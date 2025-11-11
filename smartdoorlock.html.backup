@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스마트도어락 - 게이트맨 김해 밀양 공식 대리점</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">GATEMAN</span>
+                        <span class="dealer-badge">김해 밀양 공식 대리점</span>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="smartdoorlock.html" class="active">스마트도어락</a></li>
+                        <li><a href="technology.html">테크놀로지</a></li>
+                        <li><a href="cs_support.html">고객지원</a></li>
+                        <li><a href="purchase.html">제품구매</a></li>
+                        <li><a href="gateman.html">게이트맨</a></li>
+                    </ul>
+                </nav>
+                <div class="header-contact">
+                    <i class="fas fa-phone"></i>
+                    <span>010-6633-7732</span>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>스마트도어락</h1>
+            <p>설치만으로 인테리어의 품격을 올려주는 게이트맨 프리미엄 도어락</p>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="category-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">전체보기</button>
+                <button class="filter-btn" data-category="premium">Premium 시리즈</button>
+                <button class="filter-btn" data-category="gsuit">G-SUIT 시리즈</button>
+                <button class="filter-btn" data-category="gclick">G-CLICK 시리즈</button>
+                <button class="filter-btn" data-category="ggrab">G-GRAB 시리즈</button>
+                <button class="filter-btn" data-category="pushpull">푸시풀형</button>
+                <button class="filter-btn" data-category="mortise">모티스형 (핸들일체형)</button>
+                <button class="filter-btn" data-category="rim">림형 (핸들분리형)</button>
+                <button class="filter-btn" data-category="wide">WIDE 시리즈</button>
+                <button class="filter-btn" data-category="glass">유리문용</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Series -->
+    <section class="product-category">
+        <div class="container">
+            <div class="category-header">
+                <h2>Premium 시리즈</h2>
+                <p>게이트맨의 최고급 프리미엄 라인업</p>
+            </div>
+            <div class="products-grid" id="premiumProducts">
+                <!-- Products loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- G-SUIT Series -->
+    <section class="product-category">
+        <div class="container">
+            <div class="category-header">
+                <h2>G-SUIT 시리즈</h2>
+                <p>세련된 디자인과 첨단 기술의 만남</p>
+            </div>
+            <div class="products-grid" id="gsuitProducts">
+                <!-- Products loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- G-CLICK Series -->
+    <section class="product-category">
+        <div class="container">
+            <div class="category-header">
+                <h2>G-CLICK 시리즈</h2>
+                <p>간편한 원터치 잠금 시스템</p>
+            </div>
+            <div class="products-grid" id="gclickProducts">
+                <!-- Products loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- G-GRAB Series -->
+    <section class="product-category">
+        <div class="container">
+            <div class="category-header">
+                <h2>G-GRAB 시리즈</h2>
+                <p>편리한 손잡이형 푸시풀 도어락</p>
+            </div>
+            <div class="products-grid" id="ggrabProducts">
+                <!-- Products loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Push-Pull Type -->
+    <section class="product-category">
+        <div class="container">
+            <div class="category-header">
+                <h2>푸시풀형</h2>
+                <p>밀고 당기는 간편한 개폐 방식</p>
+            </div>
+            <div class="products-grid" id="pushpullProducts">
+                <!-- Products loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Mortise Type -->
+    <section class="product-category">
+        <div class="container">
+            <div class="category-header">
+                <h2>모티스형 (핸들일체형)</h2>
+                <p>통합형 디자인의 클래식한 스타일</p>
+            </div>
+            <div class="products-grid" id="mortiseProducts">
+                <!-- Products loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Rim Type -->
+    <section class="product-category">
+        <div class="container">
+            <div class="category-header">
+                <h2>림형 (핸들분리형)</h2>
+                <p>별도 손잡이로 설치 편의성 제공</p>
+            </div>
+            <div class="products-grid" id="rimProducts">
+                <!-- Products loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- WIDE Series -->
+    <section class="product-category">
+        <div class="container">
+            <div class="category-header">
+                <h2>WIDE 시리즈</h2>
+                <p>합리적인 가격의 실용형 도어락</p>
+            </div>
+            <div class="products-grid" id="wideProducts">
+                <!-- Products loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Glass Door -->
+    <section class="product-category">
+        <div class="container">
+            <div class="category-header">
+                <h2>유리문용</h2>
+                <p>유리문 전용 스마트도어락</p>
+            </div>
+            <div class="products-grid" id="glassProducts">
+                <!-- Products loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p class="modal-category" id="modalCategory"></p>
+                    <div class="modal-price" id="modalPrice"></div>
+                    <div class="modal-description" id="modalDescription"></div>
+                    <div class="modal-features" id="modalFeatures"></div>
+                    <div class="modal-specs" id="modalSpecs"></div>
+                    <div class="modal-buttons">
+                        <a href="tel:010-6633-7732" class="btn btn-primary">
+                            <i class="fas fa-phone"></i> 구매 상담
+                        </a>
+                        <a href="purchase.html" class="btn btn-secondary">
+                            <i class="fas fa-shopping-cart"></i> 온라인 구매
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>제품 상담이 필요하신가요?</h2>
+                <p>게이트맨 전문 상담원이 최적의 제품을 추천해드립니다</p>
+                <div class="cta-buttons">
+                    <a href="tel:010-6633-7732" class="btn btn-primary btn-lg">
+                        <i class="fas fa-phone"></i> 전화 상담 010-6633-7732
+                    </a>
+                    <a href="purchase.html" class="btn btn-outline btn-lg">
+                        <i class="fas fa-shopping-cart"></i> 온라인 구매
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>게이트맨 김해 밀양 공식 대리점</h3>
+                    <p>ASSA ABLOY Korea 공식 제품 판매 및 설치</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> 제품문의: 010-6633-7732</p>
+                        <p><i class="fas fa-phone"></i> A/S: 1544-3232</p>
+                        <p><i class="fas fa-phone"></i> 본사문의: 1577-1919</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>제품</h4>
+                    <ul>
+                        <li><a href="smartdoorlock.html">스마트도어락</a></li>
+                        <li><a href="technology.html">테크놀로지</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>지원</h4>
+                    <ul>
+                        <li><a href="cs_support.html">고객지원</a></li>
+                        <li><a href="purchase.html">제품구매</a></li>
+                        <li><a href="gateman.html">회사소개</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>서비스 지역</h4>
+                    <ul>
+                        <li>김해시 전 지역</li>
+                        <li>장유동, 내동, 삼계동</li>
+                        <li>부원동, 봉황동, 외동</li>
+                        <li>무료 출장 설치</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 게이트맨 김해 밀양 공식 대리점. All rights reserved.</p>
+                <p>GATEMAN is a brand of ASSA ABLOY Korea</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

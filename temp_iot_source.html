@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- META -->
+<meta charset="utf-8">
+<meta name="Generator" content="XpressEngine">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- TITLE -->
+<title>Gateman Access</title>
+<!-- CSS -->
+<link rel="stylesheet" href="/common/css/xe.min.css?20191022190255" />
+<link rel="stylesheet" href="/common/js/plugins/ui/jquery-ui.min.css?20191022190255" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css" />
+<link rel="stylesheet" href="/common/xeicon/xeicon.min.css?20191022190255" />
+<link rel="stylesheet" href="/layouts/KSO_Infinity/css/bootstrap.min.css?20211203123330" />
+<link rel="stylesheet" href="/layouts/KSO_Infinity/css/jquery.mmenu.all.css?20211203123330" />
+<link rel="stylesheet" href="/layouts/KSO_Infinity/css/owl.carousel.min.css?20211203123330" />
+<link rel="stylesheet" href="/layouts/KSO_Infinity/css/owl.theme.default.min.css?20211203123330" />
+<link rel="stylesheet" href="/layouts/KSO_Infinity/css/animate.min.css?20211203123330" />
+<link rel="stylesheet" href="/layouts/KSO_Infinity/css/jquery.mb.YTPlayer.min.css?20211203123330" />
+<!--[if ie 8]><link rel="stylesheet" href="/layouts/KSO_Infinity/css/YTPlayer.ie8.css?20211203123330" />
+<![endif]--><link rel="stylesheet" href="/layouts/KSO_Infinity/css/bootstrap.kso.min.css?20220121102414" />
+<link rel="stylesheet" href="/layouts/KSO_Infinity/css/board.css?20211203123330" />
+<link rel="stylesheet" href="/layouts/KSO_Infinity/css/kso-layout.css?20250922125413" />
+<!--[if ie 8]><link rel="stylesheet" href="/layouts/KSO_Infinity/css/ie8.css?20211203123330" />
+<![endif]--><link rel="stylesheet" href="/layouts/KSO_Infinity/css/kso-custom.css?20220125164631" />
+<link rel="stylesheet" href="/modules/editor/styles/default/style.css?20191022190255" />
+<link rel="stylesheet" href="/files/faceOff/827/layout.css?20230322110325" />
+<!-- JS -->
+<script>
+var current_url = "https://gateman.kr/?mid=iot_gatemanaccess";
+var request_uri = "https://gateman.kr/";
+var current_mid = "iot_gatemanaccess";
+var waiting_message = "서버에 요청 중입니다. 잠시만 기다려주세요.";
+var ssl_actions = new Array();
+var default_url = "https://gateman.kr/";
+var enforce_ssl = true;</script>
+<!--[if lt IE 9]><script src="/common/js/jquery-1.x.min.js?20191022190255"></script>
+<![endif]--><!--[if gte IE 9]><!--><script src="/common/js/jquery.min.js?20191022190255"></script>
+<!--<![endif]--><script src="/common/js/x.min.js?20191022190255"></script>
+<script src="/common/js/xe.min.js?20191022190255"></script>
+<script src="/layouts/KSO_Infinity/js/respond.min.js?20211203123331"></script>
+<script src="/layouts/KSO_Infinity/js/html5shiv.js?20211203123330"></script>
+<script src="/layouts/KSO_Infinity/js/bootstrap.min.js?20211203123330"></script>
+<script src="/layouts/KSO_Infinity/js/jquery.mmenu.min.all.js?20211203123330"></script>
+<script src="/layouts/KSO_Infinity/js/jquery.sticky.js?20211203123330"></script>
+<script src="/layouts/KSO_Infinity/js/waypoints.min.js?20211203123331"></script>
+<script src="/layouts/KSO_Infinity/js/owl.carousel.min.js?20211203123331"></script>
+<!--[if ie 8]><script src="/layouts/KSO_Infinity/js/jquery.mb.YTPlayer.ie8.js?20211203123330"></script>
+<![endif]--><script src="/layouts/KSO_Infinity/js/scrolltopcontrol.js?20211203123331"></script>
+<script src="/layouts/KSO_Infinity/js/jquery.kso.js?20211203123330"></script>
+<script src="/layouts/KSO_Infinity/js/holder.js?20211203123330"></script>
+<!-- RSS -->
+<!-- ICON -->
+<link rel="shortcut icon" href="https://gateman.kr/files/attach/xeicon/favicon.ico" />
+
+<style> .xe_content { font-size:13px; }</style>
+<link rel="canonical" href="https://gateman.kr/iot_gatemanaccess" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://gateman.kr/iot_gatemanaccess" />
+<meta property="og:title" content="Gateman Access" />
+<style type="text/css">
+.pointColor {color:#1eb9d5}
+.pointHover:hover,a.pointHover:hover {color:#1eb9d5!important}
+.fullsub_nav li.on a,
+.pointBg {color:#fff;background-color:#1eb9d5}
+a.pointBgHover:hover,a.pointBgHover:active,.pointBgHover:hover,
+li.active a.pointBgHover{background-color:#1eb9d5!important;border-color:#1eb9d5!important}
+/* color */
+.section-header,
+.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,
+.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,
+#kso-tab .icon-tabElement li.active>a,#kso-tab .icon-tabElement li:hover a,
+.aside a.list-group-item.on,.aside a.list-group-item:hover,
+.company-info i,
+#kso-about .icon-wrap a, #kso-about .icon-wrap a:hover i,
+#kso-teaser .col-text:hover h4 a,#kso-teaser .col-text:hover i {color:#1eb9d5}
+/* border color */
+.dropdown-menu>li>a:hover {border-left-color:#1eb9d5}
+#responBoard .nav-pills>li.active:after {border-top-color: #1eb9d5!important}
+/* bg color */
+.nav-mini li:hover a,
+#kso-promotion .caption-title:before,
+#kso-teaser .col-img .teaser-caption h3:before,
+#kso-about .icon-wrap a:after,
+.parallax h3:after,.parallax h3:before {background-color:#1eb9d5 !important}
+#kso-about .icon-wrap a {box-shadow: 0 0 4px #1eb9d5;}
+#kso-nav.sticked .navbar-nav>li>a,
+.navbar-nav>li>a {padding-left:7px;padding-right:7px}
+#kso-about .kso-about-2:before {background-image:url(https://gateman.kr/files/attach/images/827/abce8295c0b6860f5b3d738b420d7236.png)}#kso-parallax-1 {background-image:url(https://gateman.kr/files/attach/images/827/99b983892094b5c6d2fc3736e15da7d1.png)}.sub-promotion{background-image:url(https://gateman.kr/files/attach/images/827/93468613ae031baf99f60fb918b2e4a1.png)}.sub-promotion{height:400px}
+.kso-clUp,.kso-clDown,.kso-clLeft,.kso-clRight,.kso-clFade,.kso-ftUp,.kso-ftDown,.kso-ftLeft,.kso-ftRight,.kso-ftFade {visibility:visible}@media (min-width: 1200px) {.container {max-width: 1170px;}}
+@media (max-width: 480px) { 
+}
+@media \0screen { 
+	.kso-player {height:995px} 
+	#kso-nav.sticked,#kso-nav.sticked .dropdown-menu {
+		background:rgb(255,255,255);
+	}
+}
+</style>
+<style type="text/css">/******************** reset / common ********************/
+        .gaWrap * {box-sizing: border-box; letter-spacing: -0.08rem; font-family: 'Noto Sans KR', sans-serif; padding: 0; margin: 0;}
+        .gaWrap li, dd {list-style: none;}
+        .gaWrap a {text-decoration: none;}
+        .gaWrap img {max-width: 100%;}
+
+        .gn_Inner {width: 100%; max-width: 1000px; margin: 0 auto; text-align: center; overflow: hidden;}
+
+        .gn_block_title,
+        .gn_block_title span {font-size: 18px; color: #00aad0;}
+
+        .gn_title {position: relative; font-size: 48px; font-weight: bold; line-height: 1.2;}
+        .gn_title .sub {margin-top: 48px; font-size: 20px; font-weight: 400;}
+        .gn_title .sub p {margin-top: 26px; font-size: 20px; font-weight: 500;}
+        .gn_title span,
+        .gn_color01 {color: #00aad0;}
+
+        .gn_Comment {margin-top:88px; padding-top: 30px !important; border-top: 1px solid #d5d5d5; font-size: 18px; font-weight: 300; color: #666;}
+        .gn_Comment li + li {margin-top: 8px;}
+        .gn_Comment li strong {font-weight: bold;}
+
+        table {table-layout: fixed; width: 100%; border-collapse: separate; border-spacing: 0;}
+        table caption {display: none; width: 1px; height: 1px; color: transparent;}
+
+        .hide-m,
+        .hide_tbl_m {display: none;}
+        .hide-pc {display: block;}
+
+        /******************** content ********************/
+        /* gatemanAccess */
+        .gatemanAccess {position: relative; padding: 100px 0 0; min-height: 900px; overflow: hidden; background: url(https://gateman.kr/common/img/access/gatemanAccess.png) no-repeat 50% 0; background-size: cover;}
+        .gatemanAccess .gn_title {margin-top: 40px;}
+        .gatemanAccess .gn_phone {position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); height: 520px;}
+
+        .ga_background_item {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+        .ga_background_item > div {position: absolute; top: 0; transform: translatey(0px); animation: float 6s ease-in-out infinite;}
+        .ga_background_item .gai_01 {
+        top: 42%;
+        left: calc(50% - 32%);
+        animation: float2 7s ease-in-out infinite;
+        }
+        .ga_background_item .gai_02 {
+        top: 38%;
+        left: calc(50% - 18%);
+        }
+        .ga_background_item .gai_03 {
+        top: 80%;
+        left: calc(50% - 22%);
+        animation: float2 5s ease-in-out infinite;
+        }
+        .ga_background_item .gai_11 {
+        top: 35%;
+        left: calc(50% - -18%);
+        animation: float 5s ease-in-out infinite;
+        }
+        .ga_background_item .gai_12 {
+        top: 76%;
+        left: calc(50% - -14%);
+        animation: float2 7s ease-in-out infinite;
+        }
+        .ga_background_item .gai_13 {
+        top: 65%;
+        left: calc(50% - -30%);
+        }
+
+        /* ga_Smart */
+        .ga_Smart {padding: 100px 0;}
+        .ga_Smart_list {max-width: 830px; margin: 80px auto 0; display: flex; justify-content: space-between;}
+        .ga_Smart_list li {max-width: 220px;}
+        .ga_Smart_list li a {font-size: 16px; font-weight: bold; color: #1a3550;}
+        .ga_Smart_list li span {display: block;}
+        .ga_Smart_list li span + span {margin-top: 22px;}
+
+        .ga_Smart_use {margin-top: 140px;}
+        .ga_Smart_use .tit {font-size: 40px; font-weight: bold;}
+
+        .gsu_list {position: relative; max-width: 830px; margin: 80px auto 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 50px 30px;}
+        .gsu_list li {position: relative; width: 400px; height: 500px; transition: all 0.3s;}
+        .gsu_list li .img {overflow: hidden; border-radius: 30px;}
+        .gsu_list li .img img {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+        -moz-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        -o-transform: scale(1.0);
+        transition: transform 3s;
+        }
+
+        .gsu_list li .img:hover img,
+        .gsu_list li .img:active img,
+        .gsu_list li .img:focus img {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transition: transform 5s;
+        }
+        .gsu_list li .btm {position: absolute; bottom: 0; left: 0; width: 100%; height: 140px; padding:24px 30px; display: flex; align-items: center; flex-direction: column;}
+        .gsu_list li .btm::before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 0 0 30px 30px;
+        background: rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        }
+        .gsu_list li .btm span {position: relative; display: block; width: 100%; text-align: left; color: #fff; z-index: 1;}
+        .gsu_list li .btm .txt {font-size: 20px;}
+        .gsu_list li .btm .function {font-size: 24px; font-weight: bold;}
+
+        /* ga_IOT */
+        .ga_IOT {position: relative; padding: 218px 0 94px; overflow: hidden;
+        background: rgb(222,243,248);
+        background: linear-gradient(180deg, rgba(222,243,248,1) 0%, rgba(243,243,243,1) 100%);
+        }
+        .ga_IOT_list {margin-top: 120px;}
+        .ga_IOT_list .tit {font-size: 40px; font-weight: bold;}
+
+        .gil_list {margin-top: 70px; display: flex; flex-wrap: wrap; justify-content: center; gap: 80px 40px;}
+        .gil_list li {width: 300px;}
+        .gil_list .img {width: 300px; height: 300px; border-radius: 30px;
+        box-shadow: -1px 0px 30px 10px rgba(37,54,97,0.09);
+        -webkit-box-shadow: -1px 0px 30px 10px rgba(37,54,97,0.09);
+        -moz-box-shadow: -1px 0px 30px 10px rgba(37,54,97,0.09);
+        }
+        .gil_list .ga_badge {display:block; margin-top: 20px;}
+        .gil_list .ga_badge span {display:inline-block; height: 50px; line-height: 50px; padding: 0 20px; border-radius: 25px; font-size: 18px; color: #fff;}
+
+        .gil_list .txt {margin-top: 10px; font-size: 18px; font-weight: bold;}
+
+        .gil_list li:nth-child(1) .ga_badge span {background-color: #8fcec0;}
+        .gil_list li:nth-child(2) .ga_badge span {background-color: #89c0ed}
+        .gil_list li:nth-child(3) .ga_badge span {background-color: #f3b987}
+        .gil_list li:nth-child(4) .ga_badge span {background-color: #b597f4}
+        .gil_list li:nth-child(5) .ga_badge span {background-color: #889dec}
+
+        .gn_background_item {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;}
+        .gn_background_item > div {position: absolute; top: 0; transform: translatey(0px); animation: float 6s ease-in-out infinite; transition: all 0.3s;}
+        .gn_background_item .gbi_01 {
+        top: -5%;
+        left: calc(50% - 52%);
+        }
+        .gn_background_item .gbi_02 {
+        top: 12%;
+        left: calc(50% - 52%);
+        animation: float2 6s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_03 {
+        top: 33%;
+        left: calc(50% - 52%);
+        }
+        .gn_background_item .gbi_04 {
+        top: 1%;
+        left: calc(50% - 40%);
+        animation: float2 5s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_05 {
+        top: 22%;
+        left: calc(50% - 40%);
+        animation: float3 4s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_06 {
+        top: -2%;
+        left: calc(50% - 26%);
+        animation: float4 4s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_11 {
+        top: -8%;
+        right: calc(50% - 26%);
+        animation: float2 6s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_12 {
+        top: -14%;
+        right: calc(50% - 40%);
+        animation: float2 6s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_13 {
+        top: 6%;
+        right: calc(50% - 40%);
+        animation: float3 4s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_14 {
+        top: 18%;
+        right: calc(50% - 40%);
+        animation: float4 4s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_15 {
+        top: -4%;
+        right: calc(50% - 52%);
+        animation: float 6s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_16 {
+        top: 12%;
+        right: calc(50% - 52%);
+        animation: float2 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+        0% {transform: translatey(0px);}
+        50% {transform: translatey(-10px);}
+        100% {transform: translatey(0px);}
+        }
+        @keyframes float2 {
+        0% {transform: translatey(-10px);}
+        50% {transform: translatey(0px);}
+        100% {transform: translatey(-10px);}
+        }
+        @keyframes float3 {
+        0% {transform: translatey(0px);}
+        50% {transform: translatey(-5px);}
+        100% {transform: translatey(0px);}
+        }
+        @keyframes float4 {
+        0% {transform: translatey(-5px);}
+        50% {transform: translatey(0px);}
+        100% {transform: translatey(-5px);}
+        }
+
+        /* ga_Slide */
+        .ga_Slide {padding: 200px 0 250px;}
+        .ga_Slide .gn_Inner {width: 100%; max-width: inherit;}
+
+        .access_tab {width:100%; max-width: 1000px; margin: 60px auto 0; height:224px; border-radius: 112px; padding: 46px 80px; display: flex; align-items: center; background-color: #f4f4f4;}
+
+        .acTab {width:100%; display: flex; justify-content: space-between;}
+        .acTab li {width: 182px; display: block;}
+
+        .acTab li button {position: relative; width: 100%; height: 100%; border: none; background: none; padding: 70px 0 0; margin: 0; cursor: pointer;}
+        .acTab li button span {display:block; margin-top: 20px; font-size: 24px; font-weight: bold; line-height: 38px;}
+
+        .acTab li.tab01 button {background: url(https://gateman.kr/common/img/access/ga_slide_tab_01.png) no-repeat 50% 0;}
+        .acTab li.tab02 button {background: url(https://gateman.kr/common/img/access/ga_slide_tab_02.png) no-repeat 50% 0;}
+        .acTab li.tab03 button {background: url(https://gateman.kr/common/img/access/ga_slide_tab_03.png) no-repeat 50% 0;}
+        .acTab li.tab04 button {background: url(https://gateman.kr/common/img/access/ga_slide_tab_04.png) no-repeat 50% 0;}
+
+        .acTab li.active button span {height:40px; border-radius: 20px; background-color: #00aad0; color: #fff;}
+
+        .ac_content_area {position:relative; margin-top: 90px;}
+        .ac_content {display: none;}
+        .ac_content.active {display: block;}
+
+        .ac_content .tit {font-size: 40px; font-weight: bold; line-height: 1.2; margin-bottom: 80px;}
+        .ac_content .tit span {color: #00aad0;}
+
+        .ac_content_area .accessSwiper {position: relative;}
+
+        .ac_content_area .swiper-wrapper {position:relative; padding-top: 80px;}
+
+        .ac_content_area .swiper-pagination {top:-10px; height: 20px;}
+
+        .ac_content_area .swiper-pagination-bullet {width: 10px; height: 10px; border: 1px solid #979797; background-color: #fff; opacity: 1; transition: all 0.3s;}
+        .ac_content_area .swiper-pagination-bullet-active {width:30px; border: none; border-radius: 18px; background-color: #00aad0;}
+
+        .accessSwiper .swiper-slide {margin-bottom: 50px; transition: all 0.3s; cursor: move;}
+        .ac_content_area .swiper-button-prev:after,
+        .ac_content_area .swiper-rtl .swiper-button-next:after,
+        .ac_content_area .swiper-button-next:after,
+        .ac_content_area .swiper-rtl .swiper-button-prev:after {color: #b0b0b0; opacity: 1; font-size: 42px;}
+
+        .ac_content_area .swiper-button-next,
+        .ac_content_area .swiper-button-prev {background-image: none; display: block; margin: 30px auto; width: 20px; height: 20px; border-top: 2px solid #b0b0b0; border-left: 2px solid #b0b0b0;}
+        .ac_content_area .swiper-button-next {transform: rotate(135deg);}
+        .ac_content_area .swiper-button-prev {transform: rotate(-45deg);}
+
+        .accessSwiper .swiper-slide-prev,
+        .accessSwiper .swiper-slide-next {scale: 0.9; opacity: 0.3;}
+        .accessSwiper .swiper-slide-active {scale: 1 !important; opacity: 1 !important;}
+
+        .accessSwiper .access_slide_con {position:relative; max-width: 558px; height: 996px; margin: 0 auto; background-color: #f4f4f4; border-radius: 30px;}
+
+        .accessSwiper .access_slide_con .top_tit {position: absolute; top: -30px; left: 50%; transform: translateX(-50%); width: 220px; height: 60px; line-height: 60px; padding: 0 20px; border-radius: 30px; font-size: 24px; font-weight: bold; background-color: #f3b987;}
+        .accessSwiper .access_slide_con .top_tit.tt01 {background-color: #f3b987;}
+        .accessSwiper .access_slide_con .top_tit.tt02 {background-color: #8fcec0;}
+        .accessSwiper .access_slide_con .top_tit.tt03 {background-color: #89c0ed;}
+
+        .accessSwiper .access_slide_con .access_con {position: absolute; top: 100px; left: 30px; width: calc(100% - 60px);}
+        .accessSwiper .access_slide_con .access_con dt {font-size: 20px; font-weight: bold;}
+        .accessSwiper .access_slide_con .access_con dd {font-size: 24px;}
+        .accessSwiper .access_slide_con .access_con dd.img {margin-top: 20px;}
+
+        .accessSwiper .access_slide_con .access_comment {position: absolute; bottom: 280px; left: 30px; width: calc(100% - 60px); padding: 40px 20px; background-color: #fff; border-radius: 20px;}
+        .accessSwiper .access_slide_con .access_comment::before {content: ''; position: absolute; top: -25px; left: 50%; transform: translateX(-50%); width: 50px; height: 50px; background-color: #f3b987; border-radius: 50%;}
+        .accessSwiper .access_slide_con .access_comment.ac01::before {background-color: #f3b987;}
+        .accessSwiper .access_slide_con .access_comment.ac02::before {background-color: #8fcec0;}
+        .accessSwiper .access_slide_con .access_comment.ac03::before {background-color: #89c0ed;}
+
+        .accessSwiper .access_slide_con .access_comment::after {content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%); width: 24px; height: 14px; background: url(https://gateman.kr/common/img/access/ac_arrow.png) no-repeat 50% 50%;}
+
+        .accessSwiper .swiper-slide-prev .access_slide_con .access_con::before {background-color: #8fcec0;}
+        .accessSwiper .swiper-slide-next .access_slide_con .access_con::before {background-color: #89c0ed;}
+
+        .accessSwiper .access_slide_con .access_comment dt {font-size: 20px; font-weight: bold;}
+        .accessSwiper .access_slide_con .access_comment dd {font-size: 24px; font-weight: bold;}
+        .accessSwiper .access_slide_con .access_comment dd span {position: relative; display: inline-block; padding: 0 20px;}
+        .accessSwiper .access_slide_con .access_comment dd span::before {content: "❝"; position: absolute; top: 0; left: 0; color: #c9c9c9;}
+        .accessSwiper .access_slide_con .access_comment dd span::after {content: "❞"; position: absolute; top: 0; right: 0; color: #c9c9c9;}
+        .accessSwiper .access_slide_con .access_comment dd em {position:relative; font-style: normal;}
+        .accessSwiper .access_slide_con .access_comment dd em::before {content: ''; position: absolute; bottom: 0; left: -4px; width: 100%; height: 16px; padding: 0 4px; background-color: #c7ecf5; z-index: 0;}
+        .accessSwiper .access_slide_con .access_comment dd em i {position: relative; font-style: normal; z-index: 1;}
+
+        .accessSwiper .access_slide_con .btm_txt {position: absolute; bottom: 0; left: 0; width: 100%; height: 202px; background-color: #baebf6; border-radius: 0 0 30px 30px;}
+        .accessSwiper .access_slide_con .btm_txt .tit {position: absolute; top: -30px; left: 50%; transform: translateX(-50%); width: 200px; height: 60px; line-height: 60px; padding: 0 20px; border-radius: 30px; font-size: 24px; font-weight: bold; background-color: #00aad0; color: #fff;}
+        .accessSwiper .access_slide_con .btm_txt .txt {margin-top: 60px;}
+        .accessSwiper .access_slide_con .btm_txt .txt li {min-height: 50px; width: 100%; display: inline-flex; align-items: center; justify-content: center;}
+        .accessSwiper .access_slide_con .btm_txt .txt li + li {margin-top: 10px;}
+        .accessSwiper .access_slide_con .btm_txt .txt li span {display: inline-block; min-height: 50px; font-size: 28px; font-weight: bold; padding-left: 54px;}
+
+        .ac_icon_01 {background: url(https://gateman.kr/common/img/access/ac_icon_01.png) no-repeat 0 0; background-size: 50px auto;}
+        .ac_icon_02 {background: url(https://gateman.kr/common/img/access/ac_icon_02.png) no-repeat 0 0; background-size: 50px auto;}
+        .ac_icon_03 {background: url(https://gateman.kr/common/img/access/ac_icon_03.png) no-repeat 0 0; background-size: 50px auto;}
+        .ac_icon_04 {background: url(https://gateman.kr/common/img/access/ac_icon_04.png) no-repeat 0 0; background-size: 50px auto;}
+        .ac_icon_05 {background: url(https://gateman.kr/common/img/access/ac_icon_05.png) no-repeat 0 0; background-size: 50px auto;}
+        .ac_icon_06 {background: url(https://gateman.kr/common/img/access/ac_icon_06.png) no-repeat 0 0; background-size: 50px auto;}
+        .ac_icon_07 {background: url(https://gateman.kr/common/img/access/ac_icon_07.png) no-repeat 0 0; background-size: 50px auto;}
+        .ac_icon_08 {background: url(https://gateman.kr/common/img/access/ac_icon_08.png) no-repeat 0 0; background-size: 50px auto;}
+
+        /* ga_VS */
+        .ga_VS {padding: 90px 0 130px; background-color: #eef2f8;}
+        .ga_VS .gn_Inner {overflow: visible;}
+        .ga_VS .tit {position: relative; display: flex; justify-content: space-between; align-items: center; height: 100px; border-radius: 20px; z-index: 1;
+        background: rgb(0,170,208);
+        background: linear-gradient(123deg, rgba(0,170,208,1) 0%, rgba(0,170,208,1) 49.3%, rgba(74,74,74,1) 49.3%, rgba(74,74,74,1) 100%);
+        }
+        .ga_VS .tit::before {content: ''; position: absolute; top: 0; left: 50%; width: 100%; height: 100%; transform: translateX(-50%); background: url(https://gateman.kr/common/img/access/ga_VS.png) no-repeat 50% 50%;}
+        .ga_VS .tit div {position: relative; display: flex; align-items: center; justify-content: center; width: 50%; height: 100%; font-size: 34px; font-weight: 300; color: #fff;}
+        .ga_VS .tit div strong {padding-left: 10px; font-weight: bold;}
+        .ga_VS .tit div:nth-child(1) {padding-right: 60px;}
+        .ga_VS .tit div:nth-child(2) {padding-left: 60px;}
+
+        .ga_VS .tit div::before {content: ''; position: absolute; top: -140px; display: block; width: 195px; height: 203px;}
+        .ga_VS .tit div:nth-child(1)::before{left:0; background: url(https://gateman.kr/common/img/access/ga_VS_use.png) no-repeat 0 50%;}
+        .ga_VS .tit div:nth-child(2)::before{right:0; background: url(https://gateman.kr/common/img/access/ga_VS_none.png) no-repeat 0 50%;}
+
+        .ga_VS .gn_tbl {position: relative; padding-top: 20px; padding-bottom: 40px; background-color: #fff; border-radius: 0 0 20px 20px;}
+        .ga_VS .gn_tbl::before {content: ''; position: absolute; top: -20px; left: 0; width: 100%; height: 40px; background-color: #fff;}
+        .ga_VS .gn_tbl th {font-size: 30px; font-weight: bold; padding: 80px 0 28px; text-align: center;}
+        .ga_VS .gn_tbl th span {position: relative; display:inline-block; width: 400px; height: 60px; line-height: 60px; border-radius: 30px; color: #fff; }
+
+        .ga_VS .gn_tbl th span em {display: inline-block; font-style: normal; padding-right: 40px;}
+        .ga_VS .gn_tbl th span.emoji_01,
+        .ga_VS .gn_tbl th span.emoji_03 {background: #1a3550;}
+
+        .ga_VS .gn_tbl th span.emoji_02,
+        .ga_VS .gn_tbl th span.emoji_04 {background: #f17544;}
+
+        .ga_VS .gn_tbl th span.emoji_01::after,
+        .ga_VS .gn_tbl th span.emoji_03::after {content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); margin-bottom: -40px; border-top: 20px solid #1a3550; border-right: 20px solid transparent; border-bottom: 20px solid transparent; border-left: 20px solid transparent;}
+
+        .ga_VS .gn_tbl th span.emoji_02::after,
+        .ga_VS .gn_tbl th span.emoji_04::after {content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); margin-bottom: -40px; border-top: 20px solid #f17544; border-right: 20px solid transparent; border-bottom: 20px solid transparent; border-left: 20px solid transparent;}
+
+        .ga_VS .gn_tbl th span.emoji_01 em {background: url(https://gateman.kr/common/img/access/emoji_01.png) no-repeat 100% 50%;}
+        .ga_VS .gn_tbl th span.emoji_02 em {background: url(https://gateman.kr/common/img/access/emoji_02.png) no-repeat 100% 50%;}
+        .ga_VS .gn_tbl th span.emoji_03 em {background: url(https://gateman.kr/common/img/access/emoji_03.png) no-repeat 100% 50%;}
+        .ga_VS .gn_tbl th span.emoji_04 em {background: url(https://gateman.kr/common/img/access/emoji_04.png) no-repeat 100% 50%;}
+
+        .ga_VS .gn_tbl td {padding: 28px 0; border-top: 1px solid #dcdcdc; font-size: 28px; font-weight: 500;}
+        .ga_VS .gn_tbl td:nth-child(even) {color: #808080}
+
+        /* ga_SmartPhone */
+        .ga_SmartPhone {padding:112px 0 78px; background-color: #1a3550;}
+        .ga_SmartPhone .block .tit {font-size: 40px; font-weight: 300; color: #fff;}
+        .ga_SmartPhone .block .img {margin-top: 46px;}
+        .ga_SmartPhone .block .txt {margin-top: 100px; font-size: 48px; font-weight: 300; color: #fff;}
+        .ga_SmartPhone .block .txt strong {color: #00aad0;}
+
+        /* ga_SmartPhone02 */
+        .ga_SmartPhone02 {padding: 130px 0; background: url(https://gateman.kr/common/img/access/ga_SmartPhone02.png) no-repeat 50% 0; background-size: cover;}
+        .ga_SmartPhone02 .gn_Inner {width: 800px;}
+
+        .ga_sp_list + .ga_sp_list {margin-top: 22px;}
+        .ga_sp_list {position: relative; text-align: left; padding: 40px; border-radius: 30px; display: flex; align-items: center;}
+        .ga_sp_list::before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 30px;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .ga_sp_list dl {position: relative; padding-left: 300px; min-height: 242px; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 1;}
+        .ga_sp_list dt,
+        .ga_sp_list dd {color: #fff; width: 100%; text-align: left;}
+        .ga_sp_list dt {font-size: 30px; font-weight: bold;}
+        .ga_sp_list dd {margin-top: 40px; font-size: 24px; font-weight: 500;}
+        .ga_sp_list .ga_check_list li {color: #fff; padding-left: 30px; background: url(https://gateman.kr/common/img/access/common_check.png) no-repeat 0 7px;}
+
+        .ga_sp_list dl::before {content: ''; position: absolute; top: 0; left: 0; width: 242px; height: 242px; border-radius: 50%; z-index: 0;}
+        .ga_sp_list:nth-child(1) dl::before {background: url(https://gateman.kr/common/img/access/ga_SmartPhone02_01.png) no-repeat 50% 50%}
+        .ga_sp_list:nth-child(2) dl::before {background: url(https://gateman.kr/common/img/access/ga_SmartPhone02_02.png) no-repeat 50% 50%}
+        .ga_sp_list:nth-child(3) dl::before {background: url(https://gateman.kr/common/img/access/ga_SmartPhone02_03.png) no-repeat 50% 50%}
+
+        /* ga_Card */
+        .ga_Card {padding: 110px 0; background-color: #1a3550;}
+        .ga_Card dl {display: flex; flex-direction: column; align-items: center; justify-content: center; padding-left: 370px; min-height: 301px; background: url(https://gateman.kr/common/img/access/ga_Card.png) no-repeat 0 50%; background-size: 340px auto;}
+        .ga_Card dl dt,
+        .ga_Card dl dd {width: 100%; text-align: left;}
+        .ga_Card dl dt {font-size: 46px; font-weight: bold; color: #00d0ff;}
+        .ga_Card dl dd {margin-top: 30px; font-size: 30px; color: #fff;}
+        .ga_Card dl dd.iot {font-size: 34px; font-weight: 300;}

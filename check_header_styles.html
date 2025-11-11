@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>헤더 스타일 비교</title>
+    <style>
+        body { font-family: monospace; padding: 20px; }
+        .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        iframe { width: 100%; height: 200px; border: 2px solid #ccc; }
+        h2 { background: #1a5490; color: white; padding: 10px; }
+        .metrics { background: #f0f0f0; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>게이트맨 헤더 비교</h1>
+
+    <div class="comparison">
+        <div>
+            <h2>index.html 헤더</h2>
+            <iframe src="index.html"></iframe>
+            <div class="metrics" id="index-metrics">측정 중...</div>
+        </div>
+
+        <div>
+            <h2>제품 페이지 헤더 (GM-900S)</h2>
+            <iframe src="products/gm-900s.html"></iframe>
+            <div class="metrics" id="product-metrics">측정 중...</div>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            const iframes = document.querySelectorAll('iframe');
+
+            // index.html 측정
+            const indexDoc = iframes[0].contentDocument;
+            const indexLogo = indexDoc.querySelector('.header .logo img');
+            const indexBadge = indexDoc.querySelector('.header .dealer-badge');
+            const indexContact = indexDoc.querySelector('.header .header-contact');
+
+            document.getElementById('index-metrics').innerHTML = `
+                로고 높이: ${indexLogo ? indexLogo.offsetHeight : 'N/A'}px<br>
+                배지 높이: ${indexBadge ? indexBadge.offsetHeight : 'N/A'}px<br>
+                배지 폰트: ${indexBadge ? getComputedStyle(indexBadge).fontSize : 'N/A'}<br>
+                전화번호 폰트: ${indexContact ? getComputedStyle(indexContact).fontSize : 'N/A'}
+            `;
+
+            // 제품 페이지 측정
+            const productDoc = iframes[1].contentDocument;
+            const productLogo = productDoc.querySelector('.header .logo img');
+            const productBadge = productDoc.querySelector('.header .dealer-badge');
+            const productContact = productDoc.querySelector('.header .header-contact');
+
+            document.getElementById('product-metrics').innerHTML = `
+                로고 높이: ${productLogo ? productLogo.offsetHeight : 'N/A'}px<br>
+                배지 높이: ${productBadge ? productBadge.offsetHeight : 'N/A'}px<br>
+                배지 폰트: ${productBadge ? getComputedStyle(productBadge).fontSize : 'N/A'}<br>
+                전화번호 폰트: ${productContact ? getComputedStyle(productContact).fontSize : 'N/A'}
+            `;
+        }, 2000);
+    </script>
+</body>
+</html>
