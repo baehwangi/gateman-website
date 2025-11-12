@@ -274,11 +274,87 @@ body {
 .iot_area p {font-size: 22px; line-height: 1.6;}
 
 @media (max-width: 768px) {
-    body {padding-top: 70px;}
-    .custom-header .header-container {padding: 10px 15px;}
-    .custom-header .logo img {height: 40px;}
-    .custom-header .main-nav ul {gap: 20px;}
-    .custom-header .main-nav a {font-size: 0.9rem;}
+    body {padding-top: 0;}
+
+    /* Hide desktop header on mobile */
+    .custom-header {display: none;}
+
+    /* Mobile header banner exactly like original */
+    .gatemanAccess {
+        padding: 0;
+        min-height: 667px;
+        background: linear-gradient(180deg, rgba(26,84,144,0.9) 0%, rgba(26,84,144,0.7) 100%), url(/gateman-website/images/access/gatemanAccess_mobile_bg.jpg) no-repeat center center;
+        background-size: cover;
+        position: relative;
+    }
+
+    /* Mobile hamburger menu */
+    .gatemanAccess::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 24px;
+        height: 20px;
+        background:
+            linear-gradient(#fff, #fff) no-repeat center 0/100% 2px,
+            linear-gradient(#fff, #fff) no-repeat center 50%/100% 2px,
+            linear-gradient(#fff, #fff) no-repeat center 100%/100% 2px;
+        z-index: 10;
+    }
+
+    .gatemanAccess .gn_Inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        color: white;
+        text-align: center;
+    }
+
+    .gatemanAccess .gn_block_title {
+        color: white;
+        font-size: 16px;
+    }
+
+    .gatemanAccess .gn_title {
+        color: white;
+        font-size: 22px;
+        margin-top: 15px;
+        line-height: 1.5;
+    }
+
+    .gatemanAccess .gn_title span {
+        color: white;
+    }
+
+    /* Hide desktop background items and phone on mobile */
+    .gatemanAccess .gn_phone,
+    .ga_background_item {
+        display: none;
+    }
+
+    /* ga_Smart section mobile */
+    .ga_Smart {padding: 60px 20px;}
+    .ga_Smart .gn_Inner {padding: 0;}
+    .ga_Smart .gn_block_title {font-size: 16px;}
+    .ga_Smart .gn_title {font-size: 24px; line-height: 1.4;}
+    .ga_Smart_list {margin: 40px auto 0; display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 30px 20px !important; max-width: 100% !important;}
+    .ga_Smart_list li {max-width: 100% !important; text-align: center;}
+    .ga_Smart_list li a {font-size: 14px;}
+    .ga_Smart_list li span img {width: 80px; height: 80px;}
+    .ga_Smart_list li span + span {margin-top: 15px; line-height: 1.3;}
+
+    /* ga_Smart_use - image cards section */
+    .ga_Smart_use {margin-top: 80px !important;}
+    .ga_Smart_use .tit {font-size: 24px !important; line-height: 1.4 !important; padding: 0 20px;}
+    .gsu_list {margin: 40px 20px 0 !important; gap: 30px 0 !important; flex-direction: column !important;}
+    .gsu_list li {width: 100% !important; height: auto !important;}
+    .gsu_list li .img {border-radius: 20px !important;}
+    .gsu_list li .btm {height: auto !important; padding: 20px 20px !important;}
+    .gsu_list li .btm .txt {font-size: 16px !important;}
+    .gsu_list li .btm .function {font-size: 18px !important;}
 
     .iot_area h1 {font-size: 36px;}
     .iot_area p {font-size: 16px;}
@@ -288,21 +364,83 @@ body {
     .acTab li {display: table-cell; width: auto;}
     .acTab li a {font-size: 13px; line-height: 40px;}
 
-    .gn_title {font-size: 32px;}
+    .gn_title {font-size: 24px;}
+
+    /* ga_IOT section mobile */
+    .ga_IOT {padding: 80px 20px 60px !important;}
+    .ga_IOT .gn_Inner {padding: 0;}
+    .ga_IOT .gn_block_title {font-size: 16px !important;}
+    .ga_IOT .gn_title {font-size: 24px !important; margin-top: 20px !important;}
+    .ga_IOT .gn_title .tit {font-size: 24px !important; line-height: 1.5 !important;}
+    .ga_IOT .gn_title .sub {margin-top: 30px !important; font-size: 14px !important; line-height: 1.6 !important;}
+    .ga_IOT .gn_background_item {display: none !important;}
+
+    /* ga_SmartLife section mobile */
+    .ga_SmartLife {padding: 80px 20px 60px !important;}
+    .ga_SmartLife .gn_Inner {padding: 0;}
+    .ga_SmartLife .gn_block_title {font-size: 16px !important;}
+    .ga_SmartLife .gn_title {font-size: 24px !important; line-height: 1.4 !important;}
+    .ga_SmartLife_list {margin: 40px 0 0 !important; flex-direction: column !important; gap: 30px !important;}
+    .ga_SmartLife_list li {width: 100% !important; max-width: 100% !important;}
+    .ga_SmartLife_list .img {width: 100% !important; height: 280px !important; border-radius: 20px !important;}
+    .ga_SmartLife_list .tit {font-size: 16px !important; margin-top: 15px !important;}
+    .ga_SmartLife_list .txt {font-size: 14px !important; margin-top: 10px !important; line-height: 1.5 !important;}
+    .ga_SmartLife .ga_sl_txt {margin-top: 40px !important; padding: 0 !important; font-size: 13px !important;}
+
+    /* HOW TO USE section mobile */
+    .ga_Use {padding: 80px 0 60px !important;}
+    .ga_Use .gn_Inner {padding: 0;}
+    .ga_Use .gn_block_title {font-size: 16px !important;}
+    .ga_Use .gn_title {font-size: 24px !important;}
+    .acTab {padding: 0 !important; height: auto !important; background: transparent !important; margin: 40px 20px 20px !important;}
+    .acTab li {display: inline-block !important; width: auto !important; margin: 5px !important;}
+    .acTab li a {padding: 10px 20px !important; border-radius: 25px !important; background: #e0e0e0 !important; color: #333 !important; font-size: 13px !important; line-height: normal !important;}
+    .acTab li a.active {background: #00aad0 !important; color: white !important;}
 
     /* ga_VS table - stack vertically on mobile */
-    .ga_VS table {font-size: 14px;}
+    .ga_VS {padding: 80px 20px 60px !important;}
+    .ga_VS .gn_Inner {padding: 0;}
+    .ga_VS .gn_block_title {font-size: 16px !important;}
+    .ga_VS table {font-size: 12px; width: 100% !important;}
     .ga_VS .tit {height: auto !important; flex-direction: column !important; padding: 20px 0 !important;}
-    .ga_VS .tit > div {width: 100% !important; font-size: 20px !important; padding: 15px 20px !important;}
+    .ga_VS .tit > div {width: 100% !important; font-size: 18px !important; padding: 15px 20px !important;}
+    .ga_VS td {padding: 15px 10px !important; font-size: 13px !important; line-height: 1.4 !important;}
 
-    /* ga_SmartPhone text sizes */
-    .ga_SmartPhone .tit {font-size: 20px !important;}
-    .ga_SmartPhone .txt {font-size: 18px !important;}
+    /* ga_SmartPhone sections mobile */
+    .ga_SmartPhone {padding: 80px 20px 60px !important;}
+    .ga_SmartPhone .gn_Inner {padding: 0;}
+    .ga_SmartPhone .gn_block_title {font-size: 16px !important;}
+    .ga_SmartPhone .gn_title {font-size: 24px !important;}
+    .ga_SmartPhone .tit {font-size: 18px !important; line-height: 1.4 !important;}
+    .ga_SmartPhone .txt {font-size: 16px !important; line-height: 1.5 !important;}
+    .ga_SmartPhone .img {width: 100% !important; margin: 30px 0 !important;}
 
     /* ga_SmartPhone02 glassmorphism cards */
-    .ga_SmartPhone02 .ga_sp_list {padding: 140px 25px 25px !important; margin-bottom: 30px !important;}
-    .ga_SmartPhone02 dt {font-size: 18px !important;}
-    .ga_SmartPhone02 li {font-size: 14px !important; padding: 6px 0 6px 25px !important;}
+    .ga_SmartPhone02 {padding: 80px 20px 60px !important;}
+    .ga_SmartPhone02 .gn_Inner {padding: 0;}
+    .ga_SmartPhone02 .ga_sp_list {padding: 100px 20px 20px !important; margin-bottom: 30px !important; border-radius: 20px !important;}
+    .ga_SmartPhone02 dt {font-size: 16px !important; margin-bottom: 15px !important;}
+    .ga_SmartPhone02 li {font-size: 13px !important; padding: 5px 0 5px 20px !important; line-height: 1.5 !important;}
+
+    /* ga_Start section mobile */
+    .ga_Start {padding: 80px 20px 60px !important;}
+    .ga_Start .gn_Inner {padding: 0;}
+    .ga_Start .gn_block_title {font-size: 16px !important;}
+    .ga_Start_list {margin: 40px 0 0 !important; gap: 40px 0 !important; flex-direction: column !important;}
+    .ga_Start_list li {width: 100% !important;}
+    .ga_Start_list .img {width: 80px !important; height: 80px !important;}
+    .ga_Start_list .tit {font-size: 16px !important; margin-top: 15px !important;}
+    .ga_Start_list .txt {font-size: 13px !important; margin-top: 10px !important; line-height: 1.5 !important;}
+
+    /* Products grid mobile */
+    .ga_Product {padding: 80px 20px 60px !important;}
+    .ga_Product .gn_Inner {padding: 0;}
+    .ga_Product .gn_title {font-size: 20px !important; line-height: 1.4 !important;}
+    .ga_Product .txt {font-size: 14px !important; margin-top: 15px !important;}
+    .ga_Product_list {margin: 40px 0 0 !important; grid-template-columns: repeat(2, 1fr) !important; gap: 30px 15px !important;}
+    .ga_Product_list li {padding: 0 !important;}
+    .ga_Product_list .img {width: 100% !important; height: 140px !important; margin-bottom: 15px !important;}
+    .ga_Product_list .tit {font-size: 14px !important;}
 
     /* ga_Card section */
     .ga_Card dt {font-size: 24px !important;}
