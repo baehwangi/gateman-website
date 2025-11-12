@@ -175,6 +175,72 @@ body {
     .iot_area p {font-size: 16px;}
     .acTab li a {font-size: 18px; padding: 18px 10px;}
     .gn_title {font-size: 32px;}
+
+    /* ga_VS table - stack vertically on mobile */
+    .ga_VS table {font-size: 14px;}
+    .ga_VS .tit {height: auto !important; flex-direction: column !important; padding: 20px 0 !important;}
+    .ga_VS .tit > div {width: 100% !important; font-size: 20px !important; padding: 15px 20px !important;}
+
+    /* ga_SmartPhone text sizes */
+    .ga_SmartPhone .tit {font-size: 20px !important;}
+    .ga_SmartPhone .txt {font-size: 18px !important;}
+
+    /* ga_SmartPhone02 glassmorphism cards */
+    .ga_SmartPhone02 .ga_sp_list {padding: 140px 25px 25px !important; margin-bottom: 30px !important;}
+    .ga_SmartPhone02 dt {font-size: 18px !important;}
+    .ga_SmartPhone02 li {font-size: 14px !important; padding: 6px 0 6px 25px !important;}
+
+    /* ga_Card section */
+    .ga_Card dt {font-size: 24px !important;}
+    .ga_Card dd {font-size: 16px !important;}
+
+    /* ga_Dual section */
+    .ga_Dual .tit p {font-size: 20px !important;}
+    .ga_Dual .tit h3 {font-size: 26px !important;}
+    .ga_Dual .dual_box {flex-direction: column !important; gap: 30px !important;}
+    .ga_Dual .usage_box {flex-direction: column !important; gap: 30px !important;}
+    .ga_Dual .box p {font-size: 18px !important;}
+
+    /* ga_Start section */
+    .ga_Start h3 {font-size: 24px !important;}
+    .ga_Start .step_grid {grid-template-columns: 1fr !important; gap: 20px !important;}
+    .ga_Start .step p {font-size: 16px !important;}
+
+    /* ga_SmartThings section */
+    .ga_SmartThings h3 {font-size: 28px !important;}
+    .ga_SmartThings h4 {font-size: 22px !important;}
+    .ga_SmartThings .mode_grid {grid-template-columns: 1fr !important; gap: 20px !important;}
+    .ga_SmartThings .mode p {font-size: 18px !important;}
+    .ga_SmartThings .mode .icon {width: 60px !important; height: 60px !important; font-size: 30px !important;}
+
+    /* ga_Prod section - 2 columns on mobile */
+    .ga_Prod h3 {font-size: 28px !important;}
+    .ga_Prod .prod_grid {grid-template-columns: repeat(2, 1fr) !important; gap: 15px !important;}
+    .ga_Prod .prod_item {padding: 20px 15px !important;}
+    .ga_Prod .prod_item p {font-size: 16px !important;}
+    .ga_Prod .prod_img img {max-width: 120px !important;}
+
+    /* ga_AssaAbloy section */
+    .ga_AssaAbloy .assa_content {padding: 40px 20px !important;}
+    .ga_AssaAbloy p {font-size: 18px !important;}
+    .ga_AssaAbloy .logo img {max-width: 250px !important;}
+}
+
+@media (max-width: 480px) {
+    /* Extra small mobile adjustments */
+    .custom-header .main-nav ul {flex-direction: column; gap: 10px;}
+    .custom-header .header-container {flex-direction: column; gap: 15px;}
+
+    /* Hero section */
+    .gatemanAccess {padding: 60px 0 0 !important; min-height: 600px !important;}
+    .gatemanAccess .gn_phone {height: 350px !important;}
+
+    /* ga_Prod - 1 column on very small screens */
+    .ga_Prod .prod_grid {grid-template-columns: 1fr !important;}
+
+    /* Comparison table font size */
+    .ga_VS table {font-size: 12px;}
+    .ga_VS .tit > div {font-size: 18px !important;}
 }
 </style>
 </head>
