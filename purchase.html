@@ -5,187 +5,396 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IoT 서비스 - GATEMAN 김해 미리양 대리점</title>
     <link rel="stylesheet" href="/gateman-website/css/style.css">
+    <link rel="stylesheet" href="https://gateman.kr/common/css/xe.min.css?20191022190255" />
+    <link rel="stylesheet" href="https://gateman.kr/common/css/common.min.css?20210618132600" />
+    <link rel="stylesheet" href="https://gateman.kr/layouts/gm_layout/css/layout.min.css?20210708144300" />
     <style>
-        * {
+        /* IoT Page Specific Styles */
+        .iot_area {
+            background: #e8f4f8;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .iot_area h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 20px;
+        }
+
+        .iot_area p {
+            font-size: 20px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Tab Navigation */
+        .acTab {
+            background: #00a9ce;
+            display: flex;
+            justify-content: center;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            list-style: none;
         }
 
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .purchase-container {
-            width: 100%;
-            min-height: 100vh;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 100px 20px 80px;
+        .acTab li {
+            flex: 1;
+            max-width: 400px;
             text-align: center;
         }
 
-        .hero-section h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
+        .acTab li.active,
+        .acTab li:hover {
+            background: #fff;
+        }
+
+        .acTab li a,
+        .acTab li span {
+            display: block;
+            padding: 20px 30px;
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .acTab li.active a,
+        .acTab li.active span,
+        .acTab li:hover a {
+            color: #00a9ce;
+        }
+
+        /* Content Area */
+        .ac_content {
+            display: none;
+            padding: 80px 20px;
+        }
+
+        .ac_content.active {
+            display: block;
+        }
+
+        /* Gateman Access Section */
+        .ga_top {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .ga_top img {
+            max-width: 400px;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        .ga_top h2 {
+            font-size: 28px;
+            color: #222;
+            line-height: 1.4;
+        }
+
+        .ga_top h2 span {
+            display: block;
+            font-size: 36px;
             font-weight: 700;
+            color: #00a9ce;
+            margin-top: 10px;
         }
 
-        .hero-section p {
-            font-size: 1.3em;
-            opacity: 0.95;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Features Section */
-        .features-section {
-            padding: 80px 20px;
-            background: #f8f9fa;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5em;
+        /* Guide Links */
+        .ga_guide {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
             margin-bottom: 60px;
-            color: #2c3e50;
+            flex-wrap: wrap;
         }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-        }
-
-        .feature-icon {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        .feature-card h3 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: #667eea;
-        }
-
-        .feature-card p {
+        .ga_guide a {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 14px;
             color: #666;
-            line-height: 1.8;
+            text-decoration: none;
+            transition: all 0.3s;
         }
 
-        /* Products Section */
-        .products-section {
-            padding: 80px 20px;
-            background: white;
+        .ga_guide a:hover {
+            background: #00a9ce;
+            border-color: #00a9ce;
+            color: #fff;
         }
 
-        .products-grid {
+        /* Feature Cards */
+        .ga_func {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             max-width: 1200px;
+            margin: 0 auto 80px;
+        }
+
+        .ga_func li {
+            background: #fff;
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .ga_func li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .ga_func li h3 {
+            font-size: 16px;
+            color: #999;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .ga_func li p {
+            font-size: 20px;
+            color: #222;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        /* Phone Section */
+        .ga_phone {
+            text-align: center;
+            padding: 60px 20px;
+            background: #f8f9fa;
+            border-radius: 20px;
+            margin-bottom: 80px;
+        }
+
+        .ga_phone h3 {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .ga_phone a {
+            display: inline-block;
+            font-size: 42px;
+            font-weight: 700;
+            color: #00a9ce;
+            text-decoration: none;
+            border-bottom: 3px solid #00a9ce;
+            padding-bottom: 10px;
+        }
+
+        /* Use Case Section */
+        .ga_case {
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .product-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 40px 25px;
-            border-radius: 12px;
+        .ga_case h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #222;
             text-align: center;
-            transition: transform 0.3s;
+            margin-bottom: 60px;
         }
 
-        .product-card:hover {
-            transform: scale(1.05);
+        .accessSwiper {
+            background: #fff;
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
         }
 
-        .product-card h3 {
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            color: #2c3e50;
-        }
-
-        .product-card p {
-            color: #555;
-            font-size: 1.1em;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 20px;
+        .swiper-slide {
             text-align: center;
         }
 
-        .cta-section h2 {
-            font-size: 2.5em;
+        .slide_title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #222;
             margin-bottom: 30px;
         }
 
-        .cta-section p {
-            font-size: 1.4em;
+        .slide_when dt {
+            font-size: 18px;
+            color: #00a9ce;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .slide_when dd {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .slide_how {
+            font-size: 28px;
+            font-weight: 700;
+            color: #222;
+            margin: 30px 0;
+        }
+
+        .slide_solution {
+            margin-top: 30px;
+        }
+
+        .slide_solution dt {
+            font-size: 16px;
+            color: #00a9ce;
+            font-weight: 600;
             margin-bottom: 15px;
         }
 
-        .phone-number {
-            font-size: 2em;
-            font-weight: 700;
-            margin-top: 20px;
-            letter-spacing: 2px;
+        .slide_solution dd {
+            display: inline-block;
+            padding: 10px 25px;
+            background: #e8f4f8;
+            border-radius: 25px;
+            font-size: 16px;
+            color: #333;
+            margin: 5px;
         }
 
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 40px 20px;
+        /* App Download Section */
+        .ga_app {
+            text-align: center;
+            padding: 80px 20px;
+            background: #f8f9fa;
+            margin-top: 80px;
+        }
+
+        .ga_app h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 40px;
+        }
+
+        .app_links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .app_links a {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #222;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .app_links a:hover {
+            background: #00a9ce;
+        }
+
+        /* Compatible Products */
+        .ga_products {
+            max-width: 1200px;
+            margin: 80px auto;
             text-align: center;
         }
 
-        footer p {
-            margin: 10px 0;
-            opacity: 0.9;
+        .ga_products h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 40px;
         }
 
+        .product_list {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .product_list a {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #fff;
+            border: 2px solid #00a9ce;
+            border-radius: 25px;
+            color: #00a9ce;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .product_list a:hover {
+            background: #00a9ce;
+            color: #fff;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 2em;
+            .iot_area h1 {
+                font-size: 32px;
             }
 
-            .hero-section p {
-                font-size: 1.1em;
+            .iot_area p {
+                font-size: 16px;
             }
 
-            .section-title {
-                font-size: 2em;
+            .acTab li a,
+            .acTab li span {
+                font-size: 18px;
+                padding: 15px 20px;
             }
 
-            .features-grid,
-            .products-grid {
+            .ga_func {
                 grid-template-columns: 1fr;
             }
+
+            .ga_phone a {
+                font-size: 32px;
+            }
+
+            .accessSwiper {
+                padding: 40px 20px;
+            }
+        }
+
+        /* Contact Section */
+        .contact_section {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact_section h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .contact_section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .contact_section a {
+            color: #00a9ce;
+            font-size: 36px;
+            font-weight: 700;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -210,91 +419,175 @@
         </div>
     </header>
 
-    <div class="purchase-container">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <h1>IoT 스마트 출입 서비스</h1>
-            <p>언제 어디서나 스마트폰으로 문을 제어하고, 출입 기록을 확인하세요.<br>GATEMAN의 첨단 IoT 기술로 더 안전하고 편리한 생활을 경험하세요.</p>
-        </section>
+    <!-- IoT Hero Section -->
+    <section class="iot_area">
+        <h1>IoT 서비스</h1>
+        <p>이젠 도어락도 IoT 시대!<br>
+        언제 어디서든 내 손 안에서 관리하는 스마트<br>
+        도어락을 경험해보세요.</p>
+    </section>
 
-        <!-- Features Section -->
-        <section class="features-section">
-            <h2 class="section-title">주요 기능</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>원격 제어</h3>
-                    <p>스마트폰 앱으로 언제 어디서나 문을 열고 닫을 수 있습니다. 가족이나 지인에게 임시 비밀번호를 발급할 수도 있습니다.</p>
-                </div>
+    <!-- Tab Navigation -->
+    <ul class="acTab">
+        <li class="active">
+            <span>게이트맨 액세스</span>
+        </li>
+        <li>
+            <a href="/gateman-website/gatemandot.html">게이트맨 도트</a>
+        </li>
+        <li>
+            <a href="/gateman-website/smartliving.html">스마트리빙</a>
+        </li>
+    </ul>
 
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>출입 기록</h3>
-                    <p>누가, 언제 출입했는지 실시간으로 확인하고 기록을 저장합니다. 이상 출입 시도도 즉시 파악할 수 있습니다.</p>
-                </div>
+    <!-- Gateman Access Content -->
+    <article>
+        <div class="ac_content active">
+            <!-- Top Section -->
+            <div class="ga_top">
+                <img src="https://gateman.kr/files/attach/images/187/e77bff4c9ba5af1ab2a1fa7d74f9c4d2.png" alt="Gateman Access">
+                <h2>스마트홈을 위한 가장 똑똑한 솔루션<br>
+                <span>게이트맨 액세스</span></h2>
+            </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🔔</div>
-                    <h3>실시간 알림</h3>
-                    <p>출입 발생 시 즉시 푸시 알림을 받습니다. 무단 침입 시도나 비정상적인 활동도 바로 알려드립니다.</p>
-                </div>
+            <!-- Guide Links -->
+            <div class="ga_guide">
+                <a href="tel:010-6633-7732">게이트맨액세스 설치/이용가이드</a>
+                <a href="tel:010-6633-7732">게이트맨 액세스 FAQ</a>
+                <a href="tel:010-6633-7732">제품 매뉴얼/FAQ</a>
+                <a href="tel:010-6633-7732">24시 A/S 챗봇상담</a>
+            </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3>사용자 관리</h3>
-                    <p>가족 구성원별로 개별 계정을 생성하고 권한을 설정할 수 있습니다. 임시 비밀번호 발급도 간편합니다.</p>
-                </div>
+            <!-- Feature Cards -->
+            <ul class="ga_func">
+                <li>
+                    <h3>부재중인 집에<br>손님이 방문하면?</h3>
+                    <p>원거리 도어락 여·닫힘 조작</p>
+                </li>
+                <li>
+                    <h3>우리 아이,<br>잘 귀가했을까 궁금하면?</h3>
+                    <p>가족 귀가 알림</p>
+                </li>
+                <li>
+                    <h3>렌탈하우스 손님이<br>방문할 때면?</h3>
+                    <p>일회용 비밀번호 발급</p>
+                </li>
+                <li>
+                    <h3>도어락 비밀번호,<br>누가 본 것 같다면?</h3>
+                    <p>원격 비밀번호 변경</p>
+                </li>
+            </ul>
 
-                <div class="feature-card">
-                    <div class="feature-icon">⚙️</div>
-                    <h3>원격 설정</h3>
-                    <p>도어락의 모든 설정을 앱에서 간편하게 변경할 수 있습니다. 볼륨, 조명, 보안 모드 등을 자유롭게 조정하세요.</p>
-                </div>
+            <!-- Phone Contact -->
+            <div class="ga_phone">
+                <h3>궁금하신 점이 있으신가요?</h3>
+                <a href="tel:010-6633-7732">010-6633-7732</a>
+            </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🔐</div>
-                    <h3>강화된 보안</h3>
-                    <p>AES 256비트 암호화로 모든 통신을 안전하게 보호합니다. 해킹과 복제가 불가능한 첨단 보안 시스템입니다.</p>
+            <!-- Use Case Scenarios -->
+            <div class="ga_case">
+                <h3>학교생활·사회생활로<br>집을 자주 비우는 1인 가구 솔루션</h3>
+
+                <div class="accessSwiper">
+                    <div class="swiper-slide">
+                        <div class="slide_title">홈서비스</div>
+                        <dl class="slide_when">
+                            <dt>이럴 땐?</dt>
+                            <dd>[도시가스 알림]<br>부재로 다시 방문하겠습니다?</dd>
+                        </dl>
+                        <div class="slide_how">
+                            <em>"더 이상 미루지마세요"</em>
+                        </div>
+                        <dl class="slide_solution">
+                            <dt>액세스 솔루션</dt>
+                            <dd>1회용 비밀번호 발급</dd>
+                        </dl>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="slide_title">부동산 방문</div>
+                        <dl class="slide_when">
+                            <dt>이럴 땐?</dt>
+                            <dd>평일 낮, 부동산에서<br>집을 보러 온다면?</dd>
+                        </dl>
+                        <div class="slide_how">
+                            <em>"어디서나 도어락 잠금 해제"</em>
+                        </div>
+                        <dl class="slide_solution">
+                            <dt>액세스 솔루션</dt>
+                            <dd>방문자 비밀번호 발급</dd>
+                            <dd>실시간 푸시 알림</dd>
+                        </dl>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="slide_title">택배 수령</div>
+                        <dl class="slide_when">
+                            <dt>이럴 땐?</dt>
+                            <dd>기다리던 고가의 택배 상품!<br>집 앞에 두기 걱정된다면?</dd>
+                        </dl>
+                        <div class="slide_how">
+                            <em>"집에 들여놔 주세요~"</em>
+                        </div>
+                        <dl class="slide_solution">
+                            <dt>액세스 솔루션</dt>
+                            <dd>스마트한 도어락 열기/닫기</dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Compatible Products Section -->
-        <section class="products-section">
-            <h2 class="section-title">IoT 지원 제품</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <h3>프리미엄 시리즈</h3>
-                    <p>최고급 IoT 기능<br>완벽한 스마트홈 연동</p>
-                </div>
+            <!-- FAQ Link -->
+            <div style="text-align: center; margin: 60px 0;">
+                <a href="tel:010-6633-7732" style="display: inline-block; padding: 15px 50px; background: #00a9ce; color: #fff; font-size: 20px; font-weight: 600; text-decoration: none; border-radius: 30px;">FAQ 바로가기</a>
+            </div>
 
-                <div class="product-card">
-                    <h3>디지털 도어락</h3>
-                    <p>실용적인 IoT 기능<br>편리한 원격 제어</p>
-                </div>
-
-                <div class="product-card">
-                    <h3>스마트 시리즈</h3>
-                    <p>기본 IoT 기능<br>합리적인 가격</p>
+            <!-- App Download -->
+            <div class="ga_app">
+                <h3>게이트맨 액세스 앱 다운로드</h3>
+                <div class="app_links">
+                    <a href="https://play.google.com/store/apps/details?id=com.august.gateman" target="_blank">구글 플레이 스토어</a>
+                    <a href="https://apps.apple.com/kr/app/게이트맨-액세스/id1522549283" target="_blank">애플 앱 스토어</a>
                 </div>
             </div>
-        </section>
 
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <h2>IoT 서비스 문의</h2>
-            <p>GATEMAN IoT 스마트 출입 서비스에 대해 더 알고 싶으신가요?</p>
-            <p>지금 바로 상담받으세요!</p>
-            <div class="phone-number">📞 010-6633-7732</div>
-        </section>
+            <!-- Compatible Products -->
+            <div class="ga_products">
+                <h3>게이트맨 액세스 호환 제품</h3>
+                <div class="product_list">
+                    <a href="tel:010-6633-7732">GM-1000L Series</a>
+                    <a href="tel:010-6633-7732">GM-900S</a>
+                    <a href="tel:010-6633-7732">GM-500S</a>
+                    <a href="tel:010-6633-7732">GP-900D</a>
+                    <a href="tel:010-6633-7732">GP-700D</a>
+                    <a href="tel:010-6633-7732">GP-500R</a>
+                    <a href="tel:010-6633-7732">GP-500RC</a>
+                    <a href="tel:010-6633-7732">G-SUIT Scan+</a>
+                    <a href="tel:010-6633-7732">G-SUIT Touch+</a>
+                    <a href="tel:010-6633-7732">G-SUIT Simple+</a>
+                    <a href="tel:010-6633-7732">DANDY+</a>
+                    <a href="tel:010-6633-7732">G-CLICK Scan+</a>
+                    <a href="tel:010-6633-7732">G-CLICK Touch+</a>
+                </div>
+            </div>
+        </div>
+    </article>
 
-        <!-- Footer -->
-        <footer>
+    <!-- Contact Section -->
+    <section class="contact_section">
+        <h3>GATEMAN 김해 미리양 대리점</h3>
+        <p>궁금하신 점이 있으시면 언제든지 연락주세요</p>
+        <a href="tel:010-6633-7732">010-6633-7732</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div style="background: #2c3e50; color: white; padding: 40px 20px; text-align: center;">
             <p><strong>GATEMAN 김해 미리양 대리점</strong></p>
             <p>경상남도 김해시 | 전화: 010-6633-7732</p>
-            <p>&copy; 2024 GATEMAN. All rights reserved.</p>
-        </footer>
-    </div>
+            <p style="margin-top: 20px; opacity: 0.8;">&copy; 2024 GATEMAN. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="/gateman-website/js/main.js"></script>
 </body>
