@@ -151,11 +151,41 @@ body {
 .gsu_list li .img:hover img {transform: scale(1.1); transition: transform 5s;}
 
 /* Tabs */
-.acTab {display: flex; justify-content: center; background: #00aad0;}
-.acTab li {flex: 1; max-width: 350px; text-align: center; cursor: pointer; transition: all 0.3s;}
-.acTab li.on, .acTab li:hover {background: #fff;}
-.acTab li.on a, .acTab li:hover a {color: #00aad0;}
-.acTab li a {display: block; padding: 28px 15px; font-size: 26px; font-weight: bold; color: #fff; text-decoration: none;}
+.acTab {
+    display: table;
+    width: 100%;
+    padding: 0 0 0 40px;
+    margin: 0 0 10px;
+    background: #00aad0;
+    list-style: none;
+    height: 50px;
+}
+.acTab li {
+    display: table-cell;
+    width: 320px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.acTab li a {
+    display: inline-block;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #f2f2f2;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 30px;
+    transition: all 0.3s;
+    line-height: 50px;
+    width: 100%;
+}
+.acTab li.on a,
+.acTab li a.active-nav {
+    color: #1f1f1f;
+    background: #ffffff;
+    border-radius: 30px;
+}
 
 .ac_content {display: none;}
 .ac_content.active {display: block;}
@@ -173,7 +203,12 @@ body {
 
     .iot_area h1 {font-size: 36px;}
     .iot_area p {font-size: 16px;}
-    .acTab li a {font-size: 18px; padding: 18px 10px;}
+
+    /* Tab navigation mobile */
+    .acTab {padding: 0; height: auto;}
+    .acTab li {display: table-cell; width: auto;}
+    .acTab li a {font-size: 13px; line-height: 40px;}
+
     .gn_title {font-size: 32px;}
 
     /* ga_VS table - stack vertically on mobile */
