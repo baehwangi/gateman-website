@@ -149,6 +149,11 @@ body {
 .gsu_list li .img {overflow: hidden; border-radius: 30px;}
 .gsu_list li .img img {transform: scale(1.0); transition: transform 3s;}
 .gsu_list li .img:hover img {transform: scale(1.1); transition: transform 5s;}
+.gsu_list li .btm {position: absolute; bottom: 0; left: 0; width: 100%; height: 140px; padding: 24px 30px; display: flex; align-items: center; flex-direction: column;}
+.gsu_list li .btm::before {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 0 0 30px 30px; background: rgba(0,0,0,0.2); box-shadow: 0 4px 30px rgba(0,0,0,0.1); backdrop-filter: blur(5px);}
+.gsu_list li .btm span {position: relative; display: block; width: 100%; text-align: left; color: #fff; z-index: 1;}
+.gsu_list li .btm .txt {font-size: 20px;}
+.gsu_list li .btm .function {font-size: 24px; font-weight: bold;}
 
 /* Tabs */
 .acTab {
@@ -185,6 +190,80 @@ body {
     color: #1f1f1f;
     background: #ffffff;
     border-radius: 30px;
+}
+
+/* HOW TO USE Tabs */
+.access_tab {
+    width: 100%;
+    max-width: 1000px;
+    margin: 60px auto 0;
+    height: 224px;
+    border-radius: 112px;
+    padding: 46px 80px;
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+.access_tab .acTab {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+
+.access_tab .acTab li {
+    width: 182px;
+    display: block;
+}
+
+.access_tab .acTab li button {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    padding: 90px 0 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.access_tab .acTab li button span {
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 38px;
+}
+
+.access_tab .acTab li.tab01 button {
+    background: url(/gateman-website/images/access/ga_slide_tab_01.png) 50% 0 no-repeat;
+    background-size: 80px;
+}
+
+.access_tab .acTab li.tab02 button {
+    background: url(/gateman-website/images/access/ga_slide_tab_02.png) 50% 0 no-repeat;
+    background-size: 80px;
+}
+
+.access_tab .acTab li.tab03 button {
+    background: url(/gateman-website/images/access/ga_slide_tab_03.png) 50% 0 no-repeat;
+    background-size: 80px;
+}
+
+.access_tab .acTab li.tab04 button {
+    background: url(/gateman-website/images/access/ga_slide_tab_04.png) 50% 0 no-repeat;
+    background-size: 80px;
+}
+
+.access_tab .acTab li.active button span {
+    height: 40px;
+    border-radius: 20px;
+    background-color: #00aad0;
+    color: #fff;
 }
 
 .ac_content {display: none;}
@@ -387,22 +466,37 @@ body {
                 </ul>
 
                 <div class="ga_Smart_use">
-                    <p class="tit">게이트맨 액세스 활용 시나리오</p>
+                    <div class="tit">IoT로 도어락을<br class="hide-m">
+                    스마트하게 사용하는 방법</div>
+
                     <ul class="gsu_list">
                         <li>
-                            <a href="tel:010-6633-7732" class="img">
-                                <img src="https://gateman.kr/common/img/access/ac_slide01_01.png" alt="홈서비스">
-                            </a>
+                            <div class="img"><img src="https://gateman.kr/common/img/access/ga_Smart_list_01.png" alt="원거리 도어락 여·닫힘 조작"></div>
+                            <div class="btm">
+                                <span class="txt">부재중인 집에<br>손님이 방문하면?</span>
+                                <span class="function">원거리 도어락 여·닫힘 조작</span>
+                            </div>
                         </li>
                         <li>
-                            <a href="tel:010-6633-7732" class="img">
-                                <img src="https://gateman.kr/common/img/access/ac_slide01_02.png" alt="부동산 방문">
-                            </a>
+                            <div class="img"><img src="https://gateman.kr/common/img/access/ga_Smart_list_02.png" alt="가족 귀가 알림"></div>
+                            <div class="btm">
+                                <span class="txt">우리 아이,<br>잘 귀가했을까 궁금하면?</span>
+                                <span class="function">가족 귀가 알림</span>
+                            </div>
                         </li>
                         <li>
-                            <a href="tel:010-6633-7732" class="img">
-                                <img src="https://gateman.kr/common/img/access/ac_slide01_03.png" alt="택배 수령">
-                            </a>
+                            <div class="img"><img src="https://gateman.kr/common/img/access/ga_Smart_list_03.png" alt="일회용 비밀번호 발급"></div>
+                            <div class="btm">
+                                <span class="txt">렌탈하우스 손님이<br>방문할 때면?</span>
+                                <span class="function">일회용 비밀번호 발급</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img"><img src="https://gateman.kr/common/img/access/ga_Smart_list_04.png" alt="원격 비밀번호 변경"></div>
+                            <div class="btm">
+                                <span class="txt">도어락 비밀번호,<br>누가 본 것 같다면?</span>
+                                <span class="function">원격 비밀번호 변경</span>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -483,26 +577,26 @@ body {
                 <div class="gn_block_title" style="font-size: 18px; color: #00aad0; text-align: center; margin-bottom: 20px;"><span>HOW TO USE</span></div>
 
                 <!-- Tab Navigation -->
-                <div class="access_tab" style="width: 100%; max-width: 1000px; margin: 60px auto 0; min-height: 224px; border-radius: 112px; padding: 46px 80px; display: flex; align-items: center; background-color: #f4f4f4;">
-                    <ul class="acTab" style="width: 100%; display: flex; justify-content: space-between; list-style: none; padding: 0; margin: 0;">
-                        <li class="tab01 active" style="width: 182px;">
-                            <button tab-con="acTab01" type="button" style="position: relative; width: 100%; border: none; background: url(/gateman-website/images/access/ga_slide_tab_01.png) no-repeat 50% 0; background-size: 80px; padding: 90px 0 0; cursor: pointer;">
-                                <span style="display: block; margin-top: 20px; font-size: 18px; font-weight: bold; line-height: 38px; height: 40px; border-radius: 20px; background-color: #00aad0; color: #fff;">1인 가구</span>
+                <div class="access_tab">
+                    <ul class="acTab">
+                        <li class="tab01 active">
+                            <button tab-con="acTab01" type="button">
+                                <span>1인 가구</span>
                             </button>
                         </li>
-                        <li class="tab02" style="width: 182px;">
-                            <button tab-con="acTab02" type="button" style="position: relative; width: 100%; border: none; background: url(/gateman-website/images/access/ga_slide_tab_02.png) no-repeat 50% 0; background-size: 80px; padding: 90px 0 0; cursor: pointer;">
-                                <span style="display: block; margin-top: 20px; font-size: 18px; font-weight: bold; line-height: 38px;">반려동물 가구</span>
+                        <li class="tab02">
+                            <button tab-con="acTab02" type="button">
+                                <span>반려동물 가구</span>
                             </button>
                         </li>
-                        <li class="tab03" style="width: 182px;">
-                            <button tab-con="acTab03" type="button" style="position: relative; width: 100%; border: none; background: url(/gateman-website/images/access/ga_slide_tab_03.png) no-repeat 50% 0; background-size: 80px; padding: 90px 0 0; cursor: pointer;">
-                                <span style="display: block; margin-top: 20px; font-size: 18px; font-weight: bold; line-height: 38px;">워킹맘&대디</span>
+                        <li class="tab03">
+                            <button tab-con="acTab03" type="button">
+                                <span>워킹맘&대디</span>
                             </button>
                         </li>
-                        <li class="tab04" style="width: 182px;">
-                            <button tab-con="acTab04" type="button" style="position: relative; width: 100%; border: none; background: url(/gateman-website/images/access/ga_slide_tab_04.png) no-repeat 50% 0; background-size: 80px; padding: 90px 0 0; cursor: pointer;">
-                                <span style="display: block; margin-top: 20px; font-size: 18px; font-weight: bold; line-height: 38px;">렌트하우스</span>
+                        <li class="tab04">
+                            <button tab-con="acTab04" type="button">
+                                <span>렌트하우스</span>
                             </button>
                         </li>
                     </ul>
