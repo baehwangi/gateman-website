@@ -1,0 +1,22 @@
+# Python scripts (build tools)
+*.py
+__pycache__/
+*.pyc
+
+# Screenshots and temporary files
+.playwright-mcp/
+.claude/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

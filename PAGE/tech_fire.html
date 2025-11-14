@@ -55,7 +55,121 @@ var enforce_ssl = true;</script>
 <!-- ICON -->
 <link rel="shortcut icon" href="https://gateman.kr/files/attach/xeicon/favicon.ico" />
 
-<style> .xe_content { font-size:13px; }</style>
+<style> .xe_content { font-size:13px; }
+    .custom-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: white !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+        z-index: 10000 !important;
+        width: 100% !important;
+    }
+
+    .custom-header .container {
+        max-width: 1400px !important;
+        margin: 0 auto !important;
+        padding: 0 20px !important;
+    }
+
+    .header-content {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 15px 0 !important;
+    }
+
+    .custom-header .logo {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+
+    .custom-header .logo img {
+        height: 50px !important;
+        width: auto !important;
+    }
+
+    .custom-header .dealer-badge {
+        background: #1a5490 !important;
+        color: white !important;
+        padding: 10px 20px !important;
+        border-radius: 25px !important;
+        font-size: 17.6px !important;
+        font-weight: 600 !important;
+    }
+
+    .custom-header .main-nav ul {
+        display: flex !important;
+        list-style: none !important;
+        gap: 40px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .custom-header .main-nav a {
+        text-decoration: none !important;
+        color: #333 !important;
+        font-weight: 500 !important;
+        font-size: 16px !important;
+        transition: color 0.3s !important;
+    }
+
+    .custom-header .main-nav a:hover,
+    .custom-header .main-nav a.active {
+        color: #1a5490 !important;
+    }
+
+    .custom-header .header-contact {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        color: #1a5490 !important;
+        font-weight: 600 !important;
+        font-size: 17.6px !important;
+    }
+
+    .custom-header .mobile-menu-btn {
+        display: none !important;
+        background: none !important;
+        border: none !important;
+        font-size: 1.5rem !important;
+        color: #333 !important;
+        cursor: pointer !important;
+    }
+
+    @media (max-width: 1000px) {
+        .custom-header .main-nav {
+            display: none !important;
+        }
+        .custom-header .mobile-menu-btn {
+            display: block !important;
+        }
+        .custom-header .header-contact {
+            display: none !important;
+        }
+        .custom-header .dealer-badge {
+            display: none !important;
+        }
+        .custom-header .logo {
+            justify-content: center !important;
+            flex: 1 !important;
+        }
+        .header-content {
+            position: relative !important;
+        }
+        .custom-header .mobile-menu-btn {
+            position: absolute !important;
+            right: 0 !important;
+        }
+    }
+
+    /* Add margin to body to prevent content from going under fixed header */
+    #kso-container {
+        margin-top: 80px !important;
+    }
+</style>
 <link rel="canonical" href="tech_fire.html" />
 <meta property="og:locale" content="ko_KR" />
 <meta property="og:type" content="website" />
@@ -119,19 +233,366 @@ xe.msg_select_menu = "대상 메뉴 선택";
 //]]>
 </script>
 
-<style>
-#kso-topbar,
-#kso-footer,
-#kso-copyright,
-.kso-topbar,
-.kso-footer,
-.kso-copyright {
-    display: none !important;
-}
-</style>
 
+
+
+
+
+
+
+<style>
+
+
+
+
+
+
+/* Mobile Header - Enhanced */
+.mobile-header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10001 !important;
+    padding: 15px 20px;
+}
+
+.mobile-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.mobile-header .logo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mobile-header .logo-center img {
+    height: 40px;
+}
+
+.mobile-header .hamburger-menu {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #333 !important;
+    cursor: pointer;
+    padding: 0;
+    margin-left: auto;
+    transition: color 0.3s;
+    z-index: 10;
+}
+
+.mobile-header.menu-open .hamburger-menu {
+    color: white !important;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #3d4f5c;
+    z-index: 10000 !important;
+    overflow-y: auto;
+    padding: 0;
+}
+
+.mobile-menu.active {
+    display: block !important;
+}
+
+.mobile-menu-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-item a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    color: white !important;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.mobile-menu-item a:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: white !important;
+}
+
+.mobile-menu-item a i {
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 14px;
+}
+
+/* Show on mobile */
+@media (max-width: 768px) {
+    .mobile-header {
+        display: block !important;
+    }
+
+    .custom-header {
+        display: none !important;
+    }
+
+    #kso-container {
+        margin-top: 70px !important;
+    }
+}
+
+/* Mobile Bottom Buttons - Enhanced */
+.mobile-bottom-buttons {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 99999 !important;
+    padding: 15px;
+}
+
+.mobile-button-group {
+    display: flex;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.mobile-btn {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white !important;
+    background: #1a5490 !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none !important;
+    transition: all 0.3s;
+}
+
+.mobile-btn:hover {
+    background: #2c6eb8 !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.mobile-btn:visited {
+    color: white !important;
+}
+
+.mobile-btn i {
+    font-size: 18px;
+    color: white !important;
+}
+
+/* Show on mobile */
+@media (max-width: 768px) {
+    .mobile-bottom-buttons {
+        display: block !important;
+    }
+
+    body {
+        padding-bottom: 80px !important;
+    }
+}
+
+
+
+/* Scroll to Top Button */
+#scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 9998;
+    transition: all 0.3s;
+}
+
+#scroll-to-top:hover {
+    background: #0097a7;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+#scroll-to-top.show {
+    display: flex;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    #scroll-to-top {
+        bottom: 100px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+
+
+/* Ensure mobile elements take full width */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+
+    .mobile-header {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 !important;
+    }
+
+    .mobile-bottom-buttons {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 !important;
+    }
+
+    #kso-container {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+
+    .container {
+        max-width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+</style>
 </head>
 <body>
+
+<!-- Mobile Header -->
+<div class="mobile-header" id="mobileHeader">
+    <div class="mobile-header-content">
+        <div class="logo-center">
+            <a href="main.html">
+                <img src="../LOGO/logo.png" alt="GATEMAN Logo">
+            </a>
+        </div>
+        <button class="hamburger-menu" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-item">
+        <a href="smartdoorlock.html">
+            스마트도어락
+            <i class="fas fa-chevron-right"></i>
+        </a>
+    </div>
+    <div class="mobile-menu-item">
+        <a href="iot_gatemanaccess.html">
+            IoT서비스
+            <i class="fas fa-chevron-right"></i>
+        </a>
+    </div>
+    <div class="mobile-menu-item">
+        <a href="technology.html">
+            테크놀로지
+            <i class="fas fa-chevron-right"></i>
+        </a>
+    </div>
+    <div class="mobile-menu-item">
+        <a href="cs_support.html">
+            고객지원
+            <i class="fas fa-chevron-right"></i>
+        </a>
+    </div>
+</div>
+
+<!-- Mobile Bottom Buttons -->
+<div class="mobile-bottom-buttons">
+    <div class="mobile-button-group">
+        <a href="smartdoorlock.html" class="mobile-btn">
+            <i class="fas fa-door-open"></i>
+            제품보기
+        </a>
+        <a href="tel:010-6633-7732" class="mobile-btn">
+            <i class="fas fa-phone"></i>
+            문의하기
+        </a>
+    </div>
+</div>
+
+<script>
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const header = document.getElementById('mobileHeader');
+    menu.classList.toggle('active');
+    header.classList.toggle('menu-open');
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    const menu = document.getElementById('mobileMenu');
+    const header = document.getElementById('mobileHeader');
+    const hamburger = document.querySelector('.hamburger-menu');
+
+    if (menu.classList.contains('active') &&
+        !menu.contains(event.target) &&
+        !hamburger.contains(event.target)) {
+        menu.classList.remove('active');
+        header.classList.remove('menu-open');
+    }
+});
+
+// Close menu when clicking a menu item
+document.querySelectorAll('.mobile-menu-item a').forEach(item => {
+    item.addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.remove('active');
+        document.getElementById('mobileHeader').classList.remove('menu-open');
+    });
+});
+</script>
+
+
+
+
+
+
+
 
 <!-- Custom Header -->
 <header class="custom-header">
@@ -199,73 +660,7 @@ xe.msg_select_menu = "대상 메뉴 선택";
 	</div>
 </div>
 
-<ul class="float-menu list-unstyled">
-	<h2 class="title pointColor font-lato"></h2>
-	<li class="float-link profile">
-			
-		<img src="https://gateman.kr/files/attach/images/260/cadf9e8236b030643c8c8d3ec78b4c7f.png" class="img-responsive center-block" />	</li>
-	<li class="float-link summary"></li>
-		<li class="float-link kso-member-login">
-		<div class="member-title"><span>로그인</span></div>
-		<form action="./" method="post" ><input type="hidden" name="error_return_url" value="/tech_fire" /><input type="hidden" name="mid" value="tech_fire" /><input type="hidden" name="vid" value="" /><input type="hidden" name="ruleset" value="@login" />
-								
-			<input type="hidden" name="act" value="procMemberLogin" />
-			<input type="hidden" name="success_return_url" value="/tech_fire" />
-				
-			<div style="margin-bottom:5px">
-				<!--[if lt IE 9]>
-				<span>이메일</span><![endif]-->
-				<input type="email" class="form-control" name="user_id" id="uid" value="" placeholder="이메일" required />
-			</div>
-			<div>
-				<!--[if lt IE 9]><span>비밀번호</span><![endif]-->
-				<input class="form-control" type="password" name="password" id="upw" value="" placeholder="비밀번호" required />
-			</div>
-			<div class="checkbox" style="overflow:hidden">
-				<label  for="keepid_opt" class="help-inline keep-sign pull-left">
-					<input type="checkbox" name="keep_signed" id="keepid_opt" value="Y" onclick="if(this.checked) return confirm('브라우저를 닫더라도 로그인이 계속 유지될 수 있습니다.\n\n로그인 유지 기능을 사용할 경우 다음 접속부터는 로그인할 필요가 없습니다.\n\n단, 게임방, 학교 등 공공장소에서 이용 시 개인정보가 유출될 수 있으니 꼭 로그아웃을 해주세요.');"> 로그인 유지				</label>
-				<a href="https://gateman.kr/index.php?mid=tech_fire&amp;act=dispMemberFindAccount" class="pull-right find-account">ID/PW 찾기</a>
-			</div>
-			<div class="clearfix">
-				<a href="https://gateman.kr/index.php?mid=tech_fire&amp;act=dispMemberSignUpForm" class="btn-kso btn-rect pointBg pull-left" style="width:49%; display:none;">회원가입</a>
-				<button data-toggle="modal" data-target="#kso-modal" class="btn-kso btn-rect pointBg pull-right" style="width:100%">로그인</button>
-			</div>
-		</form>
-	</li>	<li class="float-link">
-		<div class="btn-select">
-		  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-globe"></i>&nbsp; Language:한국어 <i class="fa fa-angle-down fa-lg"></i>
-		  </button>
-		  <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#" onclick="doChangeLangType('en');return false;">English</a></li>
-                                                		  </ul>
-		</div>
-	</li>	<li class="float-link search-area">
-		<form action="https://gateman.kr/" method="get" >
-			<input type="hidden" name="vid" value="" />
-			<input type="hidden" name="mid" value="tech_fire" />
-			<input type="hidden" name="act" value="IS" />
-			<i class="fa fa-search"></i>
-			<input type="text" name="is_keyword" value="" class="search-box" placeholder="Search..." />	
-		</form>	
-	</li>
-	<li class="float-link social-icon">
-		<a href="https://www.facebook.com/Egateman/" target="_blank" class="pointHover">
-			<span class="fa-stack fa-lg">
-				<i class="fa fa-circle fa-stack-2x"></i>
-				<i class="xi-facebook fa-stack-1x fa-inverse"></i>
-			</span>	
-		</a>		<a href="https://www.youtube.com/channel/UCiYYNhMvhPUsqTfyht2eBnQ" target="_blank" class="pointHover">
-			<span class="fa-stack fa-lg">
-				<i class="fa fa-circle fa-stack-2x"></i>
-				<i class="xi-youtube fa-stack-1x fa-inverse"></i>
-			</span>	
-		</a>		<a href="https://www.instagram.com/gateman_official/" target="_blank" class="pointHover">
-			<span class="fa-stack fa-lg">
-				<i class="fa fa-circle fa-stack-2x"></i>
-				<i class="xi-instagram fa-stack-1x fa-inverse"></i>
-			</span>	
-		</a>					</li>
-</ul><section class="clearfix"></section>
+
 <section class="sub-promotion">
 	<div class="displaytable">
 		<div class="displaytablecell vertical-bottom">
@@ -299,7 +694,7 @@ xe.msg_select_menu = "대상 메뉴 선택";
 	<li class="fadeUpMotion" data-wow-delay="0.6s"><a href="tech_sign.html" onclick="ga('send','event','2depth 메뉴이동','버튼클릭','인증기술')" target="_parent">인증기술</a></li>
 	<li class="fadeUpMotion" data-wow-delay="0.8s"><a href="tech_convenient.html" onclick="ga('send','event','2depth 메뉴이동','버튼클릭','편의기능')" target="_parent">편의기능</a></li>
 	<li class="fadeUpMotion" data-wow-delay="0.9s"><a href="tech_safety.html" onclick="ga('send','event','2depth 메뉴이동','버튼클릭','안전기술')" target="_parent">안전기술</a></li>
-	<!-- <li class="fadeUpMotion" data-wow-delay="1.0s"><a href="https://gateman.kr/tech_homenetwork" onclick="ga('send','event','2depth 메뉴이동','버튼클릭','홈네트워크')" target="_parent">홈네트워크</a></li> -->
+	<!-- <li class="fadeUpMotion" data-wow-delay="1.0s"><a href="tech_convenient.html" onclick="ga('send','event','2depth 메뉴이동','버튼클릭','홈네트워크')" target="_parent">홈네트워크</a></li> -->
 	<li class="fadeUpMotion" data-wow-delay="1.1s"><a class="active-nav">화재대응기술</a></li>
 	<li class="fadeUpMotion" data-wow-delay="1.2s"><a href="tech_shock.html" onclick="ga('send','event','2depth 메뉴이동','버튼클릭','전기충격무력화')" target="_parent">전기충격무력화</a></li>
 </ul>
@@ -369,5 +764,98 @@ xe.msg_select_menu = "대상 메뉴 선택";
 </script>	
 <!-- ETC -->
 <div class="wfsr"></div>
-<script src="https://gateman.kr/addons/autolink/autolink.js?20191022190255"></script><script src="https://gateman.kr/common/js/plugins/ui/jquery-ui.min.js?20191022190255"></script><script src="https://gateman.kr/common/js/plugins/ui/jquery.ui.datepicker-ko.js?20191022190255"></script><script src="https://gateman.kr/addons/resize_image/js/resize_image.min.js?20191022190255"></script><script src="https://gateman.kr/files/cache/ruleset/92762280c95e26e2932df6efd59da1d5.ko.js?20250918171404"></script></body>
+<script src="https://gateman.kr/addons/autolink/autolink.js?20191022190255"></script><script src="https://gateman.kr/common/js/plugins/ui/jquery-ui.min.js?20191022190255"></script><script src="https://gateman.kr/common/js/plugins/ui/jquery.ui.datepicker-ko.js?20191022190255"></script><script src="https://gateman.kr/addons/resize_image/js/resize_image.min.js?20191022190255"></script><script src="https://gateman.kr/files/cache/ruleset/92762280c95e26e2932df6efd59da1d5.ko.js?20250918171404"></script>
+<section id="kso-footer" style="background: #f5f5f5; padding: 30px 0 15px 0; color: #333; border-top: 3px solid #00bcd4;">
+  <div class="container">
+      <div class="row">
+          <!-- 로고 섹션 -->
+          <div class="col-md-3 mb-xs" style="text-align: center;">
+              <img src="../LOGO/logo.png" alt="GATEMAN Logo" style="height: 50px; margin-bottom: 10px;" />
+          </div>
+
+          <!-- 회사 정보 -->
+          <div class="col-md-4 mb-xs">
+              <h5 style="color: #00bcd4; font-weight: 700; margin-bottom: 12px; font-size: 14px; border-bottom: 2px solid #00bcd4; padding-bottom: 6px;">
+                  게이트맨 김해 밀양 공식 대리점
+              </h5>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                  <li style="margin-bottom: 8px; color: #555; font-size: 13px;">
+                      <i class="fas fa-user" style="color: #00bcd4; margin-right: 8px; width: 16px;"></i>
+                      <strong>대표자:</strong> 이한성
+                  </li>
+                  <li style="margin-bottom: 8px; color: #555; font-size: 13px;">
+                      <i class="fas fa-map-marker-alt" style="color: #00bcd4; margin-right: 8px; width: 16px;"></i>
+                      <strong>주소:</strong> 경남 김해시 외동 1120
+                  </li>
+              </ul>
+          </div>
+
+          <!-- 연락처 정보 -->
+          <div class="col-md-5">
+              <h5 style="color: #00bcd4; font-weight: 700; margin-bottom: 12px; font-size: 14px; border-bottom: 2px solid #00bcd4; padding-bottom: 6px;">
+                  문의하기
+              </h5>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                  <li style="margin-bottom: 8px;">
+                      <a href="tel:055-339-1382" style="color: #333; text-decoration: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; transition: all 0.3s;">
+                          <i class="fas fa-phone" style="color: #00bcd4; margin-right: 10px; font-size: 16px;"></i>
+                          055-339-1382
+                      </a>
+                  </li>
+                  <li style="margin-bottom: 8px;">
+                      <a href="tel:010-6633-7732" style="color: #333; text-decoration: none; font-size: 16px; font-weight: 700; display: flex; align-items: center; transition: all 0.3s;">
+                          <i class="fas fa-mobile-alt" style="color: #00bcd4; margin-right: 10px; font-size: 16px;"></i>
+                          010-6633-7732
+                      </a>
+                  </li>
+                  <li style="margin-bottom: 8px; color: #555; font-size: 13px;">
+                      <i class="fas fa-clock" style="color: #00bcd4; margin-right: 10px; width: 16px;"></i>
+                      <strong>24시간 영업 · 연중무휴</strong>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section id="kso-copyright" class="kso-copyright" style="background: #f5f5f5; padding: 12px 0; color: #999; border-top: 1px solid #ddd;">
+  <div class="container">
+      <div class="text-center" style="font-size: 12px;">
+          <p style="margin: 0;">© 2024 김해 밀양 공식 대리점. ALL RIGHTS RESERVED.</p>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Scroll to Top Button -->
+<button id="scroll-to-top" onclick="scrollToTop()" title="맨 위로">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+// Show/hide scroll to top button
+window.addEventListener('scroll', function() {
+    const scrollButton = document.getElementById('scroll-to-top');
+    if (window.pageYOffset > 300) {
+        scrollButton.classList.add('show');
+    } else {
+        scrollButton.classList.remove('show');
+    }
+});
+
+// Scroll to top function
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+</script>
+
+</body>
 </html>
