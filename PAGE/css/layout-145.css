@@ -1,0 +1,79 @@
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.sub-head-title h1 {
+    color: #ffffff;
+    letter-spacing:0px !important;
+	font-size:45px !important;
+	margin-bottom:30px !important;
+	font-weight:bold !important;
+	font-family:'Noto Sans KR',sans-serif !important;
+}
+
+.sub-head-title p {
+    color: #ffffff;
+    font-size:17px !important;
+    letter-spacing:0px !important;
+	font-weight:500 !important;
+	padding-bottom:30px !important
+	font-family:'Noto Sans KR',sans-serif !important;
+}
+
+#kso-nav .navbar-nav>li>a,.login-menu li,.login-menu button,.login-menu a {color:#000}
+.kso-opener .line, .navbar-nav > li.active > a > span, .navbar-nav > li:hover > a > span {
+    border-bottom-color: #000;
+}
+a.pull-right.find-account{
+    display:none;
+}
+#xs-menu .xs-register a{
+    display:none;
+}
+li.float-link.kso-member-login {
+    display: none;
+}
+#kso-footer {
+font-weight: 500;
+}
+  .popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    max-width: 340px;
+    max-height: 700px;
+    font-size: 16px;
+    z-index: 9999;
+  }
+  
+  .popup-content p {
+    margin-bottom: 10px;
+  }
+  .popup-content a {
+    color: black;
+
+  }
+  .popup-content button {
+    margin: 5px;
+    color: white;
+    background-color: #00bfff;
+    width: 300px;
+    height: 50px;
+    border-radius: 4%;
+    border: none;
+
+  }
+  .popup-content .etc {
+    display: block;
+    text-align: center;
+    margin-top: 10px; 
+  }
+  .popup-content a {
+    font-weight: 1000;
+    text-decoration: underline;
+  }
