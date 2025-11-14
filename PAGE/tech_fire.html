@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- META -->
+<meta charset="utf-8">
+<meta name="Generator" content="XpressEngine">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- TITLE -->
+<title>GATEMAN</title>
+<!-- CSS -->
+<link rel="stylesheet" href="https://gateman.kr/common/css/xe.min.css?20191022190255" />
+<link rel="stylesheet" href="https://gateman.kr/common/js/plugins/ui/jquery-ui.min.css?20191022190255" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css" />
+<link rel="stylesheet" href="https://gateman.kr/common/xeicon/xeicon.min.css?20191022190255" />
+<link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/bootstrap.min.css?20211203123330" />
+<link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/jquery.mmenu.all.css?20211203123330" />
+<link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/owl.carousel.min.css?20211203123330" />
+<link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/owl.theme.default.min.css?20211203123330" />
+<link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/animate.min.css?20211203123330" />
+<link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/jquery.mb.YTPlayer.min.css?20211203123330" />
+<!--[if ie 8]><link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/YTPlayer.ie8.css?20211203123330" />
+<![endif]--><link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/bootstrap.kso.min.css?20220121102414" />
+<link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/board.css?20211203123330" />
+<link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/kso-layout.css?20250922125413" />
+<!--[if ie 8]><link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/ie8.css?20211203123330" />
+<![endif]--><link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/kso-custom.css?20220125164631" />
+<link rel="stylesheet" href="https://gateman.kr/modules/editor/styles/default/style.css?20191022190255" />
+<link rel="stylesheet" href="https://gateman.kr/files/faceOff/260/layout.css?20230322110445" />
+<!-- JS -->
+<script>
+var current_url = "https://gateman.kr/?mid=tech_fire";
+var request_uri = "https://gateman.kr/";
+var current_mid = "tech_fire";
+var waiting_message = "서버에 요청 중입니다. 잠시만 기다려주세요.";
+var ssl_actions = new Array();
+var default_url = "https://gateman.kr/";
+var enforce_ssl = true;</script>
+<!--[if lt IE 9]><script src="https://gateman.kr/common/js/jquery-1.x.min.js?20191022190255"></script>
+<![endif]--><!--[if gte IE 9]><!--><script src="https://gateman.kr/common/js/jquery.min.js?20191022190255"></script>
+<!--<![endif]--><script src="https://gateman.kr/common/js/x.min.js?20191022190255"></script>
+<script src="https://gateman.kr/common/js/xe.min.js?20191022190255"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/respond.min.js?20211203123331"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/html5shiv.js?20211203123330"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/bootstrap.min.js?20211203123330"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/jquery.mmenu.min.all.js?20211203123330"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/jquery.sticky.js?20211203123330"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/waypoints.min.js?20211203123331"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/owl.carousel.min.js?20211203123331"></script>
+<!--[if ie 8]><script src="https://gateman.kr/layouts/KSO_Infinity/js/jquery.mb.YTPlayer.ie8.js?20211203123330"></script>
+<![endif]--><script src="https://gateman.kr/layouts/KSO_Infinity/js/scrolltopcontrol.js?20211203123331"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/jquery.kso.js?20211203123330"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/holder.js?20211203123330"></script>
+<!-- RSS -->
+<!-- ICON -->
+<link rel="shortcut icon" href="https://gateman.kr/files/attach/xeicon/favicon.ico" />
+
+<style> .xe_content { font-size:13px; }</style>
+<link rel="canonical" href="tech_fire.html" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://gateman.kr/tech_fire" />
+<meta property="og:title" content="GATEMAN" />
+<style type="text/css">
+.pointColor {color:#1eb9d5}
+.pointHover:hover,a.pointHover:hover {color:#1eb9d5!important}
+.fullsub_nav li.on a,
+.pointBg {color:#fff;background-color:#1eb9d5}
+a.pointBgHover:hover,a.pointBgHover:active,.pointBgHover:hover,
+li.active a.pointBgHover{background-color:#1eb9d5!important;border-color:#1eb9d5!important}
+/* color */
+.section-header,
+.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,
+.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,
+#kso-tab .icon-tabElement li.active>a,#kso-tab .icon-tabElement li:hover a,
+.aside a.list-group-item.on,.aside a.list-group-item:hover,
+.company-info i,
+#kso-about .icon-wrap a, #kso-about .icon-wrap a:hover i,
+#kso-teaser .col-text:hover h4 a,#kso-teaser .col-text:hover i {color:#1eb9d5}
+/* border color */
+.dropdown-menu>li>a:hover {border-left-color:#1eb9d5}
+#responBoard .nav-pills>li.active:after {border-top-color: #1eb9d5!important}
+/* bg color */
+.nav-mini li:hover a,
+#kso-promotion .caption-title:before,
+#kso-teaser .col-img .teaser-caption h3:before,
+#kso-about .icon-wrap a:after,
+.parallax h3:after,.parallax h3:before {background-color:#1eb9d5 !important}
+#kso-about .icon-wrap a {box-shadow: 0 0 4px #1eb9d5;}
+#kso-nav.sticked .navbar-nav>li>a,
+.navbar-nav>li>a {padding-left:7px;padding-right:7px}
+#kso-about .kso-about-2:before {background-image:url(https://gateman.kr/files/attach/images/260/abce8295c0b6860f5b3d738b420d7236.png)}#kso-parallax-1 {background-image:url(https://gateman.kr/files/attach/images/260/99b983892094b5c6d2fc3736e15da7d1.png)}.sub-promotion{background-image:url(https://gateman.kr/files/attach/images/260/0b339adafed2b8268dd4b4da45b988d0.png)}.sub-promotion{height:400px}
+.kso-clUp,.kso-clDown,.kso-clLeft,.kso-clRight,.kso-clFade,.kso-ftUp,.kso-ftDown,.kso-ftLeft,.kso-ftRight,.kso-ftFade {visibility:visible}@media (min-width: 1200px) {.container {max-width: 1170px;}}
+@media (max-width: 480px) { 
+}
+@media \0screen { 
+	.kso-player {height:995px} 
+	#kso-nav.sticked,#kso-nav.sticked .dropdown-menu {
+		background:rgb(255,255,255);
+	}
+}
+</style>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css' />
+<link href="https://gateman.kr/common/css/gateman/sub/animate.css" rel="stylesheet" type="text/css" />
+<link href="https://gateman.kr/common/css/gateman/sub/common.css" rel="stylesheet" type="text/css" />
+<link href="https://gateman.kr/common/css/gateman/sub/style_pc_2.css" rel="stylesheet" type="text/css" />
+<link href="https://gateman.kr/common/css/gateman/sub/style_tab_2.css" rel="stylesheet" type="text/css" />
+<link href="https://gateman.kr/common/css/gateman/sub/style_m_2.css" rel="stylesheet" type="text/css" />
+<meta name="format-detection" content="telephone=no"><script>
+//<![CDATA[
+xe.current_lang = "ko";
+xe.cmd_find = "찾기";
+xe.cmd_cancel = "취소";
+xe.cmd_confirm = "확인";
+xe.msg_no_root = "루트는 선택 할 수 없습니다.";
+xe.msg_no_shortcut = "바로가기는 선택 할 수 없습니다.";
+xe.msg_select_menu = "대상 메뉴 선택";
+//]]>
+</script>
+</head>
+<body>
+
+<!-- Custom Header -->
+<header class="custom-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <a href="main.html" style="display: flex; align-items: center; gap: 15px; text-decoration: none;">
+                    <img src="../LOGO/logo.png" alt="GATEMAN Logo">
+                    <span class="dealer-badge">김해 밀양 공식 대리점</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="smartdoorlock.html">스마트도어락</a></li>
+                    <li><a href="iot_gatemanaccess.html">IoT 서비스</a></li>
+                    <li><a href="technology.html">테크놀로지</a></li>
+                    <li><a href="cs_support.html">고객지원</a></li>
+                </ul>
+            </nav>
+            <div class="header-contact">
+                <i class="fas fa-phone"></i>
+                <span>010-6633-7732</span>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- 
+** KSODESIGN LAYOUT 
+** http://ksodesign.com/
+** 1.0.8 INFINITE(RX)
+** Copyright 2010~2016 KSODESIGN	 
+** Contributing author : KSJade (ksodesign1@naver.com)
+-->
+
+<!--[if (gt ie 8)|(!ie)]><![endif]-->
+<!--[if lt IE 9]><![endif]-->
+
+
+<div id="kso-container">
+<p class="skip"><a href="#content">메뉴 건너뛰기</a></p>
+<div id="xs-header" class="visible-xs visible-sm text-center">
+	<a href="#xs-menu" class="menu-button visible-xs visible-sm"><i class="fa fa-bars fa-lg"></i></a>			
+	<a class="xs-sitelogo" href="main.html">
+		<img src="https://gateman.kr/files/attach/images/260/0f14d32d85e9dfc6e74bad18ffb71558.png">	</a>
+	<a class="xs-language visible-xs visible-sm" data-toggle="modal" data-target="#language_modal"><i class="fa fa-globe fa-lg"></i></a>	
+</div>
+<nav id="xs-menu">
+	<ul>
+		<li class="xs-register">
+			<a href="https://gateman.kr/index.php?mid=tech_fire&amp;act=dispMemberSignUpForm" class="xs-signup"><i class="xi-user-plus fa-lg"></i><br />회원가입</a><a href="https://gateman.kr/index.php?mid=tech_fire&amp;act=dispMemberLoginForm" class="xs-login"><i class="xi-upload-square fa-lg"></i><br />로그인</a>								
+		</li>
+		<li class="xs-searchbox">
+	        <!--
+			<span class="xs-sitename text-center" style="padding:15px"><span>KSODESIGN</span></span>
+	         -->
+            <br />
+         	<img src="https://gateman.kr/files/attach/images/260/cadf9e8236b030643c8c8d3ec78b4c7f.png" class="img-responsive center-block" />            <br />
+			<form action="https://gateman.kr/" method="get" >
+				<input type="hidden" name="vid" value="" />
+				<input type="hidden" name="mid" value="tech_fire" />
+				<input type="hidden" name="act" value="IS" />
+				<input type="text" name="is_keyword" value="" class="xs-search" required="required" placeholder="Search..." />	
+			</form>	
+		</li>
+		<li>
+			<a href="https://smartstore.naver.com/gatemanstore" target="_blank">브랜드스토어</a>
+					</li><li>
+			<a href="https://gateman.kr/smartdoorlock">스마트도어락</a>
+			<ul>
+				<li>
+					<a href="https://gateman.kr/gateman">GATEMAN</a>
+					<ul>
+						<li>
+							<a href="https://gateman.kr/pushpull">푸시풀</a>
+						</li><li>
+							<a href="https://gateman.kr/mortise">핸들일체형</a>
+						</li><li>
+							<a href="https://gateman.kr/rim">핸들분리형</a>
+						</li>					</ul>				</li><li>
+					<a href="https://gateman.kr/b2b">건설사전용제품</a>
+									</li><li>
+					<a href="https://gateman.kr/door_handle">방문 손잡이</a>
+					<ul>
+						<li>
+							<a href="https://gateman.kr/gd_2701p">푸시풀</a>
+						</li><li>
+							<a href="https://gateman.kr/gd2962l_gd2966l">레버형</a>
+						</li>					</ul>				</li>			</ul>		</li><li>
+			<a href="https://gateman.kr/iot_gatemanaccess">IoT서비스</a>
+			<ul>
+				<li>
+					<a href="https://gateman.kr/iot_gatemanaccess">Gateman Access</a>
+									</li><li>
+					<a href="https://gateman.kr/gatemandot">Gateaman DOT</a>
+									</li><li>
+					<a href="https://gateman.kr/smartliving">스마트리빙</a>
+									</li>			</ul>		</li><li class="active">
+			<a href="tech_sign.html">테크놀로지</a>
+			<ul>
+				<li>
+					<a href="tech_sign.html">인증기술</a>
+									</li><li>
+					<a href="tech_convenient.html">편의기능</a>
+									</li><li>
+					<a href="tech_safety.html">안전기술</a>
+									</li><li class="active">
+					<a href="tech_fire.html">화재대응기술</a>
+									</li><li>
+					<a href="tech_shock.html">전기충격무력화</a>
+									</li>			</ul>		</li><li>
+			<a href="https://gateman.kr/find_reseller">대리점찾기</a>
+					</li><li>
+			<a href="https://gateman.kr/cs_support">고객지원</a>
+			<ul>
+				<li>
+					<a href="https://gateman.kr/faq_tech">자주하는질문</a>
+					<ul>
+						<li>
+							<a href="https://gateman.kr/faq_tech">제품기능</a>
+						</li><li>
+							<a href="https://gateman.kr/faq_move">설치/이전</a>
+						</li><li>
+							<a href="https://gateman.kr/faq_as">A/S 비용</a>
+						</li><li>
+							<a href="https://gateman.kr/faq_purchase">제품구입</a>
+						</li><li>
+							<a href="https://gateman.kr/faq_key">키 관련</a>
+						</li><li>
+							<a href="https://gateman.kr/faq_access">게이트맨 액세스 관련</a>
+						</li>					</ul>				</li><li>
+					<a href="https://gateman.kr/cs_manual">제품 매뉴얼</a>
+									</li><li>
+					<a href="https://gateman.kr/cs_live">실시간 상담</a>
+									</li>			</ul>		</li><li>
+			<a href="https://gateman.kr/purchase">제품구매</a>
+			<ul>
+				<li>
+					<a href="https://gateman.kr/purchase">제품구매</a>
+									</li>			</ul>		</li><li>
+			<a href="https://gateman.kr/brand">게이트맨</a>
+			<ul>
+				<li>
+					<a href="https://gateman.kr/brand">브랜드</a>
+					<ul>
+						<li>
+							<a href="https://gateman.kr/brand_introduction">브랜드 소개</a>
+						</li><li>
+							<a href="https://gateman.kr/brand_competitiveness">브랜드 경쟁력</a>
+						</li>					</ul>				</li><li>
+					<a href="https://gateman.kr/media">미디어센터</a>
+					<ul>
+						<li>
+							<a href="https://gateman.kr/media">뉴스</a>
+						</li><li>
+							<a href="https://gateman.kr/notice">공지사항</a>
+						</li><li>
+							<a href="https://gateman.kr/video">비디오</a>
+						</li>					</ul>				</li>			</ul>		</li>			</ul>
+</nav>
+<a href="#kso-container" class="kso-scroll pointBg" style="display:inline"><span class="visible-xs">SCROLL TO TOP</span></a>
+<div class="modal modal-mini kso_modal fade" id="language_modal">
+	<div class="modal-dialog">
+		<div class="modal-content" style="padding:30px">
+			<h3 class="modal-title text-center">LANGUAGE</h3>
+			<form action="./" method="post"  class="clear"><input type="hidden" name="error_return_url" value="/tech_fire" /><input type="hidden" name="act" value="" /><input type="hidden" name="mid" value="tech_fire" /><input type="hidden" name="vid" value="" /><input type="hidden" name="ruleset" value="@login" />
+				<div class="modal-body">
+					<ul class="lang_list text-left" role="menu">
+						<li><a href="#" onclick="doChangeLangType('en');return false;">English</a>
+						</li>					</ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn-kso btn-kso-default btn-block pointBgColor" data-dismiss="modal">닫기</button>
+				</div>
+			</form>		
+		</div>
+	</div>
+</div>
+<header id="kso-header" class="visible-md visible-lg ">
+		<nav id="kso-nav">
+		<div class="navbar nav-md">
+			<div class="container" class="header-full">
+				<div class="row">
+					<div class="navbar-header">
+						<a class="sitelogo" href="https://gateman.kr/">
+														<img src="https://gateman.kr/files/attach/images/260/c3e1444a4d24003b9d60dc70c25647b8.png" class="img-responsive logo-default" />							<img src="https://gateman.kr/files/attach/images/260/6ecdf299adf7044e4ecc9c4413f6b2ee.png" class="img-responsive logo-sticky" />						</a>
+					</div>
+					<a href="#" class="kso-opener pull-right">
+						<span class="lines-wrap">
+							<span class="first line"></span>
+							<span class="second line"></span>
+							<span class="third line"></span>
+						</span>
+					</a>				
+					<div class="navbar-collapse collapse pull-right">
+						<ul class="nav navbar-nav">
+							
+																								<li class="">
+										<a href="https://smartstore.naver.com/gatemanstore" class="dropdown-toggle rounded font-en" target="_blank"><span>브랜드스토어</span></a>
+																			</li>
+																																<li class="dropdown">
+										<a href="https://gateman.kr/smartdoorlock" class="dropdown-toggle rounded font-en"><span>스마트도어락</span></a>
+										<ul class="dropdown-menu active-arrow">
+																																				<li class="dropdown">
+														<a id="dLabel" href="https://gateman.kr/gateman" class="dropdown-toggle"><span class="visible-xs pull-left">-&nbsp;</span> GATEMAN</a>
+														<ul class="dropdown-menu">
+																																																<li class="dropdown">
+																		<a href="https://gateman.kr/pushpull">푸시풀</a>
+																	</li>
+																																																																<li class="dropdown">
+																		<a href="https://gateman.kr/mortise">핸들일체형</a>
+																	</li>
+																																																																<li class="dropdown">
+																		<a href="https://gateman.kr/rim">핸들분리형</a>
+																	</li>
+																																													</ul>													</li>
+																																																<li class="">
+														<a id="dLabel" href="https://gateman.kr/b2b" class="dropdown-toggle"><span class="visible-xs pull-left">-&nbsp;</span> 건설사전용제품</a>
+																											</li>
+																																																<li class="dropdown">
+														<a id="dLabel" href="https://gateman.kr/door_handle" class="dropdown-toggle"><span class="visible-xs pull-left">-&nbsp;</span> 방문 손잡이</a>
+														<ul class="dropdown-menu">
+																																																<li class="">
+																		<a href="https://gateman.kr/gd_2701p">푸시풀</a>
+																	</li>
+																																																																<li class="">
+																		<a href="https://gateman.kr/gd2962l_gd2966l">레버형</a>
+																	</li>
+																																													</ul>													</li>
+																																	</ul>									</li>
+																																<li class="dropdown">
+										<a href="https://gateman.kr/iot_gatemanaccess" class="dropdown-toggle rounded font-en"><span>IoT서비스</span></a>
+										<ul class="dropdown-menu active-arrow">
+																																				<li class="">
+														<a id="dLabel" href="https://gateman.kr/iot_gatemanaccess" class="dropdown-toggle"><span class="visible-xs pull-left">-&nbsp;</span> Gateman Access</a>
+																											</li>
+																																																<li class="">
+														<a id="dLabel" href="https://gateman.kr/gatemandot" class="dropdown-toggle"><span class="visible-xs pull-left">-&nbsp;</span> Gateaman DOT</a>
+																											</li>
+																																																<li class="">
+														<a id="dLabel" href="https://gateman.kr/smartliving" class="dropdown-toggle"><span class="visible-xs pull-left">-&nbsp;</span> 스마트리빙</a>
+																											</li>
+																																	</ul>									</li>
+																																<li class="dropdown active">
+										<a href="tech_sign.html" class="dropdown-toggle rounded font-en"><span>테크놀로지</span></a>
+										<ul class="dropdown-menu active-arrow">
+																																				<li class="">
+														<a id="dLabel" href="tech_sign.html" class="dropdown-toggle"><span class="visible-xs pull-left">-&nbsp;</span> 인증기술</a>
+																											</li>
+																																																<li class="">
+														<a id="dLabel" href="tech_convenient.html" class="dropdown-toggle"><span class="visible-xs pull-left">-&nbsp;</span> 편의기능</a>
+																											</li>
+																																																<li class="">
+														<a id="dLabel" href="tech_safety.html" class="dropdown-toggle"><span class="visible-xs pull-left">-&nbsp;</span> 안전기술</a>
+																											</li>
+																																																<li class=" active">
+														<a id="dLabel" href="tech_fire.html" class="dropdown-toggle"><span class="visible-xs pull-left">-&nbsp;</span> 화재대응기술</a>
+																											</li>
+																																																<li class="">
+														<a id="dLabel" href="tech_shock.html" class="dropdown-toggle"><span class="visible-xs pull-left">-&nbsp;</span> 전기충격무력화</a>
+																											</li>
+																																	</ul>									</li>
+																																<li class="">
+										<a href="https://gateman.kr/find_reseller" class="dropdown-toggle rounded font-en"><span>대리점찾기</span></a>
+																			</li>
+																																<li class="dropdown">
+										<a href="https://gateman.kr/cs_support" class="dropdown-toggle rounded font-en"><span>고객지원</span></a>
+										<ul class="dropdown-menu active-arrow">
+																																				<li class="dropdown">
+														<a id="dLabel" href="https://gateman.kr/faq_tech" class="dropdown-toggle"><span class="visible-xs pull-left">-&nbsp;</span> 자주하는질문</a>
+														<ul class="dropdown-menu">
+																																																<li class="">
+																		<a href="https://gateman.kr/faq_tech">제품기능</a>
+																	</li>
+																																																																<li class="">
+																		<a href="https://gateman.kr/faq_move">설치/이전</a>
+																	</li>
+																																																																<li class="">
+																		<a href="https://gateman.kr/faq_as">A/S 비용</a>
+																	</li>
+																																																																<li class="">
+																		<a href="https://gateman.kr/faq_purchase">제품구입</a>
+																	</li>
+																																																																<li class="">
+																		<a href="https://gateman.kr/faq_key">키 관련</a>
+																	</li>
+																																																																<li class="">
+																		<a href="https://gateman.kr/faq_access">게이트맨 액세스 관련</a>
+																	</li>
+																																													</ul>													</li>
+																																																<li class="">
+														<a id="dLabel" href="https://gateman.kr/cs_manual" class="dropdown-toggle"><span class="visible-xs pull-left">-&nbsp;</span> 제품 매뉴얼</a>
+																											</li>
+																																																<li class="">
+														<a id="dLabel" href="https://gateman.kr/cs_live" class="dropdown-toggle"><span class="visible-xs pull-left">-&nbsp;</span> 실시간 상담</a>
+																											</li>
+																																	</ul>									</li>
+																																<li class="dropdown">
+										<a href="https://gateman.kr/purchase" class="dropdown-toggle rounded font-en"><span>제품구매</span></a>
+										<ul class="dropdown-menu active-arrow">
+																																				<li class="">
+														<a id="dLabel" href="https://gateman.kr/purchase" class="dropdown-toggle"><span class="visible-xs pull-left">-&nbsp;</span> 제품구매</a>
+																											</li>
+																																	</ul>									</li>
+																																<li class="dropdown">
+										<a href="https://gateman.kr/brand" class="dropdown-toggle rounded font-en"><span>게이트맨</span></a>
+										<ul class="dropdown-menu active-arrow">
+																																				<li class="dropdown">
+														<a id="dLabel" href="https://gateman.kr/brand" class="dropdown-toggle"><span class="visible-xs pull-left">-&nbsp;</span> 브랜드</a>
+														<ul class="dropdown-menu">
+																																																<li class="">
+																		<a href="https://gateman.kr/brand_introduction">브랜드 소개</a>
+																	</li>
+																																																																<li class="">
+																		<a href="https://gateman.kr/brand_competitiveness">브랜드 경쟁력</a>
+																	</li>
+																																													</ul>													</li>
+																																																<li class="dropdown">
+														<a id="dLabel" href="https://gateman.kr/media" class="dropdown-toggle"><span class="visible-xs pull-left">-&nbsp;</span> 미디어센터</a>
+														<ul class="dropdown-menu">
+																																																<li class="">
+																		<a href="https://gateman.kr/media">뉴스</a>
+																	</li>
+																																																																<li class="dropdown">
+																		<a href="https://gateman.kr/notice">공지사항</a>
+																	</li>
+																																																																<li class="dropdown">
+																		<a href="https://gateman.kr/video">비디오</a>
+																	</li>
+																																													</ul>													</li>
+																																	</ul>									</li>
+																					</ul>
+					</div>
+				</div>
+			</div>			
+		</div>		
+	</nav>
+	<div class="ieCover"></div>
+</header>
+<ul class="float-menu list-unstyled">
+	<h2 class="title pointColor font-lato"></h2>
+	<li class="float-link profile">
+			
+		<img src="https://gateman.kr/files/attach/images/260/cadf9e8236b030643c8c8d3ec78b4c7f.png" class="img-responsive center-block" />	</li>
+	<li class="float-link summary"></li>
+		<li class="float-link kso-member-login">
+		<div class="member-title"><span>로그인</span></div>
+		<form action="./" method="post" ><input type="hidden" name="error_return_url" value="/tech_fire" /><input type="hidden" name="mid" value="tech_fire" /><input type="hidden" name="vid" value="" /><input type="hidden" name="ruleset" value="@login" />
+								
+			<input type="hidden" name="act" value="procMemberLogin" />
+			<input type="hidden" name="success_return_url" value="/tech_fire" />
+				
+			<div style="margin-bottom:5px">
+				<!--[if lt IE 9]>
+				<span>이메일</span><![endif]-->
+				<input type="email" class="form-control" name="user_id" id="uid" value="" placeholder="이메일" required />
+			</div>
+			<div>
+				<!--[if lt IE 9]><span>비밀번호</span><![endif]-->
+				<input class="form-control" type="password" name="password" id="upw" value="" placeholder="비밀번호" required />
+			</div>
+			<div class="checkbox" style="overflow:hidden">
+				<label  for="keepid_opt" class="help-inline keep-sign pull-left">
+					<input type="checkbox" name="keep_signed" id="keepid_opt" value="Y" onclick="if(this.checked) return confirm('브라우저를 닫더라도 로그인이 계속 유지될 수 있습니다.\n\n로그인 유지 기능을 사용할 경우 다음 접속부터는 로그인할 필요가 없습니다.\n\n단, 게임방, 학교 등 공공장소에서 이용 시 개인정보가 유출될 수 있으니 꼭 로그아웃을 해주세요.');"> 로그인 유지				</label>
+				<a href="https://gateman.kr/index.php?mid=tech_fire&amp;act=dispMemberFindAccount" class="pull-right find-account">ID/PW 찾기</a>
+			</div>
+			<div class="clearfix">
+				<a href="https://gateman.kr/index.php?mid=tech_fire&amp;act=dispMemberSignUpForm" class="btn-kso btn-rect pointBg pull-left" style="width:49%; display:none;">회원가입</a>
+				<button data-toggle="modal" data-target="#kso-modal" class="btn-kso btn-rect pointBg pull-right" style="width:100%">로그인</button>
+			</div>
+		</form>
+	</li>	<li class="float-link">
+		<div class="btn-select">
+		  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-globe"></i>&nbsp; Language:한국어 <i class="fa fa-angle-down fa-lg"></i>
+		  </button>
+		  <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#" onclick="doChangeLangType('en');return false;">English</a></li>
+                                                		  </ul>
+		</div>
+	</li>	<li class="float-link search-area">
+		<form action="https://gateman.kr/" method="get" >
+			<input type="hidden" name="vid" value="" />
+			<input type="hidden" name="mid" value="tech_fire" />
+			<input type="hidden" name="act" value="IS" />
+			<i class="fa fa-search"></i>
+			<input type="text" name="is_keyword" value="" class="search-box" placeholder="Search..." />	
+		</form>	
+	</li>
+	<li class="float-link social-icon">
+		<a href="https://www.facebook.com/Egateman/" target="_blank" class="pointHover">
+			<span class="fa-stack fa-lg">
+				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="xi-facebook fa-stack-1x fa-inverse"></i>
+			</span>	
+		</a>		<a href="https://www.youtube.com/channel/UCiYYNhMvhPUsqTfyht2eBnQ" target="_blank" class="pointHover">
+			<span class="fa-stack fa-lg">
+				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="xi-youtube fa-stack-1x fa-inverse"></i>
+			</span>	
+		</a>		<a href="https://www.instagram.com/gateman_official/" target="_blank" class="pointHover">
+			<span class="fa-stack fa-lg">
+				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="xi-instagram fa-stack-1x fa-inverse"></i>
+			</span>	
+		</a>					</li>
+</ul><section class="clearfix"></section>
+<section class="sub-promotion">
+	<div class="displaytable">
+		<div class="displaytablecell vertical-bottom">
+			<div class="container">
+				<div class="sub-head-title">
+					<h1 class="font-en">테크놀로지</h1>
+					<p>당신의 세상을 지키는 안전 기술의 진보.<br>게이트맨의 앞선 기술력을 알아보세요.</p>
+				</div>
+			</div>			
+		</div>
+	</div>
+</section>	
+<article class="kso-contents" id="content" style="padding:0;">
+		<div class="container" style="max-width:100%; width:100%; padding:0;">
+		<div class="row">
+			<div class="col-md-12 content-body" style="padding:0;"><div class="xe_content xe-widget-wrapper " style="float:left;padding:none;margin:none;width:100%;"><div style="padding:0px 0px 0px 0px !important;">
+
+
+
+
+<section id="container">
+<div class="sub-bnr tech-bnr">
+<dl>
+	<dt class="fadeUpMotion" data-wow-delay="0.6s">화재대응기술</dt>
+</dl>
+</div>
+
+<div class="sub-nav tech-nav">
+<div class="section">
+<ul class="nav6">
+	<li class="fadeUpMotion" data-wow-delay="0.6s"><a href="tech_sign.html" onclick="ga('send','event','2depth 메뉴이동','버튼클릭','인증기술')" target="_parent">인증기술</a></li>
+	<li class="fadeUpMotion" data-wow-delay="0.8s"><a href="tech_convenient.html" onclick="ga('send','event','2depth 메뉴이동','버튼클릭','편의기능')" target="_parent">편의기능</a></li>
+	<li class="fadeUpMotion" data-wow-delay="0.9s"><a href="tech_safety.html" onclick="ga('send','event','2depth 메뉴이동','버튼클릭','안전기술')" target="_parent">안전기술</a></li>
+	<!-- <li class="fadeUpMotion" data-wow-delay="1.0s"><a href="https://gateman.kr/tech_homenetwork" onclick="ga('send','event','2depth 메뉴이동','버튼클릭','홈네트워크')" target="_parent">홈네트워크</a></li> -->
+	<li class="fadeUpMotion" data-wow-delay="1.1s"><a class="active-nav">화재대응기술</a></li>
+	<li class="fadeUpMotion" data-wow-delay="1.2s"><a href="tech_shock.html" onclick="ga('send','event','2depth 메뉴이동','버튼클릭','전기충격무력화')" target="_parent">전기충격무력화</a></li>
+</ul>
+</div>
+</div>
+
+<div class="sub-content pt15 pb15">
+<div class="bg-gray3">
+<div class="section tech-con">
+<div class="tb-box sec2">
+<div class="td-cell">
+<div class="tech-item">
+<p class="tech-item-img"><img alt="내화형소재" src="https://gateman.kr/common/img/technology/tech-item-img22.png" /></p>
+
+<div class="tech-item-info">
+<dl class="tech-item-type">
+	<dt>화재에 강한 내화형 소재</dt>
+	<dd>메인바디에 사용되는 특수소재는 섭씨 1,000도의 고온에서도 형태를 유지하여 유사시에도 정상작동하도록 제작되었습니다. 또한 이 소재는 전기절연성이 커서 정전기에도 강합니다. 화이버라스는 군용헬멧 등에 사용하고 있는 첨단소재이고, PCB 이중코팅으로 안정성을 높습니다.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+<div class="td-cell" data-wow-delay="0.3s">
+<div class="tech-item">
+<p class="tech-item-img"><img alt="안티파이어기술" src="https://gateman.kr/common/img/technology/tech-item-img23.png" /></p>
+
+<div class="tech-item-info">
+<dl class="tech-item-type">
+	<dt>불꽃이 새지 않는 안티파이어 기술</dt>
+	<dd>불꽃과 열기에 지속적으로 노출되면 도어록과 방화문의 틈새로 불꽃이 새어나와 화재가 전이됩니다. 게이트맨에서 개발한 내화기술(내부 설치형 브라켓)은 도어록과 방화문의 틈새를 완벽하게 차단해 화재가 전이되는 것을 막아줍니다.</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--  추가!! --></section>
+<!--script type="text/javascript" src="https://gateman.kr/common/js/gateman/jquery-1.12.4.js"></script--><script type="text/javascript" src="https://gateman.kr/common/js/gateman/wow.min.js"></script><script type="text/javascript" src="https://gateman.kr/common/js/gateman/script-f.js"></script><script type="text/javascript" src="https://gateman.kr/common/js/gateman/test-boot.js"></script><script type="text/javascript">
+		$(document).ready(function(){
+		
+			$('.sub-bnr dt').click(function(){
+				$(this).toggleClass('open-nav');
+				$(this).parent().parent().next().toggleClass('nav-drop');
+			});
+
+
+		});
+	</script></div></div></div>
+					</div>
+	</div>
+</article><section id="kso-footer" class="">
+	<div class="container">
+		<div class="row mBtm30">
+			<div class="col-md-3 mb-xs">
+												<img src="https://gateman.kr/files/attach/images/260/01f031d560bc353efc1c33d493dc1415.png" class="img-responsive center-block" />			</div>
+			<div class="col-md-4 col-md-offset-1 mb-xs">
+				<h5 class="deco-line font-en pointColor"><span>COMPANY INFO</span></h5>				<p class="footer-color">Experience a safer and more open world<br>
+아사아블로이코리아 주식회사<br>
+대표자 : 신현욱<br>
+사업자등록번호 : 128-86-00073<br>
+서울특별시 금천구 가산디지털1로 186<br>
+(가산동 459-11), 제이플라츠 빌딩 10층</p>
+			</div>
+			<div class="col-md-4">
+				<h5 class="deco-line font-en pointColor"><span>CONTACT US</span></h5>				<div class="company-info footer-color">
+					<ul class="list-unstyled">
+						<li><i class="xi-headset fa-lg"></i> AS문의 : 1544-3232</li>
+						<li><i class="xi-box fa-lg"></i> 제품문의 : 1577-1919</li> <br/> <li><i class="xi-announce fa-lg"></i> <a href="https://gateman.kr/tradeterms">표준 거래 약관 & 법적고지</a></li>						<li><i class="xi-check-shieldout fa-lg"></i> <a href="https://gateman.kr/security_center">보안센터</a></li>
+						<li><i class="xi-user-lock fa-lg"></i> <a href="https://gateman.kr/privacy_policy">개인정보취급방침</a></li>
+						<li><i class="xi-windows-ban fa-lg"></i> <a href="https://gateman.kr/unauthorized_mail">이메일 무단수집 거부</a></li>
+					</ul>
+				</div>				
+			</div>
+		</div>
+		<div class="row">
+			<ul class="social list-unstyled list-inline text-center">
+				<li>
+					<a href="https://www.facebook.com/Egateman/" class="pointHover" target="_blank" alt="">
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="xi-facebook fa-stack-1x fa-inverse"></i>
+						</span>					
+					</a>
+				</li>				<li>
+					<a href="https://www.youtube.com/channel/UCiYYNhMvhPUsqTfyht2eBnQ" class="pointHover" target="_blank" alt="">
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="xi-youtube fa-stack-1x fa-inverse"></i>
+						</span>					
+					</a>
+				</li>				<li>
+					<a href="https://www.instagram.com/gateman_official/" class="pointHover" target="_blank" alt="">
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="xi-instagram fa-stack-1x fa-inverse"></i>
+						</span>					
+					</a>
+				</li>											</ul>	
+		</div>	</div>
+</section><section id="kso-copyright" class="kso-copyright  ">
+	<div class="container">
+				<div class="sr-only">© <span class="conceptColor">k2s0o1d6e0s1i0g1n</span>. All Rights Reserved</div>
+		<div class="text-center">© ASSA ABLOY COPYRIGHT(C) IREVO. ALL RIGHTS RESERVED.</div>	</div>
+</section></div>
+<script type="text/javascript">
+	// <![CDATA[
+	(function($) {
+		$(document).ready(function(){
+			$("#kso-nav").sticky({topSpacing:0, className: 'sticked', wrapperClassName: 'kso-sticky hidden-xs'});
+			$("#kso-owl").owlCarousel({
+    			autoplayTimeout:4000
+			});
+		});
+			}) (jQuery);	
+	
+	// ]]>
+</script>	
+<!-- ETC -->
+<div class="wfsr"></div>
+<script src="https://gateman.kr/addons/autolink/autolink.js?20191022190255"></script><script src="https://gateman.kr/common/js/plugins/ui/jquery-ui.min.js?20191022190255"></script><script src="https://gateman.kr/common/js/plugins/ui/jquery.ui.datepicker-ko.js?20191022190255"></script><script src="https://gateman.kr/addons/resize_image/js/resize_image.min.js?20191022190255"></script><script src="https://gateman.kr/files/cache/ruleset/92762280c95e26e2932df6efd59da1d5.ko.js?20250918171404"></script></body>
+</html>
