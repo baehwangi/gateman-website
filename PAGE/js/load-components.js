@@ -1,23 +1,22 @@
 // Load header and footer components automatically
 (function() {
-    // Function to load HTML content
+    // Function to load HTML content using XMLHttpRequest (works with file:// protocol)
     function loadComponent(elementId, filePath) {
-        fetch(filePath)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Failed to load ' + filePath);
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', filePath, true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200 || xhr.status === 0) { // 0 for local files
+                    var element = document.getElementById(elementId);
+                    if (element) {
+                        element.innerHTML = xhr.responseText;
+                    }
+                } else {
+                    console.error('Failed to load ' + filePath);
                 }
-                return response.text();
-            })
-            .then(html => {
-                const element = document.getElementById(elementId);
-                if (element) {
-                    element.innerHTML = html;
-                }
-            })
-            .catch(error => {
-                console.error('Error loading component:', error);
-            });
+            }
+        };
+        xhr.send();
     }
 
     // Load components when DOM is ready

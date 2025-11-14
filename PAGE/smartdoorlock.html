@@ -19,6 +19,20 @@
 <link rel="shortcut icon" href="images/favicon.ico" />
 
 <style>
+/* Hide ALL Original Headers */
+#xs-header, #kso-header, #kso-nav, nav#xs-menu,
+.kso-header, .kso-nav, .xs-header, .xs-menu,
+header[id*="kso-"], nav[id*="kso-"],
+.navbar.nav-md, .navbar-header, .navbar-collapse,
+.float-menu, .nav-mini {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
 /* Custom Header Styles */
 .custom-header {
     position: fixed !important;
@@ -550,34 +564,8 @@
 </head>
 <body>
 
-<!-- Custom Header -->
-<header class="custom-header">
-    <div class="container">
-        <div class="header-content">
-            <div class="logo">
-                <a href="main.html" style="display: flex; align-items: center; gap: 15px; text-decoration: none;">
-                    <img src="../LOGO/logo.png" alt="GATEMAN Logo">
-                    <span class="dealer-badge">김해 밀양 공식 대리점</span>
-                </a>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="smartdoorlock.html">스마트도어락</a></li>
-                    <li><a href="purchase.html">IoT 서비스</a></li>
-                    <li><a href="technology.html">테크놀로지</a></li>
-                    <li><a href="cs_support.html">고객지원</a></li>
-                </ul>
-            </nav>
-            <div class="header-contact">
-                <i class="fas fa-phone"></i>
-                <span>010-6633-7732</span>
-            </div>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </div>
-</header>
+<!-- Header will be loaded here -->
+<div id="header-placeholder"></div>
 
 
 
@@ -742,62 +730,14 @@
 </section>
 
 <!-- Footer -->
-<section id="kso-footer" class="">
-  <div class="container">
-      <div class="row mBtm30">
-          <div class="col-md-3 mb-xs">
-                                          <img src="images/145/01f031d560bc353efc1c33d493dc1415.png" class="img-responsive center-block" />          </div>
-          <div class="col-md-4 col-md-offset-1 mb-xs">
-              <h5 class="deco-line font-en pointColor"><span>COMPANY INFO</span></h5>
-              <p class="footer-color">김해 밀양 공식 대리점<br>
-대표자 : [대표자명]<br>
-사업자등록번호 : [사업자번호]<br>
-주소 : [주소]</p>
-          </div>
-          <div class="col-md-4">
-              <h5 class="deco-line font-en pointColor"><span>CONTACT US</span></h5>
-              <div class="company-info footer-color">
-                  <ul class="list-unstyled">
-                      <li><i class="xi-headset fa-lg"></i> 문의 : 010-6633-7732</li>
-                      <li><i class="xi-box fa-lg"></i> 영업시간 : 평일 09:00-18:00</li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-      <div class="row">
-          <ul class="social list-unstyled list-inline text-center">
-              <li>
-                  <a href="https://www.facebook.com/Egateman/" class="pointHover" target="_blank" alt="">
-                      <span class="fa-stack fa-lg">
-                          <i class="fa fa-circle fa-stack-2x"></i>
-                          <i class="xi-facebook fa-stack-1x fa-inverse"></i>
-                      </span>
-                  </a>
-              </li>              <li>
-                  <a href="https://www.youtube.com/channel/UCiYYNhMvhPUsqTfyht2eBnQ" class="pointHover" target="_blank" alt="">
-                      <span class="fa-stack fa-lg">
-                          <i class="fa fa-circle fa-stack-2x"></i>
-                          <i class="xi-youtube fa-stack-1x fa-inverse"></i>
-                      </span>
-                  </a>
-              </li>              <li>
-                  <a href="https://www.instagram.com/gateman_official/" class="pointHover" target="_blank" alt="">
-                      <span class="fa-stack fa-lg">
-                          <i class="fa fa-circle fa-stack-2x"></i>
-                          <i class="xi-instagram fa-stack-1x fa-inverse"></i>
-                      </span>
-                  </a>
-              </li>                                      </ul>
-      </div>  </div>
-</section><section id="kso-copyright" class="kso-copyright">
-  <div class="container">
-      <div class="sr-only">© <span class="conceptColor">k2s0o1d6e0s1i0g1n</span>. All Rights Reserved</div>
-      <div class="text-center">© 김해 밀양 공식 대리점. ALL RIGHTS RESERVED.</div>
-  </div>
-</section>
+<!-- Footer will be loaded here -->
+<div id="footer-placeholder"></div>
 
 <!-- JavaScript -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+
+<!-- Load header and footer components -->
+<script src="js/load-components.js"></script>
 </body>
 </html>
