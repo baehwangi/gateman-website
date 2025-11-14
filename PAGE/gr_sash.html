@@ -1,0 +1,2262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- META -->
+<meta charset="utf-8">
+<meta name="Generator" content="XpressEngine">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- TITLE -->
+<title>GR-SASH</title>
+<!-- CSS -->
+<link rel="stylesheet" href="https://gateman.kr/common/css/xe.min.css?20191022190255" />
+<link rel="stylesheet" href="https://gateman.kr/common/js/plugins/ui/jquery-ui.min.css?20191022190255" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css" />
+<link rel="stylesheet" href="https://gateman.kr/common/xeicon/xeicon.min.css?20191022190255" />
+<link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/bootstrap.min.css?20211203123330" />
+<link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/jquery.mmenu.all.css?20211203123330" />
+<link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/owl.carousel.min.css?20211203123330" />
+<link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/owl.theme.default.min.css?20211203123330" />
+<link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/animate.min.css?20211203123330" />
+<link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/jquery.mb.YTPlayer.min.css?20211203123330" />
+<!--[if ie 8]><link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/YTPlayer.ie8.css?20211203123330" />
+<![endif]--><link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/bootstrap.kso.min.css?20220121102414" />
+<link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/board.css?20211203123330" />
+<link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/kso-layout.css?20250922125413" />
+<!--[if ie 8]><link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/ie8.css?20211203123330" />
+<![endif]--><link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/kso-custom.css?20220125164631" />
+<link rel="stylesheet" href="https://gateman.kr/modules/editor/styles/default/style.css?20191022190255" />
+<link rel="stylesheet" href="https://gateman.kr/files/faceOff/512/layout.css?20240701132859" />
+<!-- JS -->
+<script>
+var current_url = "https://gateman.kr/?mid=gm_900s";
+var request_uri = "https://gateman.kr/";
+var current_mid = "gm_900s";
+var waiting_message = "서버에 요청 중입니다. 잠시만 기다려주세요.";
+var ssl_actions = new Array();
+var default_url = "https://gateman.kr/";
+var enforce_ssl = true;</script>
+<!--[if lt IE 9]><script src="https://gateman.kr/common/js/jquery-1.x.min.js?20191022190255"></script>
+<![endif]--><!--[if gte IE 9]><!--><script src="https://gateman.kr/common/js/jquery.min.js?20191022190255"></script>
+<!--<![endif]--><script src="https://gateman.kr/common/js/x.min.js?20191022190255"></script>
+<script src="https://gateman.kr/common/js/xe.min.js?20191022190255"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/respond.min.js?20211203123331"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/html5shiv.js?20211203123330"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/bootstrap.min.js?20211203123330"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/jquery.mmenu.min.all.js?20211203123330"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/jquery.sticky.js?20211203123330"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/waypoints.min.js?20211203123331"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/owl.carousel.min.js?20211203123331"></script>
+<!--[if ie 8]><script src="https://gateman.kr/layouts/KSO_Infinity/js/jquery.mb.YTPlayer.ie8.js?20211203123330"></script>
+<![endif]--><script src="https://gateman.kr/layouts/KSO_Infinity/js/scrolltopcontrol.js?20211203123331"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/jquery.kso.js?20211203123330"></script>
+<script src="https://gateman.kr/layouts/KSO_Infinity/js/holder.js?20211203123330"></script>
+<!-- RSS -->
+<!-- ICON -->
+<link rel="shortcut icon" href="https://gateman.kr/files/attach/xeicon/favicon.ico" />
+
+<style>
+/* Hide ALL Original Headers */
+#xs-header, #kso-header, #kso-nav, nav#xs-menu,
+.kso-header, .kso-nav, .xs-header, .xs-menu,
+header[id*="kso-"], nav[id*="kso-"],
+.navbar.nav-md, .navbar-header, .navbar-collapse,
+.float-menu, .nav-mini {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Header - Force override */
+.header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: white !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    z-index: 10000 !important;
+    width: 100% !important;
+}
+
+.header .container {
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+.header-content {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 15px 0 !important;
+}
+
+.header .logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.header .logo img {
+    height: 50px !important;
+    width: auto !important;
+}
+
+.header .dealer-badge {
+    background: #1a5490 !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    border-radius: 25px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+}
+
+.header .main-nav ul {
+    display: flex !important;
+    list-style: none !important;
+    gap: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.header .main-nav a {
+    text-decoration: none !important;
+    color: #333 !important;
+    font-weight: 500 !important;
+    font-size: 1rem !important;
+    transition: color 0.3s !important;
+}
+
+.header .main-nav a:hover,
+.header .main-nav a.active {
+    color: #1a5490 !important;
+}
+
+.header .header-contact {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    color: #1a5490 !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+}
+
+.header .header-contact span {
+    color: #1a5490 !important;
+}
+
+.page-hero {
+    padding-top: 120px !important;
+    padding-bottom: 60px !important;
+    background: #1a1a1a !important;
+    color: white !important;
+    text-align: center !important;
+}
+
+.page-hero h1 {
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+    color: white !important;
+}
+
+.page-hero p {
+    font-size: 20px !important;
+    color: white !important;
+    opacity: 0.9 !important;
+}
+
+@media (max-width: 1000px) {
+    .header .main-nav {
+        display: none !important;
+    }
+    .header .header-contact {
+        display: none !important;
+    }
+    .header .dealer-badge {
+        display: none !important;
+    }
+}
+
+
+/* Header Styles */
+.header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: white !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    z-index: 10000 !important;
+    width: 100% !important;
+}
+
+.header .container {
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+.header-content {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 15px 0 !important;
+}
+
+.header .logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.header .logo img {
+    height: 50px !important;
+    width: auto !important;
+}
+
+.header .dealer-badge {
+    background: #1a5490 !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    border-radius: 25px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+}
+
+.header .main-nav ul {
+    display: flex !important;
+    list-style: none !important;
+    gap: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.header .main-nav a {
+    text-decoration: none !important;
+    color: #333 !important;
+    font-weight: 500 !important;
+    font-size: 1rem !important;
+    transition: color 0.3s !important;
+}
+
+.header .main-nav a:hover,
+.header .main-nav a.active {
+    color: #1a5490 !important;
+}
+
+.header .header-contact {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    color: #1a5490 !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+}
+
+.sub-promotion {
+    padding-top: 150px !important;
+    padding-bottom: 80px !important;
+    background: #1a1a1a !important;
+    color: white !important;
+    text-align: center !important;
+}
+
+.sub-promotion h1 {
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+    color: white !important;
+}
+
+.sub-promotion p {
+    font-size: 20px !important;
+    color: white !important;
+    opacity: 0.9 !important;
+}
+
+@media (max-width: 1000px) {
+    .header .main-nav {
+        display: none !important;
+    }
+    .header .header-contact {
+        display: none !important;
+    }
+    .header .dealer-badge {
+        font-size: 0.9rem !important;
+        padding: 8px 15px !important;
+    }
+}
+
+.xe_content { font-size:13px; }</style>
+<link rel="canonical" href="https://gateman.kr/gm_900s" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://gateman.kr/gm_900s" />
+<meta property="og:title" content="GM-900S" />
+<style type="text/css">
+.pointColor {color:#1eb9d5}
+.pointHover:hover,a.pointHover:hover {color:#1eb9d5!important}
+.fullsub_nav li.on a,
+.pointBg {color:#fff;background-color:#1eb9d5}
+a.pointBgHover:hover,a.pointBgHover:active,.pointBgHover:hover,
+li.active a.pointBgHover{background-color:#1eb9d5!important;border-color:#1eb9d5!important}
+/* color */
+.section-header,
+.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,
+.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,
+#kso-tab .icon-tabElement li.active>a,#kso-tab .icon-tabElement li:hover a,
+.aside a.list-group-item.on,.aside a.list-group-item:hover,
+.company-info i,
+#kso-about .icon-wrap a, #kso-about .icon-wrap a:hover i,
+#kso-teaser .col-text:hover h4 a,#kso-teaser .col-text:hover i {color:#1eb9d5}
+/* border color */
+.dropdown-menu>li>a:hover {border-left-color:#1eb9d5}
+#responBoard .nav-pills>li.active:after {border-top-color: #1eb9d5!important}
+/* bg color */
+.nav-mini li:hover a,
+#kso-promotion .caption-title:before,
+#kso-teaser .col-img .teaser-caption h3:before,
+#kso-about .icon-wrap a:after,
+.parallax h3:after,.parallax h3:before {background-color:#1eb9d5 !important}
+#kso-about .icon-wrap a {box-shadow: 0 0 4px #1eb9d5;}
+#kso-nav.sticked .navbar-nav>li>a,
+.navbar-nav>li>a {padding-left:7px;padding-right:7px}
+#kso-about .kso-about-2:before {background-image:url(https://gateman.kr/files/attach/images/512/abce8295c0b6860f5b3d738b420d7236.png)}#kso-parallax-1 {background-image:url(https://gateman.kr/files/attach/images/512/99b983892094b5c6d2fc3736e15da7d1.png)}.sub-promotion{background-image:url(https://gateman.kr/files/attach/images/512/f8ea5c4d0a6aeead57df03ff1176f6cb.jpg)}.sub-promotion{height:400px}
+.kso-clUp,.kso-clDown,.kso-clLeft,.kso-clRight,.kso-clFade,.kso-ftUp,.kso-ftDown,.kso-ftLeft,.kso-ftRight,.kso-ftFade {visibility:visible}@media (min-width: 1200px) {.container {max-width: 1170px;}}
+@media (max-width: 480px) { 
+}
+@media \0screen { 
+	.kso-player {height:995px} 
+	#kso-nav.sticked,#kso-nav.sticked .dropdown-menu {
+		background:rgb(255,255,255);
+	}
+}
+</style>
+<style type="text/css">
+        /******************** reset / common ********************/
+        .gaWrap {font-size: 20px;}
+        .gaWrap * {box-sizing: border-box; letter-spacing: -0.08rem; font-family: 'Noto Sans KR', sans-serif; padding: 0; margin: 0; color: #231f20;}
+        .gaWrap li, dd {list-style: none;}
+        .gaWrap a {text-decoration: none;}
+        .gaWrap img {max-width: 100%; vertical-align: top;}
+        .gn_Inner {width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 15px; overflow: hidden;}
+        .gn_block_title, .gn_block_title span {font-size: 20px; color: #00aad0; text-align: center; margin-bottom: 20px;}
+        .gn_title {position: relative; font-size: 48px; font-weight: bold; line-height: 1.2; text-align: center;}
+        .gn_title .sub + .tit {margin-top: 20px;}
+        .gn_title .tit + .sub {margin-top: 48px;}
+        .gn_title .sub {margin-top: 0; font-size: 20px; font-weight: 400; line-height: 1.4;}
+        .gn_title .sub p {margin-top: 26px; font-size: 20px; font-weight: 500;}
+        .gn_title span, .gn_color01 {color: #00aad0;}
+        .gn_Comment {margin-top:88px; padding-top: 30px !important; border-top: 1px solid #d5d5d5; font-size: 18px; font-weight: 300; color: #666;}
+        .gn_Comment li + li {margin-top: 8px;}
+        .gn_Comment li strong {font-weight: bold;}
+        table {table-layout: fixed; width: 100%; border-collapse: separate; border-spacing: 0;}
+        table caption {display: none; width: 1px; height: 1px; color: transparent;}
+        .gaWrap .hide-m, .gaWrap .hide_tbl_m {display: none;}
+        .gaWrap .hide-pc {display: block;}
+        #container {min-height: 100px;}
+        .gaWrap .imgM {display: none;}
+        .gaBlind {overflow:hidden;position:absolute;width:1px ;height:1px;margin:-1px;border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);}
+        @keyframes float {0% {transform: translatey(0px);}      50% {transform: translatey(-10px);} 100% {transform: translatey(0px);}}
+        @keyframes float2 {0% {transform: translatey(-10px);}   50% {transform: translatey(0px);}   100% {transform: translatey(-10px);}}
+        @keyframes float3 {0% {transform: translatey(0px);}     50% {transform: translatey(-5px);}  100% {transform: translatey(0px);}}
+        @keyframes float4 {0% {transform: translatey(-5px);}    50% {transform: translatey(0px);}   100% {transform: translatey(-5px);}}
+        /******************** content ********************/
+        /* ga_GM-900S */
+        .ga_GM-900S {padding: 320px 0 200px; background: #000 url(https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Main_bg.png) no-repeat 50% 0%; background-size: cover;}
+        .ga_GM-900S .gn_block_title span {color: #fff;}
+        .ga_GM-900S .gn_title * {color: #bebab7; letter-spacing: 1.5rem; font-weight: 300;}
+        .ga_GM-900S .gn_title strong {display: block; margin-top: 50px; font-weight: bold;}
+        .ga_GM-900S .gm-900S {position: relative; top: -20px;}
+        .ga_GM-900S .gm-900S .imgBlock {display: flex;}
+        .ga_GM-900S .gm-900S .imgBlock > div {width: 50%;}
+        .ga_GM-900S .gm-900S .imgBlock > .img01 {text-align: right; padding-top: 120px; padding-right: 0; margin-right: -50px;}
+        .ga_GM-900S .gm-900S .imgBlock > .img02 {text-align: left; padding-left: 0; padding-top: 470px; margin-left: -50px;}
+        .ga_GM-900S .gm-900S .img01 img {transform: translatey(0px); animation: float 6s ease-in-out infinite; transition: all 0.3s;}
+        .ga_GM-900S .gm-900S .img02 img {transform: translatey(0px); animation: float2 6s ease-in-out infinite; transition: all 0.3s;}
+        .ga_GM-900S .gm-900S .txt {margin-top: 100px; font-size: 73px; font-weight: bold; text-align: center; color: #fff;}
+
+        /* ga_Point */
+        .ga_Point {padding: 180px 0;}
+        .ga_Point .gp_list > div {display: flex; justify-content: space-between;}
+        .ga_Point .gp_list > div > div + div {margin-left: 30px;}
+        .ga_Point .gp_list > div > .i2 .iBox + .iBox {margin-top: 31px;}
+        .ga_Point .gp_list .gl02 {margin-top: 30px;}
+
+        /* ga_assaAbloy */
+        .ga_assaAbloy {padding: 140px 0 400px; background: #030d18 url(https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_assaAbloy_bg.png) no-repeat 50% 100%;}
+        .ga_assaAbloy .gn_title {margin-top: 160px;}
+        .ga_assaAbloy .gn_title * {color: #fff;}
+        .ga_assaAbloy .gn_title .tit span {display:block; color: #00aad0;}
+        .ga_assaAbloy .gn_title .sub {line-height: 1.6;}
+
+        /* ga_Easily */
+        .ga_Easily {padding: 180px 0 230px; background-color: #000;}
+        .ga_Easily .gn_title .tit {color: #fff;}
+        .ga_Easily .gn_title .sub span {display: inline-block; border: 1px solid #fff; border-radius: 34px; padding: 4px 50px; color: #fff; font-size: 40px;}
+        .ga_Easily .img {padding: 50px 0 80px; text-align: center;}
+        .ga_Easily .block {text-align: center; color: #fff; font-weight: bold; font-size: 28px;}
+        .ga_Easily .block span {color: #00b8d6;}
+        .ga_Easily .gn_Comment {margin-top: 30px; padding-top: 0 !important; border: none;}
+        .ga_Easily .gn_Comment li {color: #b4b4b4;}
+
+        /* ga_GatemanDot */
+        .ga_GatemanDot {padding-top: 130px; background:
+            url(https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_GatemanDot_bg.png) no-repeat 50% 0,
+            linear-gradient(180deg, rgba(208, 234, 252, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+        .ga_GatemanDot .gn_title span {display: block; margin-top: 70px; font-size: 100px;}
+        .ga_GatemanDot .gn_title span + br {display: none;}
+        .ga_GatemanDot .gvSlider {margin-top: 60px;}
+
+        /* ga_Anyone */
+        .ga_Anyone {position: relative; margin-top: -185px; padding: 0 0 120px; text-align: center; z-index: 1;}
+        .ga_Anyone .block {margin-top: 100px;}
+        .ga_Anyone .gn_Comment {margin-top: 60px; padding-top: 0 !important; border: none;}
+        .ga_Anyone .gn_Comment .hide-pc {display: none;}
+
+        /* ga_Anyone02 */
+        .ga_Anyone02 {padding: 170px 0 120px; background-color: #f4f8f9;}
+        .ga_Anyone02 .gn_Inner > .block,
+        .ga_Anyone02 .gn_Inner > .block_list {max-width: 1000px; margin: 0 auto;}
+        .ga_Anyone02 .gn_Inner > .block {margin-top: 90px;}
+        .ga_Anyone02 dl {margin-top: 50px;}
+        .ga_Anyone02 dt {font-size: 30px; font-weight: bold; color: #000;}
+        .ga_Anyone02 dd {margin-top: 30px; font-size: 20px; color: #000;}
+        .ga_Anyone02 .gn_Inner > .block dl {display: flex;}
+        .ga_Anyone02 .gn_Inner > .block dt {min-width: 400px;}
+        .ga_Anyone02 .gn_Inner > .block dd {margin-top: 0;}
+        .ga_Anyone02 .block_list .box {display: flex; justify-content: space-between; gap: 0 8%; margin-top: 110px;}
+        .ga_Anyone02 .block_list .box .block {width: 50%;}
+        .ga_Anyone02 .block_list .box .block .img {width: 100%; max-width: 460px;}
+        .ga_Anyone02 .gn_Comment {text-align: center;}
+        .ga_Anyone02 .hide-pc {display: none;}
+
+        /* ga_Dot */
+        .ga_Dot {background-color: #000;}
+        .ga_Dot .gd_media {position:relative; height:0; padding-bottom:56.25%;}
+        .ga_Dot .gd_media iframe {position:absolute; top:0; left:0; width:100%; height:100%;}
+
+        /* ga_USE */
+        .ga_USE {padding: 180px 0; text-align: center;}
+        .ga_USE .img {margin-top: 120px;}
+
+        /* ga_IOT */
+        .ga_IOT {position: relative; padding: 218px 0 94px; overflow: hidden; background: rgb(222,243,248); background: linear-gradient(180deg, rgba(222,243,248,1) 0%, rgba(243,243,243,1) 100%);}
+        .ga_IOT_list {margin-top: 120px; text-align: center;}
+        .ga_IOT_list .tit {font-size: 40px; font-weight: bold;}
+        .ga_IOT .gil_list {margin-top: 70px; display: flex; flex-wrap: wrap; justify-content: center; gap: 80px 40px;}
+        .ga_IOT .gil_list li {width: calc(100% / 3 - 40px);}
+        .ga_IOT .gil_list .img {width: 300px; height: 300px; margin: 0 auto; border-radius: 30px; box-shadow: -1px 0px 30px 10px rgba(37,54,97,0.09); -webkit-box-shadow: -1px 0px 30px 10px rgba(37,54,97,0.09); -moz-box-shadow: -1px 0px 30px 10px rgba(37,54,97,0.09);}
+        .ga_IOT .gil_list .ga_badge {display:block; margin-top: 20px;}
+        .ga_IOT .gil_list .ga_badge span {display:inline-block; height: 50px; line-height: 50px; padding: 0 20px; border-radius: 25px; font-size: 18px; color: #fff;}
+        .ga_IOT .gil_list .txt {margin-top: 10px; font-size: 18px; font-weight: bold;}
+        .ga_IOT .gil_list li:nth-child(1) .ga_badge span {background-color: #8fcec0;}
+        .ga_IOT .gil_list li:nth-child(2) .ga_badge span {background-color: #89c0ed}
+        .ga_IOT .gil_list li:nth-child(3) .ga_badge span {background-color: #f3b987}
+        .ga_IOT .gil_list li:nth-child(4) .ga_badge span {background-color: #b597f4}
+        .ga_IOT .gil_list li:nth-child(5) .ga_badge span {background-color: #889dec}
+        .ga_IOT .gn_background_item {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;}
+        .ga_IOT .gn_background_item > div {position: absolute; top: 0; transform: translatey(0px); animation: float 6s ease-in-out infinite; transition: all 0.3s;}
+        .ga_IOT .gn_background_item .gbi_01 {top: -150px; left: calc(50% - 52%);}
+        .ga_IOT .gn_background_item .gbi_02 {top: 190px; left: calc(50% - 52%); animation: float2 6s ease-in-out infinite;}
+        .ga_IOT .gn_background_item .gbi_03 {top: 590px; left: calc(50% - 52%);}
+        .ga_IOT .gn_background_item .gbi_04 {top: 10px; left: calc(50% - 40%); animation: float2 5s ease-in-out infinite;}
+        .ga_IOT .gn_background_item .gbi_05 {top: 430px; left: calc(50% - 40%); animation: float3 4s ease-in-out infinite;}
+        .ga_IOT .gn_background_item .gbi_06 {top: -50px; left: calc(50% - 26%); animation: float4 4s ease-in-out infinite;}
+        .ga_IOT .gn_background_item .gbi_11 {top: -150px; right: calc(50% - 26%); animation: float2 6s ease-in-out infinite;}
+        .ga_IOT .gn_background_item .gbi_12 {top: -230px; right: calc(50% - 40%); animation: float2 6s ease-in-out infinite;}
+        .ga_IOT .gn_background_item .gbi_13 {top: 180px; right: calc(50% - 40%); animation: float3 4s ease-in-out infinite;}
+        .ga_IOT .gn_background_item .gbi_14 {top: 420px; right: calc(50% - 40%); animation: float4 4s ease-in-out infinite;}
+        .ga_IOT .gn_background_item .gbi_15 {top: -50px; right: calc(50% - 52%); animation: float 6s ease-in-out infinite;}
+        .ga_IOT .gn_background_item .gbi_16 {top: 280px; right: calc(50% - 52%); animation: float2 6s ease-in-out infinite;}
+        .ga_IOT .gn_Comment {text-align: center;}
+
+        /* ga_SmartPhone */
+        .ga_SmartPhone {padding:112px 0 78px; background-color: #1a3550; text-align: center;}
+        .ga_SmartPhone .block .tit {font-size: 40px; font-weight: 300; color: #fff;}
+        .ga_SmartPhone .block .img {margin-top: 46px;}
+        .ga_SmartPhone .block .txt {margin-top: 100px; font-size: 48px; font-weight: 300; color: #fff;}
+        .ga_SmartPhone .block .txt strong {color: #00aad0; font-weight: bold;}
+
+        /* ga_SmartPhone02 */
+        .ga_SmartPhone02 {padding: 130px 0; background: url(https://gateman.kr/common/img/access/ga_SmartPhone02.png) no-repeat 50% 0; background-size: cover;}
+        .ga_SmartPhone02 .gn_Inner {width: 800px; padding: 0;}
+        .ga_SmartPhone02 .ga_sp_list + .ga_sp_list {margin-top: 22px;}
+        .ga_SmartPhone02 .ga_sp_list {position: relative; text-align: left; padding: 40px; border-radius: 30px; display: flex; align-items: center;}
+        .ga_SmartPhone02 .ga_sp_list::before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 30px; background: rgba(255, 255, 255, 0.2); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);}
+        .ga_SmartPhone02 .ga_sp_list dl {position: relative; padding-left: 300px; min-height: 242px; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 1;}
+        .ga_SmartPhone02 .ga_sp_list dt, .ga_SmartPhone02 .ga_sp_list dd {color: #fff; width: 100%; text-align: left;}
+        .ga_SmartPhone02 .ga_sp_list dt {font-size: 30px; font-weight: bold;}
+        .ga_SmartPhone02 .ga_sp_list dd {margin-top: 40px; font-size: 24px; font-weight: 500;}
+        .ga_SmartPhone02 .ga_sp_list .ga_check_list li {color: #fff; padding-left: 30px; background: url(https://gateman.kr/common/img/access/common_check.png) no-repeat 0 7px;}
+        .ga_SmartPhone02 .ga_sp_list dl::before {content: ''; position: absolute; top: 0; left: 0; width: 242px; height: 242px; border-radius: 50%; z-index: 0;}
+        .ga_SmartPhone02 .ga_sp_list:nth-child(1) dl::before {background: url(https://gateman.kr/common/img/access/ga_SmartPhone02_01.png) no-repeat 50% 50%}
+        .ga_SmartPhone02 .ga_sp_list:nth-child(2) dl::before {background: url(https://gateman.kr/common/img/access/ga_SmartPhone02_02.png) no-repeat 50% 50%}
+        .ga_SmartPhone02 .ga_sp_list:nth-child(3) dl::before {background: url(https://gateman.kr/common/img/access/ga_SmartPhone02_03.png) no-repeat 50% 50%}
+
+        /* ga_Card */
+        .ga_Card {padding: 110px 0; background-color: #1a3550;}
+        .ga_Card .gn_Inner {width: 100%; max-width: 1000px; margin: 0 auto; padding: 0; text-align: center; overflow: hidden;}
+        .ga_Card dl {display: flex; flex-direction: column; align-items: center; justify-content: center; padding-left: 370px; min-height: 301px; background: url(https://gateman.kr/common/img/access/ga_Card.png) no-repeat 0 50%; background-size: 340px auto;}
+        .ga_Card dl dt, .ga_Card dl dd {width: 100%; text-align: left;}
+        .ga_Card dl dt {font-size: 46px; font-weight: bold; color: #00d0ff;}
+        .ga_Card dl dd {margin-top: 30px; font-size: 30px; color: #fff;}
+        .ga_Card dl dd.iot {font-size: 34px; font-weight: 300;}
+        .ga_Card dl dd.iot span {display: block; padding: 0 6px; color: #fff; background-color: #00aad0;}
+        .ga_Card dl dd.iot .hide-pc {display: none;}
+        .ga_Card dl dd.iot br + span {margin-top: 10px;}
+
+        /* ga_Dual */
+        .ga_Dual {padding: 200px 0 140px;}
+        .ga_Dual .gn_Inner {width: 100%; max-width: 1000px; margin: 0 auto; padding: 0; text-align: center; overflow: hidden;}
+        .ga_Dual_list {margin-top: 134px}
+        .ga_Dual_list + .ga_Dual_list {margin-top: 74px; display: flex; justify-content: space-between;}
+        .ga_Dual_list .block {display: flex; align-items: center;}
+        .ga_Dual_list .block + .block {margin-top: 38px;}
+        .ga_Dual_list .block .img {margin-right: 50px; width: 430px; height: 348px; border-radius: 20px;}
+        .ga_Dual_list .block .img.gd_01 {background: #f3fcff url(https://gateman.kr/common/img/access/ga_Dual_01.png) no-repeat 50% 50%;}
+        .ga_Dual_list .block .img.gd_02 {background: #fbf3ff url(https://gateman.kr/common/img/access/ga_Dual_02.png) no-repeat 50% 50%;}
+        .ga_Dual_list .block dl {text-align: left;}
+        .ga_Dual_list .block dl dt {margin-bottom: 30px; font-size: 30px; font-weight: bold;}
+        .ga_Dual_list .block dl dd {font-size: 20px; font-weight: 500;}
+        .ga_Dual_list + .ga_Dual_list .block {width: 484px; height: 754px; margin-top: 0; border-radius: 20px;}
+        .ga_Dual_list + .ga_Dual_list .block:nth-child(1) {background: #f3fcff url(https://gateman.kr/common/img/access/ga_Dual_03.png) no-repeat 50% 50%;}
+        .ga_Dual_list + .ga_Dual_list .block:nth-child(2) {background: #fbf3ff url(https://gateman.kr/common/img/access/ga_Dual_04.png) no-repeat 50% 50%;}
+        .ga_Dual_list + .ga_Dual_list .block dl {text-align: center; position: relative; width: 100%; height: 100%;}
+        .ga_Dual_list + .ga_Dual_list .block dl dt, .ga_Dual_list + .ga_Dual_list .block dl dd {position: absolute; left: 0; width: 100%; padding: 0 20px; margin: 0;}
+        .ga_Dual_list + .ga_Dual_list .block dl dt {top: 60px;}
+        .ga_Dual_list + .ga_Dual_list .block dl dd {bottom: 0; border-radius: 0 0 20px 20px; width: 100%; height: 172px; padding: 40px 0;}
+        .ga_Dual_list + .ga_Dual_list .block:nth-child(1) dl dd {background-color: #bbebf7;}
+        .ga_Dual_list + .ga_Dual_list .block:nth-child(2) dl dd {background-color: #ddbbf7;}
+        .ga_Dual .btn_set {margin-top: 36px; text-align: center;}
+        .ga_Dual .btn_set a {display:inline-block; height: 60px; padding: 0 30px; background-color: #f2f2f2; border-radius: 30px;}
+        .ga_Dual .btn_set a span {display: block; line-height: 60px; font-size: 16px; font-weight: bold; color: #1a3550;}
+
+        /* ga_Certified */
+        .ga_Certified {padding: 160px 0; background-color: #f4f8f9;}
+        .ga_Certified .gd_Block .block + .block {margin-top: 180px;}
+        .ga_Certified .gd_Block .block .img {margin-top: 140px; text-align: center;}
+        .ga_Certified .gd_Block .block:first-child .img {margin-top: 80px;}
+
+        /* ga_Safety */
+        .ga_Safety {padding: 160px 0; background-color: #000;}
+        .ga_Safety .gn_title * {color: #fff;}
+        .ga_Safety .gs_block {margin-top: 140px;}
+        .ga_Safety .gs_block * {color: #fff;}
+        .ga_Safety .gs_block .box {display: flex; align-items: center; justify-content: start; flex-direction: row-reverse;}
+        .ga_Safety .gs_block .box + .box {margin-top: 200px;}
+        .ga_Safety .gs_block .box .img {margin: 0 100px 0 0;}
+        .ga_Safety .gs_block .box .txt > span {display: block; margin-bottom: 40px;}
+        .ga_Safety .gs_block .box .txt > div {font-size: 48px; font-weight: bold; color: #00b8d6;}
+        .ga_Safety .gs_block .box .txt > p {margin-top: 60px;}
+        .ga_Safety .gs_block .box .txt > p span {display:block; margin-top:30px; color: #aca8a9;}
+        .ga_Safety .gs_block.gs_block_top {margin: 0; padding: 240px 0; background: url(https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Safety_bg.png) no-repeat 100% 50%;}
+        .ga_Safety .gs_block.gs_block_top .box {flex-direction: column; align-items: flex-start;}
+        .ga_Safety .gs_block.gs_block_top .box .img {margin: 0;}
+        .ga_Safety .gs_vs {display: flex; align-items: center; justify-content: center; padding: 50px; border-radius: 20px; background-color: #222222; margin-top: 100px;}
+        .ga_Safety .gs_vs > span {padding: 0 5%; font-size: 54px; font-weight: bold; color: #fff;}
+        .ga_Safety .gs_vs > div {width: auto; text-align: center;}
+        .ga_Safety .gs_vs > div:first-child {max-width: 418px;}
+        .ga_Safety .gs_vs > div:last-child {max-width: 510px;}
+        .ga_Safety .gs_vs dl {display: block; margin-top: 40px; text-align: center;}
+        .ga_Safety .gs_vs dl * {color: #fff;}
+        .ga_Safety .gs_vs dt {font-size: 28px; font-weight: bold;}
+        .ga_Safety .gs_vs dd {margin-top: 30px;}
+        .ga_Safety .gs_media {margin-top: 150px; position:relative; height:0; padding-bottom:56.25%;}
+        .ga_Safety .gs_media iframe {position:absolute; top:0; left:0; width:100%; height:100%;}
+
+        /* ga_Fire */
+        .ga_Fire {text-align: center; background: #310A04;
+            background: linear-gradient(180deg,rgba(49, 10, 4, 1) 0%, rgba(22, 0, 0, 1) 50%, rgba(118, 33, 10, 1) 100%);
+        }
+
+        /* ga_Reliability */
+        .ga_Reliability {padding: 170px 0 80px; background: #121212 url(https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Reliability_bg.png) no-repeat 50% 0;}
+        .ga_Reliability .gn_title .tit,
+        .ga_Reliability .gn_title .sub {color: #fff;}
+        .ga_Reliability .gn_title .tit span {display: block; color: #fff;}
+        .ga_Reliability .gn_title .tit .t1 {font-weight: normal;}
+        .ga_Reliability .gr_area {position: relative; margin-top: 100px; text-align: center;}
+        .ga_Reliability .gr_area dl {position: absolute; text-align: left;}
+        .ga_Reliability .gr_area .gr_item01 {top: 5%; left: 0; width: 450px;}
+        .ga_Reliability .gr_area .gr_item02 {top: 55%; left: 0; width: 480px;}
+        .ga_Reliability .gr_area .gr_item03 {top: 30%; left: 60%; width: 540px;}
+        .ga_Reliability .gr_area .gr_item04 {bottom: 0; left: 60%; width: 480px;}
+        .ga_Reliability .gr_area dt {font-size: 40px; font-weight: bold; color: #b3d4e8;}
+        .ga_Reliability .gr_area dd {margin-top: 30px; font-size: 18px; color: #fff;}
+        .ga_Reliability .gr_media {margin-top: 140px; position:relative; height:0; padding-bottom:56.25%;}
+        .ga_Reliability .gr_media iframe {position:absolute; top:0; left:0; width:100%; height:100%;}
+
+        /* ga_Space */
+        .ga_Space {text-align: center; background: #515150;
+            background: linear-gradient(180deg,rgba(81, 81, 80, 1) 0%, rgba(114, 114, 113, 1) 50%, rgba(76, 76, 75, 1) 100%);
+        }
+
+        /* ga_Beautiful */
+        .ga_Beautiful {padding: 250px 0 0; background: #e1e4eb url(https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Beautiful_bg.png) no-repeat 50% 50%;}
+        .ga_Beautiful .gn_block_title span {color: #000;}
+        .ga_Beautiful .gb_area {margin-top: 60px; text-align: center;}
+
+        /* ga_Visual */
+        .ga_Visual {padding: 100px 0;}
+        .ga_Visual .gn_Inner {text-align: center;}
+        .ga_Visual .img + .img {margin-top: 100px;}
+
+        /* ga_Function */
+        .ga_Function {padding: 220px 0 150px; background-color: #f7f7f7;}
+        .ga_Function .gn_Inner {max-width: 1920px; overflow: visible;}
+        .ga_Function .gn_block_title span {color: #313131;}
+        .ga_Function .gf_list {padding-left: 12%; margin-top: 100px; overflow: visible;}
+        .ga_Function .gf_list .swiper-slide {max-width: 400px !important;}
+        .ga_Function .gf_list dl {margin-top: 40px;}
+        .ga_Function .gf_list dt {font-weight: bold;}
+        .ga_Function .gf_list dd {margin-top: 20px;}
+        .ga_Function .gf_list dd span {display:block; margin-top: 20px; color: #aca8a9;}
+        .ga_Function .gf_convenience {margin-top: 180px;}
+
+        /* ga_SmartIOT */
+        .ga_SmartIOT {text-align: center; background: #D0EAFC;
+            background: linear-gradient(180deg,rgba(208, 234, 252, 1) 0%, rgba(249, 249, 249, 1) 100%);
+        }
+
+        /* ga_Part */
+        .ga_Part {padding-top: 220px;}
+        .ga_Part .gp_block {margin-top: 100px; padding: 8% 7%; border-radius: 20px; background-color: #f7f7f7;}
+        .ga_Part .gp_block .top {display: flex; justify-content: center;}
+        .ga_Part .gp_block .top > div {text-align: center;}
+        .ga_Part .gp_block .top > div + div {margin-left: 10%;}
+        .ga_Part .gp_block .top > div span {display: block; margin-top: 60px; font-weight: 500;}
+        .ga_Part .gp_block .bottom {margin-top: 80px; border-top: 1px solid #c7c7c7; padding-top: 90px; display: flex; justify-content: space-between;}
+        .ga_Part .gp_block .bottom ul {width: 50%;}
+        .ga_Part .gp_block .bottom li {display: inline-block; width: 49%; padding: 0 15px; margin-bottom: 20px;}
+        .ga_Part .gp_block .bottom li span {color: #aca8a9;}
+
+        /* ga_Spec */
+        .ga_Spec {padding-top: 200px;}
+        .ga_Spec .gs_list {display: flex; justify-content: space-between; margin-top: 180px;}
+        .ga_Spec .gs_list ul {width: calc(50% - 20px);}
+        .ga_Spec .gs_list li {display: flex;}
+        .ga_Spec .gs_list li + li {margin-top: 20px;}
+        .ga_Spec .gs_list li span {width: 100%;}
+        .ga_Spec .gs_list li .tit {width: 220px; font-weight: bold;}
+
+        /* ga_Inquiry */
+        .ga_Inquiry {padding: 150px 0;}
+        .ga_Inquiry .gi_list {margin-top: 100px; display: flex; justify-content: space-between;}
+        .ga_Inquiry .gi_list > dl {position:relative; display: flex; align-items: center; width: calc(100% / 3 - 15px); height: 148px; padding: 40px; border-radius: 20px;}
+        .ga_Inquiry .gi_list .iL01 {background-color: #00b8d6;}
+        .ga_Inquiry .gi_list .iL02 {background-color: #002e4f;}
+        .ga_Inquiry .gi_list .iL03 {background-color: #fbcb0a;}
+        .ga_Inquiry .gi_list .iL02 * {color: #fff;}
+        .ga_Inquiry .gi_list dt {width: 120px; font-weight: bold; line-height: 1.2;}
+        .ga_Inquiry .gi_list dd a, .ga_Inquiry .gi_list dd div {display: block; font-size: 48px; font-weight: 600;}
+        .ga_Inquiry .gi_list .iL03 .center {padding-left: 40px; font-size: 28px; font-weight: bold; background: url(https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/common_Search.png) no-repeat 0 50%;}
+        .ga_Inquiry .btn_kakao {position:absolute; top:0; left:0; width:100%; height:100%;}
+
+        @media all and (max-width: 1600px){
+            .ga_IOT .gn_background_item .gbi_01 {width: 100px; top: -50px; left: calc(50% - 11%);}
+            .ga_IOT .gn_background_item .gbi_02 {width: 100px; top: -17px; left: calc(50% - 32%);}
+            .ga_IOT .gn_background_item .gbi_03 {width: 100px; top: -60px; left: calc(50% - 52%);}
+            .ga_IOT .gn_background_item .gbi_04 {width: 100px; top: 180px; left: calc(50% - 52%);}
+            .ga_IOT .gn_background_item .gbi_05 {width: 100px; top: 120px; left: calc(50% - 42%);}
+            .ga_IOT .gn_background_item .gbi_06 {width: 100px; top: 30px; left: calc(50% - 21%);}
+            .ga_IOT .gn_background_item .gbi_11 {width: 100px; top: -30px; right: calc(50% - 22%);}
+            .ga_IOT .gn_background_item .gbi_12 {width: 100px; top: -96px; right: calc(50% - 40%);}
+            .ga_IOT .gn_background_item .gbi_13 {width: 100px; top: 58px; right: calc(50% - 31%);}
+            .ga_IOT .gn_background_item .gbi_14 {width: 100px; top: 122px; right: calc(50% - 40%);}
+            .ga_IOT .gn_background_item .gbi_15 {width: 100px; top: -8px; right: calc(50% - 52%);}
+            .ga_IOT .gn_background_item .gbi_16 {width: 100px; top: 165px; right: calc(50% - 52%);}
+
+            .ga_Safety .gs_vs {flex-direction: column; align-items: inherit; justify-content: inherit;}
+            .ga_Safety .gs_vs > span {padding: 5% 0; text-align: center;}
+            .ga_Safety .gs_vs > div {display:flex; align-items: center; text-align: left;}
+            .ga_Safety .gs_vs > div:first-child,
+            .ga_Safety .gs_vs > div:last-child {max-width: inherit;}
+            .ga_Safety .gs_vs > div .img {width: 418px;}
+            .ga_Safety .gs_vs dl {margin: 0 0 0 40px; text-align: left; width: 100%;}
+        }
+        @media all and (max-width: 1430px){
+            .ga_Inquiry .gi_list > dl {width: calc(100% / 3 - 8px); padding: 26px;}
+            .ga_Inquiry .gi_list dt {width: 80px; font-size: 16px;}
+            .ga_Inquiry .gi_list dd {font-size: 16px;}
+            .ga_Inquiry .gi_list dd a,
+            .ga_Inquiry .gi_list dd div {font-size: 34px;}
+            .ga_Inquiry .gi_list .iL03 .center {padding-left: 25px; font-size: 16px;}
+        }
+        @media all and (max-width: 1400px){
+            .ga_Safety .gs_block.gs_block_top {background-size: 80% auto;}
+
+            .ga_Reliability .gr_area > dl {width: 420px !important;}
+            .ga_Reliability .gr_area > dl dd .hide-pc {display: none;}
+
+            .ga_Part .gp_block .bottom li {font-size: 16px; margin-bottom: 15px;}
+        }
+        @media all and (max-width: 1200px){
+        }
+        @media all and (max-width: 1150px){
+            .ga_Safety .gs_block.gs_block_top {background-size: 60% auto;}
+
+            .ga_Part .gp_block .bottom {flex-direction: column;}
+            .ga_Part .gp_block .bottom ul {width: 100%;}
+        }
+        @media all and (max-width: 1000px){
+            .gaWrap {font-size: 16px;}
+            .gaWrap * {letter-spacing: -0.05rem;}
+            .gn_Inner {max-width: inherit; padding: 0 10px;}
+            .gn_block_title, .gn_block_title span {font-size: 14px; color: #00aad0; margin-bottom: 10px;}
+            .gn_title {position: relative; font-size: 28px !important; font-weight: bold; line-height: 1.2;}
+            .gn_title .sub + .tit {margin-top: 10px;}
+            .gn_title .tit + .sub {margin-top: 24px;}
+            .gn_title .sub {font-size: 14px !important; font-weight: 400;}
+            .gn_title .sub p {margin-top: 14px; font-size: 14px !important; font-weight: 500;}
+            .gn_Comment {margin-top:40px; padding-top: 20px; border-top: 1px solid #d5d5d5; font-size: 14px; font-weight: 300; color: #666;}
+            .gn_Comment li + li {margin-top: 4px;}
+            .gaWrap .hide-pc, .gaWrap .hide_tbl_m {display: none;}
+            .gaWrap .hide-m {display: block;}
+            .gaWrap .imgPC {display: none;}
+            .gaWrap .imgM {display: block;}
+
+            .ga_GM-900S {padding: 80px 0 50px;}
+            .ga_GM-900S .gn_title * {letter-spacing: 0.5rem;}
+            .ga_GM-900S .gn_title strong {margin-top: 20px;}
+            .ga_GM-900S .gm-900S {top: 30px; padding-bottom: 30px;}
+            .ga_GM-900S .gm-900S .imgBlock > .img01 {padding-top: 20px; margin-right: -20px;}
+            .ga_GM-900S .gm-900S .imgBlock > .img02 {padding-top: 160px; margin-left: -20px;}
+            .ga_GM-900S .gm-900S .img01 img, .ga_GM-900S .gm-900S .img02 img {max-height: 500px;}
+            .ga_GM-900S .gm-900S .txt {margin-top: 50px; font-size: 26px;}
+
+            .ga_Point {padding: 50px 0;}
+            .ga_Point .gp_list > div {flex-direction: column; align-items: center;}
+            .ga_Point .gp_list > div > div + div {margin: 20px 0 0;}
+            .ga_Point .gp_list > div > .i2 .iBox + .iBox {margin-top: 20px;}
+            .ga_Point .gp_list .gl01 .i2 .b2 {margin-top: 20px;}
+            .ga_Point .gp_list .gl01 .i2 .b2 > div + div {margin-left: 10px;}
+            .ga_Point .gp_list .gl02 {margin-top: 0; flex-direction: column-reverse;}
+            .ga_Point .gp_list .gl02 > div {margin: 20px 0 0;}
+            .ga_Point .gp_list .iBox .txt {top: 20px; left: 20px;}
+
+            .ga_assaAbloy {padding: 70px 0 200px; background-size: 1280px auto;}
+            .ga_assaAbloy .gn_block_title img {height: 50px;}
+            .ga_assaAbloy .gn_title {margin-top: 80px;}
+
+            /* ga_Easily */
+            .ga_Easily {padding: 80px 0 70px;}
+            .ga_Easily .gn_title .sub span {font-size: 22px;}
+            .ga_Easily .img {padding: 30px 20px 20px;}
+            .ga_Easily .block {font-size: 20px;}
+            .ga_Easily .gn_Comment {margin-top: 10px;}
+
+            .ga_GatemanDot .gn_title span {margin-top: 40px; font-size: 60px;}
+
+            .ga_Anyone {padding: 0 0 60px; margin-top: -105px;}
+            .ga_Anyone .gn_title_img img {width: 200px;}
+            .ga_Anyone .block {margin-top: 40px;}
+            .ga_Anyone .gn_Comment {margin-top: 20px;}
+            .ga_Anyone .gn_Comment .hide-pc {display: block;}
+
+            .ga_Anyone02 {padding: 70px 0 60px;}
+            .ga_Anyone02 .gn_Inner > .block,
+            .ga_Anyone02 .gn_Inner > .block_list {max-width: inherit;}
+            .ga_Anyone02 .gn_Inner > .block {margin-top: 50px;}
+            .ga_Anyone02 dl {margin-top: 0;}
+            .ga_Anyone02 dt {font-size: 20px; font-weight: bold; color: #000;}
+            .ga_Anyone02 dd {margin-top: 15px; font-size: 16px; color: #000;}
+            .ga_Anyone02 .gn_Inner > .block dl {flex-direction: column; align-items: center; margin-top: 25px;}
+            .ga_Anyone02 .gn_Inner > .block dt {min-width: inherit;}
+            .ga_Anyone02 .gn_Inner > .block dt br {display: none;}
+            .ga_Anyone02 .gn_Inner > .block dd {margin-top: 0; text-align: center;}
+            .ga_Anyone02 .gn_Inner > .block dd br {display: none;}
+            .ga_Anyone02 .block_list .box {flex-direction: column; gap: 70px 0; margin-top: 70px;}
+            .ga_Anyone02 .block_list .box .block {display: flex; justify-content: space-between; align-items: center; gap: 0 25px; width: 100%;}
+            .ga_Anyone02 .block_list .box .block .img {width: 100%; max-width: inherit; flex: 400px 0 0;}
+            .ga_Anyone02 .block_list .box .block:nth-child(2) {flex-direction: row-reverse;}
+            .ga_Anyone02 .gn_Comment {text-align: center;}
+            .ga_Anyone02 .gn_Comment .hide-pc {display: block;}
+
+            .ga_USE {padding: 80px 0;}
+            .ga_USE .img {margin-top: 50px;}
+
+            .ga_IOT {position: relative; padding: 100px 0 60px; overflow: hidden; background: rgb(222,243,248); background: linear-gradient(180deg, rgba(222,243,248,1) 0%, rgba(243,243,243,1) 100%); transition: all 0.3s;}
+            .ga_IOT .gn_Inner {padding: 0 10px;}
+            .ga_IOT_list {margin-top: 60px;}
+            .ga_IOT_list .tit {font-size: 24px; font-weight: bold;}
+            .ga_IOT .gil_list {margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 40px 20px;}
+            .ga_IOT .gil_list li {width: 100%; max-width: 300px;}
+            .ga_IOT .gil_list .img {width: 100%; height: auto; border-radius: 30px; box-shadow: -1px 0px 30px 10px rgba(37,54,97,0.09); -webkit-box-shadow: -1px 0px 30px 10px rgba(37,54,97,0.09); -moz-box-shadow: -1px 0px 30px 10px rgba(37,54,97,0.09);}
+            .ga_IOT .gil_list .img img {width:100%; height: 100%; vertical-align: middle;}
+            .ga_IOT .gil_list .ga_badge span {display:inline-block; height: 30px; line-height: 30px; padding: 0 10px; border-radius: 15px; font-size: 12px; color: #fff;}
+            .ga_IOT .gil_list .txt {margin-top: 10px; font-size: 14px; font-weight: bold;}
+            .ga_IOT .gn_background_item > div {position: absolute; top: 0; transform: translatey(0px); animation: float 6s ease-in-out infinite;}
+            .ga_IOT .gn_background_item .gbi_01 {width: 70px; height: 140px; top: -50px; left: calc(50% - 11%);}
+            .ga_IOT .gn_background_item .gbi_02 {width: 70px; height: 140px; top: -50px; left: calc(50% - -39%); animation: float2 6s ease-in-out infinite;}
+            .ga_IOT .gn_background_item .gbi_03 {width: 70px; height: 140px; top: -60px; left: calc(50% - 52%);}
+            .ga_IOT .gn_background_item .gbi_04 {width: 70px; height: 140px; top: 100px; left: calc(50% - 52%); animation: float2 5s ease-in-out infinite;}
+            .ga_IOT .gn_background_item .gbi_05 {display: none; width: 70px; height: 70px; top: 100px; left: calc(50% - 40%); animation: float3 4s ease-in-out infinite;}
+            .ga_IOT .gn_background_item .gbi_06 {width: 70px; height: 70px; top: 30px; left: calc(50% - 30%); animation: float4 4s ease-in-out infinite;}
+            .ga_IOT .gn_background_item .gbi_11 {width: 70px; height: 140px; top: -30px; right: calc(50% - 28%); animation: float2 6s ease-in-out infinite;}
+            .ga_IOT .gn_background_item .gbi_12 {display: none; width: 70px; height: 70px; top: 100px; right: calc(50% - 40%); animation: float2 6s ease-in-out infinite;}
+            .ga_IOT .gn_background_item .gbi_13 {width: 70px; height: 70px; top: 100px; right: calc(50% - 53%); animation: float3 4s ease-in-out infinite;}
+            .ga_IOT .gn_background_item .gbi_14 {display: none; width: 70px; height: 70px; top: 150px; right: calc(50% - 40%); animation: float4 4s ease-in-out infinite;}
+            .ga_IOT .gn_background_item .gbi_15 {display: none; width: 70px; height: 140px; top: 100px; right: calc(50% - 52%); animation: float 6s ease-in-out infinite;}
+            .ga_IOT .gn_background_item .gbi_16 {display: none; width: 70px; height: 140px; top: 180px; right: calc(50% - 52%); animation: float2 6s ease-in-out infinite;}
+            .ga_IOT .gn_Comment .hide-m {display: none;}
+
+            .ga_SmartPhone {padding:50px 0 40px; background-color: #1a3550;}
+            .ga_SmartPhone .block .tit {font-size: 20px; font-weight: 300; color: #fff;}
+            .ga_SmartPhone .block .img {margin-top: 26px;}
+            .ga_SmartPhone .block .img img {width: 100%; max-width: 320px;}
+            .ga_SmartPhone .block .txt {margin-top: 30px; font-size: 24px; font-weight: 300; color: #fff;}
+
+            .ga_SmartPhone02 {padding: 80px 0; background: url(https://gateman.kr/common/img/access/ga_SmartPhone02.png) no-repeat 50% 0; background-size: cover;}
+            .ga_SmartPhone02 .gn_Inner {max-width: 800px; margin: 0 auto; padding: 0 20px;}
+            .ga_SmartPhone02 .ga_sp_list + .ga_sp_list {margin-top: 40px;}
+            .ga_SmartPhone02 .ga_sp_list {position: relative; text-align: left; padding:20px 40px; border-radius: 20px; display: flex; align-items: center; justify-content: center;}
+            .ga_SmartPhone02 .ga_sp_list::before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px; background: rgba(255, 255, 255, 0.2); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);}
+            .ga_SmartPhone02 .ga_sp_list dl {position: relative; padding: 150px 0 0; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 1;}
+            .ga_SmartPhone02 .ga_sp_list dt {font-size: 22px; font-weight: bold; text-align: center;}
+            .ga_SmartPhone02  .ga_sp_list dd {margin-top: 20px; font-size: 20px; font-weight: 500;}
+            .ga_SmartPhone02 .ga_sp_list .ga_check_list li {color: #fff; padding-left: 20px; background: url(https://gateman.kr/common/img/access/common_check.png) no-repeat 0 7px; background-size: 16px auto;}
+            .ga_SmartPhone02 .ga_sp_list dl::before {content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 125px; height: 125px; border-radius: 50%; z-index: 0;}
+            .ga_SmartPhone02 .ga_sp_list:nth-child(1) dl::before {background: url(https://gateman.kr/common/img/access/ga_SmartPhone02_01.png) no-repeat 50% 0; background-size: 125px auto;}
+            .ga_SmartPhone02 .ga_sp_list:nth-child(2) dl::before {background: url(https://gateman.kr/common/img/access/ga_SmartPhone02_02.png) no-repeat 50% 0; background-size: 125px auto;}
+            .ga_SmartPhone02 .ga_sp_list:nth-child(3) dl::before {background: url(https://gateman.kr/common/img/access/ga_SmartPhone02_03.png) no-repeat 50% 0; background-size: 125px auto;}
+
+            .ga_Card {padding: 70px 0; background-color: #1a3550;}
+            .ga_Card dl {display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 200px 0 0; background: url(https://gateman.kr/common/img/access/ga_Card.png) no-repeat 50% 0; background-size: 200px auto;}
+            .ga_Card dl dt, .ga_Card dl dd {width: 100%; text-align: center;}
+            .ga_Card dl dt {font-size: 34px; font-weight: bold; color: #00d0ff;}
+            .ga_Card dl dd {margin-top: 20px; font-size: 24px; color: #fff;}
+            .ga_Card dl dd.iot {font-size: 24px; font-weight: 300;}
+            .ga_Card dl dd.iot span {display: inline-block; padding: 0 6px; color: #fff; background-color: #00aad0;}
+            .ga_Card dl dd.iot .hide-pc {display: block;}
+            .ga_Card dl dd.iot br + span {margin-top: 6px;}
+
+            .ga_Dual {padding: 80px 0 40px;}
+            .ga_Dual_list {margin-top: 50px; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+            .ga_Dual_list + .ga_Dual_list {margin-top: 50px; display: flex; justify-content: space-between;}
+            .ga_Dual_list .block + .block {margin-top: 50px;}
+            .ga_Dual_list .block .img {margin-right: 20px; width: 155px; height: 115px; border-radius: 20px;}
+            .ga_Dual_list .block .img.gd_01 {background: #f3fcff url(https://gateman.kr/common/img/access/ga_Dual_01.png) no-repeat 50% 50%; background-size: 80% auto;}
+            .ga_Dual_list .block .img.gd_02 {background: #fbf3ff url(https://gateman.kr/common/img/access/ga_Dual_02.png) no-repeat 50% 50%; background-size: 70% auto;}
+            .ga_Dual_list .block dl dt {margin-bottom: 10px; font-size: 20px; font-weight: bold;}
+            .ga_Dual_list .block dl dd {font-size: 16px; font-weight: 500;}
+            .ga_Dual_list + .ga_Dual_list .block {width: 484px; max-width: 300px; height: 460px; margin-top: 0; border-radius: 20px;}
+            .ga_Dual_list + .ga_Dual_list .block + .block {margin-top: 50px;}
+            .ga_Dual_list + .ga_Dual_list .block:nth-child(1) {background: #f3fcff url(https://gateman.kr/common/img/access/ga_Dual_03.png) no-repeat 50% 50%; background-size: 70% auto;}
+            .ga_Dual_list + .ga_Dual_list .block:nth-child(2) {background: #fbf3ff url(https://gateman.kr/common/img/access/ga_Dual_04.png) no-repeat 50% 50%; background-size: 70% auto;}
+            .ga_Dual_list + .ga_Dual_list .block dl dt,
+            .ga_Dual_list + .ga_Dual_list .block dl dd {position: absolute; left: 0; width: 100%; padding: 0 10px; margin: 0;}
+            .ga_Dual_list + .ga_Dual_list .block dl dt {top: 30px;}
+            .ga_Dual_list + .ga_Dual_list .block dl dd {bottom: 0; border-radius: 0 0 20px 20px; width: 100%; height: 110px; padding: 20px 0;}
+            .ga_Dual .btn_set {margin-top: 20px; text-align: center;}
+            .ga_Dual .btn_set a {display:inline-block; height: 40px; padding: 0 20px; background-color: #f2f2f2; border-radius: 30px;}
+            .ga_Dual .btn_set a span {display: block; line-height: 40px; font-size: 14px; font-weight: bold; color: #1a3550;}
+            .ga_Dual .gn_Comment br {display: none;}
+
+            .ga_Certified {padding: 80px 0; background-color: #fff;}
+            .ga_Certified .gd_Block .block + .block {margin-top: 60px;}
+            .ga_Certified .gd_Block .block .img {margin-top: 60px; text-align: center;}
+
+            .ga_Safety {padding: 80px 0 50px;}
+            .ga_Safety .gn_title img {height: 80px;}
+            .ga_Safety .gs_block {margin-top: 100px;}
+            .ga_Safety .gs_block .box {flex-direction: column; align-items: start;}
+            .ga_Safety .gs_block .box:nth-child(even) {flex-direction: column; justify-content: inherit;}
+            .ga_Safety .gs_block .box + .box {margin-top: 90px;}
+            .ga_Safety .gs_block .box .img {margin: 35px 0 0; text-align: center; width: 100%;}
+            .ga_Safety .gs_block .box:nth-child(even) .img {margin: 35px 0 0;}
+            .ga_Safety .gs_block .box .txt > span {margin-bottom: 15px;}
+            .ga_Safety .gs_block .box .txt > div {font-size: 28px;}
+            .ga_Safety .gs_block .box .txt > p {margin-top: 25px;}
+            .ga_Safety .gs_block .box .txt > p br {display: none;}
+            .ga_Safety .gs_block .box .txt > p span {margin-top:10px;}
+            .ga_Safety .gs_block.gs_block_top {padding: 120px 0 0; background-position: 50% 100%; background-size: 100% auto;}
+            .ga_Safety .gs_block.gs_block_top .box {padding-bottom: 90%;}
+            .ga_Safety .gs_block.gs_block_top .box .img img {max-width: 60%;}
+            .ga_Safety .gs_block.gs_block_top .box .txt {text-align: center;}
+
+            .ga_Safety .gs_vs { margin-top: 30px; padding: 30px 25px;}
+            .ga_Safety .gs_vs > span {font-size: 28px;}
+            .ga_Safety .gs_vs dt {font-size: 20px;}
+            .ga_Safety .gs_vs dd {margin-top: 15px;}
+            .ga_Safety .gs_media {margin-top: 50px;}
+
+            .ga_Reliability {padding: 80px 0 100px;}
+            .ga_Reliability .gr_area .img img {height: 500px;}
+            .ga_Reliability .gr_area dl {width: 100% !important; max-width: 300px;}
+            .ga_Reliability .gr_area dt {font-size: 18px;}
+            .ga_Reliability .gr_area dd {margin-top: 15px; font-size: 12px;}
+            .ga_Reliability .gr_media {margin: 70px 0 0;}
+
+            .ga_Beautiful {padding-top: 80px; background-size: auto 90%;}
+            .ga_Beautiful .gb_area .img img {max-height: 400px;}
+
+            .ga_Visual {padding: 60px 0;}
+            .ga_Visual .img + .img {margin-top: 30px;}
+
+            .ga_Function {padding: 100px 0 80px;}
+            .ga_Function .gn_Inner {overflow: hidden;}
+            .ga_Function .gf_list {overflow: hidden; margin-top: 50px; padding-left: 0;}
+            .ga_Function .gf_list .swiper-wrapper {flex-wrap: wrap; justify-content: space-between;}
+            .ga_Function .gf_list .swiper-slide {max-width: inherit !important; width: calc(50% - 7.4%); margin-bottom: 40px;}
+            .ga_Function .gf_list dl {margin-top: 20px;}
+            .ga_Function .gf_list dd {margin-top: 10px;}
+            .ga_Function .gf_list dd span {margin-top: 10px;}
+            .ga_Function .gf_convenience {margin-top: 100px;}
+
+            .ga_Part {padding-top: 100px;}
+            .ga_Part .gp_block .top > div img {max-height: 230px;}
+            .ga_Part .gp_block .top > div span {margin-top: 25px;}
+            .ga_Part .gp_block {margin-top: 50px; padding: 40px 20px;}
+            .ga_Part .gp_block .bottom {margin-top: 40px; padding-top: 30px;}
+
+            .ga_Spec {padding-top: 90px;}
+            .ga_Spec .gs_list {margin-top: 60px; flex-direction: column;}
+            .ga_Spec .gs_list ul {width: 100%;}
+            .ga_Spec .gs_list ul + ul,
+            .ga_Spec .gs_list li + li {margin-top: 15px;}
+            .ga_Spec .gs_list li .tit {width: 180px;}
+            .ga_Spec .gs_list li .txt br {display: none;}
+            .ga_Spec .gs_list li .txt br.hide-m {display: block;}
+
+            .ga_Inquiry {padding: 80px 0 120px;}
+            .ga_Inquiry .gi_list {margin-top:50px; flex-direction: column; align-items: center;}
+            .ga_Inquiry .gi_list > dl {width: 70%; height: auto; padding: 3% 4%;}
+            .ga_Inquiry .gi_list > dl + dl {margin-top: 25px;}
+            .ga_Inquiry .gi_list dt {width: 100px;}
+        }
+        @media all and (max-width: 860px) {
+            .ga_SmartPhone02 .gn_Inner {width: auto;}
+        }
+        @media all and (max-width: 800px){
+            .ga_Anyone02 .block_list .box .block .img {flex: 300px 0 0;}
+
+            .ga_Reliability .gr_area .gr_item03,
+            .ga_Reliability .gr_area .gr_item04 {left: inherit; right: 0;}
+        }
+        @media all and (max-width: 680px) {
+            .ga_Anyone {padding: 0 0 60px; margin-top: -65px;}
+            .ga_Anyone .gn_title_img img {width: 120px;}
+
+            .ga_Safety .gs_vs dl * br {display: none;}
+        }
+        @media all and (max-width: 640px) {
+            .ga_Safety .gs_vs > div .img {width: 200px;}
+            .ga_Safety .gs_vs dl {margin: 0 0 0 20px;}
+        }
+        @media all and (max-width: 580px) {
+            .ga_Anyone02 .block_list .box .block .img {flex: 150px 0 0;}
+
+            .ga_Part .gp_block .bottom li {padding: 0 5px;}
+            .ga_Part .gp_block .bottom li span {font-size: 12px;}
+        }
+        @media all and (max-width: 540px) {
+            .ga_SmartPhone02 .ga_sp_list dt {font-size: 18px;}
+            .ga_SmartPhone02 .ga_sp_list dd {font-size: 16px;}
+            .ga_SmartPhone02 .ga_sp_list .ga_check_list li {padding-left: 20px; background: url(https://gateman.kr/common/img/access/common_check.png) no-repeat 0 5px; background-size: 16px auto;}
+
+            .ga_Card dl {padding: 130px 0 0; background-size: 130px auto;}
+            .ga_Card dl dt {font-size: 22px;}
+            .ga_Card dl dd {margin-top: 10px; font-size: 16px;}
+            .ga_Card dl dd.iot {font-size: 16px;}
+            .ga_Card dl dd.iot br + span {margin-top: 6px;}
+
+            .ga_Reliability .gr_area dl {position: relative; max-width: 100%; top: inherit; left: inherit; right: inherit; text-align: center;}
+            .ga_Reliability .gr_area dl {margin-top: 30px;}
+            .ga_Reliability .gr_area dd {margin-top: 10px;}
+
+            .ga_Inquiry .gi_list > dl {width: 100%;}
+        }
+        @media all and (max-width: 480px) {
+            .ga_Dual .ga_Dual_list .block {flex-direction: column; justify-content: center; align-items: center;}
+            .ga_Dual .ga_Dual_list .block dl {text-align: center; margin-top: 20px;}
+
+            .ga_Function .gf_list .swiper-slide {width: 100%;}
+            .ga_Function .gf_list .swiper-slide .img {text-align: center;}
+            .ga_Function .gf_list .swiper-slide .img img {max-width: 260px;}
+
+            .ga_Part .gp_block .bottom li span {display: block;}
+        }
+        @media all and (max-width: 440px) {
+            .ga_IOT .gn_background_item .gbi_04,
+            .ga_IOT .gn_background_item .gbi_13 {display: none;}
+            .ga_IOT .gn_background_item .gbi_11  {right: calc(50% - 33%);}
+
+            .ga_Part .gp_block .bottom li {display: block; width: 100%;}
+            .ga_Part .gp_block .bottom li span {display: inline-block;}
+        }
+        @media all and (max-width: 400px) {
+            .ga_SmartPhone02 .ga_sp_list dl {position: relative; padding-top: 130px;}
+        }
+        @media all and (max-width: 360px) {
+            .ga_IOT {padding-top: 130px;}
+        }
+        /***************************************************/
+        .sub-nav.nav-drop.brand-nav {height: auto !important;}
+    </style>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css' />
+<link href="https://gateman.kr/common/css/gateman/sub/animate.css" rel="stylesheet" type="text/css" />
+<link href="https://gateman.kr/common/css/gateman/sub/common.css" rel="stylesheet" type="text/css" />
+<link href="https://gateman.kr/common/css/gateman/sub/style_pc_2.css" rel="stylesheet" type="text/css" />
+<link href="https://gateman.kr/common/css/gateman/sub/style_tab_2.css" rel="stylesheet" type="text/css" />
+<link href="https://gateman.kr/common/css/gateman/sub/style_m_2.css" rel="stylesheet" type="text/css" />
+<link href="https://gateman.kr/common/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+<meta name="format-detection" content="telephone=no">
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1" /><script>
+//<![CDATA[
+xe.current_lang = "ko";
+xe.cmd_find = "찾기";
+xe.cmd_cancel = "취소";
+xe.cmd_confirm = "확인";
+xe.msg_no_root = "루트는 선택 할 수 없습니다.";
+xe.msg_no_shortcut = "바로가기는 선택 할 수 없습니다.";
+xe.msg_select_menu = "대상 메뉴 선택";
+//]]>
+</script>
+
+
+
+
+
+<!-- Custom Header Styles -->
+<style>
+    /* Hide ALL Original Headers */
+    #xs-header, #kso-header, #kso-nav, nav#xs-menu,
+    .kso-header, .kso-nav, .xs-header, .xs-menu,
+    header[id*="kso-"], nav[id*="kso-"],
+    .navbar.nav-md, .navbar-header, .navbar-collapse,
+    .float-menu, .nav-mini {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    /* Custom Header Styles */
+    .custom-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: white !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+        z-index: 10000 !important;
+        width: 100% !important;
+    }
+
+    .custom-header .container {
+        max-width: 1400px !important;
+        margin: 0 auto !important;
+        padding: 0 20px !important;
+    }
+
+    .header-content {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 15px 0 !important;
+    }
+
+    .custom-header .logo {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+
+    .custom-header .logo img {
+        height: 50px !important;
+        width: auto !important;
+    }
+
+    .custom-header .dealer-badge {
+        background: #1a5490 !important;
+        color: white !important;
+        padding: 10px 20px !important;
+        border-radius: 25px !important;
+        font-size: 17.6px !important;
+        font-weight: 600 !important;
+    }
+
+    .custom-header .main-nav ul {
+        display: flex !important;
+        list-style: none !important;
+        gap: 40px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .custom-header .main-nav a {
+        text-decoration: none !important;
+        color: #333 !important;
+        font-weight: 500 !important;
+        font-size: 16px !important;
+        transition: color 0.3s !important;
+    }
+
+    .custom-header .main-nav a:hover,
+    .custom-header .main-nav a.active {
+        color: #1a5490 !important;
+    }
+
+    .custom-header .header-contact {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        color: #1a5490 !important;
+        font-weight: 600 !important;
+        font-size: 17.6px !important;
+    }
+
+    .custom-header .mobile-menu-btn {
+        display: none !important;
+        background: none !important;
+        border: none !important;
+        font-size: 1.5rem !important;
+        color: #333 !important;
+        cursor: pointer !important;
+    }
+
+    @media (max-width: 1000px) {
+        .custom-header .main-nav {
+            display: none !important;
+        }
+        .custom-header .mobile-menu-btn {
+            display: block !important;
+        }
+        .custom-header .header-contact {
+            display: none !important;
+        }
+        .custom-header .dealer-badge {
+            display: none !important;
+        }
+        .custom-header .logo {
+            justify-content: center !important;
+            flex: 1 !important;
+        }
+        .header-content {
+            position: relative !important;
+        }
+        .custom-header .mobile-menu-btn {
+            position: absolute !important;
+            right: 0 !important;
+        }
+    }
+
+    /* Video Hero Section */
+    .hero-video-section {
+        position: relative !important;
+        width: 100% !important;
+        height: 100vh !important;
+        max-height: 800px !important;
+        overflow: hidden !important;
+        margin-top: 80px !important;
+    }
+
+    .hero-video-wrapper {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .hero-video {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .hero-overlay {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: rgba(0, 0, 0, 0.3) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .hero-content {
+        text-align: center !important;
+        color: white !important;
+        z-index: 2 !important;
+        padding: 0 20px !important;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 20px !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem !important;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    @media (max-width: 768px) {
+        .hero-video-section {
+            margin-top: 60px !important;
+            height: 60vh !important;
+        }
+        .hero-content h1 {
+            font-size: 2rem !important;
+        }
+        .hero-content p {
+            font-size: 1.2rem !important;
+        }
+    }
+
+    /* Ensure content after header has proper spacing */
+    body {
+        padding-top: 0 !important;
+    }
+
+    #kso-container {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+</style>
+</head>
+<body>
+
+<!-- Custom Header -->
+<header class="custom-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <a href="main.html" style="display: flex; align-items: center; gap: 15px; text-decoration: none;">
+                    <img src="../LOGO/logo.png" alt="GATEMAN Logo">
+                    <span class="dealer-badge">김해 밀양 공식 대리점</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="smartdoorlock.html">스마트도어락</a></li>
+                    <li><a href="purchase.html">IoT 서비스</a></li>
+                    <li><a href="technology.html">테크놀로지</a></li>
+                    <li><a href="cs_support.html">고객지원</a></li>
+                </ul>
+            </nav>
+            <div class="header-contact">
+                <i class="fas fa-phone"></i>
+                <span>010-6633-7732</span>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+
+<!-- 
+** KSODESIGN LAYOUT 
+** http://ksodesign.com/
+** 1.0.8 INFINITE(RX)
+** Copyright 2010~2016 KSODESIGN	 
+** Contributing author : KSJade (ksodesign1@naver.com)
+-->
+
+<!--[if (gt ie 8)|(!ie)]><![endif]-->
+<!--[if lt IE 9]><![endif]-->
+
+
+<div id="kso-container">
+<section class="page-hero">
+        <div class="container">
+            <h1>GR-SASH</h1>
+            <p>슬림 & 플랫 디자인<br>샷시문 전용 스마트 도어록</p>
+        </div>
+    </section>	
+<article class="kso-contents" id="content" style="padding:0;">
+		<div class="container" style="max-width:100%; width:100%; padding:0;">
+		<div class="row">
+			<div class="col-md-12 content-body" style="padding:0;"><div class="xe_content xe-widget-wrapper " style="float:left;padding:none;margin:none;width:100%;"><div style="padding:0px 0px 0px 0px !important;"><!doctype html>
+<html lang="ko">
+<head>
+</head>
+<body>
+    
+    
+    
+    
+    
+    <script src="https://gateman.kr/common/js/jquery.min.js"></script>
+
+    
+    <title></title>
+    
+    
+    
+    <script src="https://gateman.kr/js/ios-orientationchange-fix.min.js"></script>
+
+    <!-- gaWrap -->
+    
+    <!-- //gaWrap -->
+
+    <section id="container">
+        <div class="prod-section prod-view pb15">
+
+            <!-- gaWrap -->
+            <div class="gaWrap">
+                <!-- ga_GM-900S -->
+                <div class="ga_GM-900S">
+                    <div class="gn_Inner">
+                        <div class="gn_title">
+                            <div class="tit fadeUpMotion">곡선이 주는 부드러움 <br><strong>현관문을 아름답게</strong></div>
+                        </div>
+                        <div class="gm-900S">
+                            <div class="imgBlock">
+                                <div class="img01 fadeUpMotion"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Main01.png"></div>
+                                <div class="img02 fadeUpMotion"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Main02.png"></div>
+                            </div>
+                            <div class="txt fadeUpMotion">GM-900S</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ga_Point -->
+                <div class="ga_Point">
+                    <div class="gn_Inner">
+                        <div class="gp_list">
+                            <div class="gl01">
+                                <div class="i1">
+                                    <div class="iBox fadeUpMotion">
+                                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gm900s_point01.gif" alt="0초 즉시 잠김"></div>
+                                    </div>
+                                </div>
+                                <div class="i2">
+                                    <div class="iBox fw fadeUpMotion">
+                                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gm900s_point03.gif" alt="화재 대응"></div>
+                                    </div>
+                                    <div class="iBox fw fadeUpMotion">
+                                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gm900s_point04.gif" alt="모터락 / 후크 매커니즘"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gl02">
+                                <div class="iBox fadeUpMotion">
+                                    <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gm900s_point02.gif" alt="슬림 디자인"></div>
+                                </div>
+                                <div class="iBox fadeUpMotion">
+                                    <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gm900s_point05.gif" alt="게이트맨 도트"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ga_assaAbloy -->
+                <div class="ga_assaAbloy">
+                    <div class="gn_Inner">
+                        <div class="gn_block_title fadeUpMotion"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_assaAbloy_logo.png" alt="Gateman ASSA ABLOY"></div>
+                        <div class="gn_title">
+                            <div class="tit fadeUpMotion"><span>세계 최초</span> 디지털 도어락 시대를 열다.</div>
+                            <div class="sub fadeUpMotion">최초는 다릅니다. 가장 먼저 시작했기에 가장 잘 알고 가장 잘 만듭니다. <br>대한민국을 넘어 세계 최초로 ‘디지털 도어락’이라는 새로운 문화를 만든 게이트맨은 <br>국내 최초 후크 매커니즘과 모터락 기술까지 도입하며 <br>더 편리하고 안전한 세상을 만들어가고 있습니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ga_Easily -->
+                <div class="ga_Easily">
+                    <div class="gn_Inner">
+                        <div class="gn_title fadeUpMotion">
+                            <div class="tit fadeUpMotion">누구나 쉽게 사용할 수 있는 IoT 도어락</div>
+                            <div class="sub fadeUpMotion"><span>GM-900S</span></div>
+                        </div>
+                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Easily.png" alt="게이트맨 도트, 듀얼 통신팩, 게이트맨 액세스 APP"></div>
+                        <div class="block txt">
+                            게이트맨 액세스 기능을 바로 사용할 수 있는 <br>
+                            <span>게이트맨 도트, 듀얼 통신팩</span> 기본 제공
+                            <ul class="gn_Comment">
+                                <li>*원거리 사용을 위한 게이트맨 액세스 커넥트 별매</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ga_GatemanDot -->
+                <div class="ga_GatemanDot">
+                    <div class="gn_Inner">
+                        <div class="gn_title fadeUpMotion">
+                            <div class="tit">
+                                어려운 IoT? <br>누구에게나 간편한 IoT! <br>
+                                <span>GATEMAN DOT</span> <br>
+                                게이트맨 도트
+                            </div>
+                        </div>
+
+                        <div class="swiper gvSlider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_GatemanDot_Img01.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_GatemanDot_Img02.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_GatemanDot_Img03.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_GatemanDot_Img04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <script type="text/javascript" src="https://gateman.kr/common/swiper/swiper-bundle.min.js"></script>
+                        <script>
+                            var mySwiper = new Swiper('.gvSlider', {
+                                slidesPerView: 1,
+                                effect: 'fade',
+                                fadeEffect: {
+                                    crossFade: true
+                                },
+                                speed: 1500,
+                                spaceBetween: 30,
+                                loop: true,
+                                autoplay: {
+                                    delay: 2000,
+                                    disableOnInteraction: false
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+
+                <!-- ga_Anyone -->
+                <div class="ga_Anyone">
+                    <div class="gn_Inner">
+                        <div class="gn_title_img">
+                            <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Anyone01.png"></div>
+                        </div>
+                        <div class="gn_title fadeUpMotion">
+                            <div class="tit">어플 사용이 어려운 어르신, 어린아이도 <br>손쉽게 사용하는 <span>게이트맨 도트.</span></div>
+                            <div class="sub">게이트맨 도트에 휴대폰을 간단히 탭하면 <br>도어락을 손쉽게 잠금 해제할 수 있습니다.</div>
+                        </div>
+                        <div class="block fadeUpMotion">
+                            <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Anyone02.png"></div>
+                        </div>
+                        <ul class="gn_Comment">
+                            <li>*게이트맨 도트를 사용하기 위해서는 도어락에 <br class="hide-pc"><strong>듀얼통신팩 설치</strong> 및 <strong>게이트맨 액세스와 연동</strong>이 필요합니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ga_Anyone02 -->
+                <div class="ga_Anyone02">
+                    <div class="gn_Inner">
+                        <div class="gn_title fadeUpMotion">
+                            <div class="tit"><span>누구에게나 열린 IoT</span> <br>이렇게 사용해 보세요.</div>
+                        </div>
+                        <div class="block fadeUpMotion">
+                            <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Anyone02_01.png"></div>
+                            <dl>
+                                <dt>현관, 월패드까지 <br>힘들게 움직일 필요 없어요</dt>
+                                <dd>거동이 불편한 어르신이나 장애인, 일시적으로 움직임이 제한된 분들도 침대나 그자리에서 스마트폰 태그만으로 도어락을 열 수 있어 집안 깊숙이 설치된 월패드나 현관까지 힘겹게 이동할 필요가 없습니다.</dd>
+                            </dl>
+                        </div>
+
+                        <div class="block_list">
+                            <div class="box">
+                                <div class="block slideLeftMotion">
+                                    <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Anyone02_02.png"></div>
+                                    <dl>
+                                        <dt>키가 작아 도어락을 <br>누르기 어려운 어린이</dt>
+                                        <dd>현관 도어락 버튼이 너무 높아 손이 닿지 않는 아이들, 이제는 걱정하지 마세요. <br>복잡한 조작 없이 태그 한 번으로 열 수 있어 아이 혼자 등하원할 때도 스마트하고 안전한 출입을 도와줍니다.</dd>
+                                    </dl>
+                                </div>
+                                <div class="block slideRightMotion">
+                                    <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Anyone02_03.png"></div>
+                                    <dl>
+                                        <dt>주방, 욕실 생활반경 <br>어느 곳에서든</dt>
+                                        <dd>요리 중이든, 샤워 중이든 더 이상 현관 앞까지 달려갈 필요 없어요. 게이트맨 도트를 가까이 두기만 해도 주방, 욕실, 거실 등 집 안 어디서나 도어락을 열 수 있어 일상이 훨씬 편해집니다.</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="block slideLeftMotion">
+                                    <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Anyone02_04.png"></div>
+                                    <dl>
+                                        <dt>휠체어를 타거나 <br>일어나기 힘들 때에도</dt>
+                                        <dd>게이트맨 도트를 손이 닿기 쉬운 위치에 설치하면 앉은 채로도 간편하게 문을 열 수 있어 누구에게나 편리하고 안전한 출입 환경을 제공합니다.</dd>
+                                    </dl>
+                                </div>
+                                <div class="block slideRightMotion">
+                                    <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Anyone02_05.png"></div>
+                                    <dl>
+                                        <dt>운전 등 스마트폰 사용이 <br>어려운 상황에서도</dt>
+                                        <dd>운전 중이거나 양손이 바쁜 순간, <br>일일이 스마트폰을 꺼내 앱을 실행하긴 번거롭죠. <br>이젠 태그만으로 간편하게 제어하세요.</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="block slideLeftMotion">
+                                    <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Anyone02_06.png"></div>
+                                    <dl>
+                                        <dt>비밀번호, 카드키를 <br>잊었을 때 곤란하지 않게</dt>
+                                        <dd>비밀번호가 기억나지 않거나 카드키를 깜빡하고 나와 당황한 적 있으신가요? <br>이제 게이트맨 도트로 갑작스런 상황에도 걱정없이 간편하게 출입하세요.</dd>
+                                    </dl>
+                                </div>
+                                <div class="block slideRightMotion">
+                                    <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Anyone02_07.png"></div>
+                                    <dl>
+                                        <dt>우리 집 대문에서 <br>현관문까지 편안하게</dt>
+                                        <dd>대문에서 태그하고 마당을 지나 현관문 앞에 도착하 는 순간, 도어락이 해제되어 문 앞에서 멈추지않고 자연스럽게 출입 할 수 있습니다.</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="gn_Comment">
+                            <li>*외부에서 게이트맨 도트 사용 시 원거리 통신을   <br class="hide-pc"><strong>게이트맨 액세스 커넥트</strong>가 필요합니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ga_Dot -->
+                <div class="ga_Dot">
+                    <div class="gn_Inner">
+                        <div class="gd_media fadeUpMotion">
+                            <iframe src="https://www.youtube.com/embed/ymL-hv3bzJY?si=Hf8M5_azQaHOAMTd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ga_USE -->
+                <div class="ga_USE">
+                    <div class="gn_Inner">
+                        <div class="gn_title fadeUpMotion">
+                            <div class="tit">사용 방법</div>
+                        </div>
+                        <div class="img imgPC fadeUpMotion"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_USE_PC.png" alt="안드로이드 : 핸드폰 잠금 해제 - 게이트맨 도트 태킹 / 아이폰 : 핸드폰 잠금 해제 - 게이트맨 도트 태깅 - 팝업 클릭"></div>
+                        <div class="img imgM fadeUpMotion"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_USE_M.png" alt="화재 시 도어락 문제, 알고 계신가요? - 아래 참조"></div>
+                    </div>
+                </div>
+
+                <!-- ga_IOT -->
+                <div class="ga_IOT">
+                    <div class="gn_Inner">
+                        <div class="gn_background_item">
+                            <div class="gbi_01"><img src="https://gateman.kr/common/img/access/ga_IOT_gbi_01.png" alt=""></div>
+                            <div class="gbi_02"><img src="https://gateman.kr/common/img/access/ga_IOT_gbi_02.png" alt=""></div>
+                            <div class="gbi_03"><img src="https://gateman.kr/common/img/access/ga_IOT_gbi_03.png" alt=""></div>
+                            <div class="gbi_04"><img src="https://gateman.kr/common/img/access/ga_IOT_gbi_04.png" alt=""></div>
+                            <div class="gbi_05"><img src="https://gateman.kr/common/img/access/ga_IOT_gbi_05.png" alt=""></div>
+                            <div class="gbi_06"><img src="https://gateman.kr/common/img/access/ga_IOT_gbi_06.png" alt=""></div>
+                            <div class="gbi_11"><img src="https://gateman.kr/common/img/access/ga_IOT_gbi_11.png" alt=""></div>
+                            <div class="gbi_12"><img src="https://gateman.kr/common/img/access/ga_IOT_gbi_12.png" alt=""></div>
+                            <div class="gbi_13"><img src="https://gateman.kr/common/img/access/ga_IOT_gbi_13.png" alt=""></div>
+                            <div class="gbi_14"><img src="https://gateman.kr/common/img/access/ga_IOT_gbi_14.png" alt=""></div>
+                            <div class="gbi_15"><img src="https://gateman.kr/common/img/access/ga_IOT_gbi_15.png" alt=""></div>
+                            <div class="gbi_16"><img src="https://gateman.kr/common/img/access/ga_IOT_gbi_16.png" alt=""></div>
+                        </div>
+                        <div class="gn_block_title fadeUpMotion">
+                            <span>WHY GATEMAN ACCESS?</span>
+                        </div>
+                        <div class="gn_title fadeUpMotion">
+                            <div class="tit">도어락에 <span>IoT</span>를 더해 <br>언제 어디서나 <br>안전한 <span>보안 솔루션</span>을 제공합니다.</div>
+                            <div class="sub">국내 최초 디지털 도어락의 시대를 연 ‘게이트맨’ <br>IoT(사물인터넷) 기술력으로 더욱 똑똑해진 스마트 도어락 <br>높은 보안과 편리함을 모두 누리는 방법입니다.</div>
+                        </div>
+                        <div class="ga_IOT_list">
+                            <div class="tit fadeUpMotion">언제 어디서나 스마트한 생활</div>
+                            <ul class="gil_list">
+                                <li class="fadeUpMotion" data-wow-delay="100ms">
+                                    <div class="img"><img src="https://gateman.kr/common/img/access/ga_IOT_01.png" alt=""></div>
+                                    <div class="ga_badge"><span>#가족_도착_알림</span></div>
+                                    <div class="txt">가족의 안전한 귀가 알림 <br>도어락 침입/파손 간편 조회</div>
+                                </li>
+                                <li class="fadeUpMotion" data-wow-delay="400ms">
+                                    <div class="img"><img src="https://gateman.kr/common/img/access/ga_IOT_02.png" alt=""></div>
+                                    <div class="ga_badge"><span>#원격_도어락_제어</span></div>
+                                    <div class="txt">앱을 사용한 원격 <br>비밀번호 변경</div>
+                                </li>
+                                <li class="fadeUpMotion" data-wow-delay="700ms">
+                                    <div class="img"><img src="https://gateman.kr/common/img/access/ga_IOT_03.png" alt=""></div>
+                                    <div class="ga_badge"><span>#실시간_푸시_알림</span></div>
+                                    <div class="txt">실시간 도어락 조작 현황 <br>푸시 알림 조회</div>
+                                </li>
+                                <li class="fadeUpMotion" data-wow-delay="1000ms">
+                                    <div class="img"><img src="https://gateman.kr/common/img/access/ga_IOT_04.png" alt=""></div>
+                                    <div class="ga_badge"><span>#스마트한_도어락_열기_닫기</span></div>
+                                    <div class="txt">외부에서 앱을 통해 <br>도어락 열고 닫기</div>
+                                </li>
+                                <li class="fadeUpMotion" data-wow-delay="1300ms">
+                                    <div class="img"><img src="https://gateman.kr/common/img/access/ga_IOT_05.png" alt=""></div>
+                                    <div class="ga_badge"><span>#1회용_방문자_비밀번호_발급</span></div>
+                                    <div class="txt">특정 시간/상황에서만 <br>사용 가능한 일회성 비밀번호 발급</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="gn_Inner fadeUpMotion">
+                            <ul class="gn_Comment">
+                                <li>*블루투스 통신 범위 외 작동을 위한 <br class="hide-pc"><strong>게이트맨 액세스 커넥트</strong> 별도 구매 (구매 문의 <a href="tel:1577-1919">1577-1919</a>)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ga_SmartPhone -->
+                <div class="ga_SmartPhone">
+                    <div class="gn_Inner">
+                        <div class="block">
+                            <div class="tit fadeUpMotion" data-wow-delay="100ms">스마트폰으로만 관리하는 도어락?</div>
+                            <div class="img fadeUpMotion" data-wow-delay="400ms"><img src="https://gateman.kr/common/img/access/ga_SmartPhone.png" alt=""></div>
+                            <div class="txt fadeUpMotion" data-wow-delay="700ms">이제는 <strong>일상</strong>이 된 <strong>스마트폰</strong></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ga_SmartPhone02 -->
+                <div class="ga_SmartPhone02">
+                    <div class="gn_Inner">
+                        <div class="ga_sp_list slideLeftMotion">
+                            <dl>
+                                <dt>스마트폰만 있으면 언제 어디서든 <br>현관문의 보안 상태를 체크!</dt>
+                                <dd>
+                                    <ul class="ga_check_list">
+                                        <li>도어락 열림/닫힘 히스토리 확인</li>
+                                        <li>현재 문/도어락 여닫힘 상태 확인</li>
+                                        <li>실시간 푸시 알림</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="ga_sp_list slideRightMotion">
+                            <dl>
+                                <dt>도어락 설정도 앱 하나로 간단히!</dt>
+                                <dd>
+                                    <ul class="ga_check_list">
+                                        <li>비밀번호 변경 &amp; 지문 &middot; 카드키 등록</li>
+                                        <li>일회용 비밀번호 발급</li>
+                                        <li>시간대별 출입 비밀번호 발급</li>
+                                        <li>사용자 등록 &middot; 삭제</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="ga_sp_list fadeUpMotion">
+                            <dl>
+                                <dt>혹시 모를 침입 걱정도 끝!</dt>
+                                <dd>
+                                    <ul class="ga_check_list">
+                                        <li>불법 잠금 해제 경보</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ga_Card -->
+                <div class="ga_Card">
+                    <div class="gn_Inner">
+                        <dl>
+                            <dt class="fadeUpMotion" data-wow-delay="100ms">이런 범죄 예방해요</dt>
+                            <dd class="fadeUpMotion" data-wow-delay="300ms">이웃이 집주인 몰래 도어락 카드키를 <br>등록해서 절도 범죄를 저지른 일이 있어요.
+                            </dd>
+                            <dd class="iot fadeUpMotion" data-wow-delay="700ms">
+                                <span>게이트맨 액세스는 <strong>실시간 IoT 서비스</strong>로 </span>
+                                <br class="hide-pc">
+                                <span>더욱 <strong>안전하고 편리한 생활</strong>을 제공합니다.</span>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <!-- ga_Dual -->
+                <div class="ga_Dual">
+                    <div class="gn_Inner">
+                        <div class="gn_title"><div class="tit fadeUpMotion">게이트맨 액세스 서비스를 위한 <br><span>듀얼 통신팩 &amp; 액세스 커넥트</span></div></div>
+                        <div class="ga_Dual_list">
+                            <div class="block slideLeftMotion">
+                                <div class="img gd_01"></div>
+                                <dl>
+                                    <dt>게이트맨 액세스 듀얼 통신팩</dt>
+                                    <dd>기존에 각각 설치가 필요했던 <br>어플 연동 통신팩과 홈넷(비디오폰) <br>연동 통신팩을 하나로!</dd>
+                                </dl>
+                            </div>
+                            <div class="block slideRightMotion">
+                                <div class="img gd_02"></div>
+                                <dl>
+                                    <dt>게이트맨 액세스 커넥트</dt>
+                                    <dd>블루투스 통신 거리를 벗어나 <br>전국 언제 어디서나 도어락 제어와 <br>관리가 가능합니다
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="ga_Dual_list">
+                            <div class="block fadeUpMotion" data-wow-delay="100ms">
+                                <dl>
+                                    <dt>게이트맨 액세스 <br>듀얼 통신팩 단독 사용 시</dt>
+                                    <dd class="txt">모든 기능 사용에 대해 <br>블루투스 수신 가능한 <br> <strong>근거리 내 지원</strong></dd>
+                                </dl>
+                            </div>
+                            <div class="block fadeUpMotion" data-wow-delay="300ms">
+                                <dl>
+                                    <dt>게이트맨 액세스 <br>듀얼 통신팩 + 커넥트 연동 사용 시</dt>
+                                    <dd class="txt">모든 기능 사용에 대해 <br> <strong>외부 어디에서나 <br>실시간으로 가능</strong></dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <ul class="gn_Comment fadeUpMotion">
+                            <li>*앱을 통해 등록된 서비스는 사용 중인 무선공유기를 통해 게이트맨 액세스 커넥트로 전달되어 언제 어디서나 도어락을 자유롭게 <br>컨트롤할 수 있습니다. 커넥트 연결 시 무선 송·수신부의 거리, 신호의 세기, 전파 방해물 등 여건에 따라 제약이 따를 수 있습니다.</li>
+                            <li>*게이트맨 액세스 사용 시, 도어락은 마스터모드로 전환되어 일부 사용 기능에 제약이 있을 수 있습니다. <br>자세한 내용은 FAQ를 통해 확인할 수 있습니다.</li>
+                        </ul>
+                        <div class="btn_set fadeUpMotion">
+                            <a href="https://gateman.kr/faq_tech"><span>FAQ 바로가기</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ga_Certified -->
+                <div class="ga_Certified">
+                    <div class="gn_Inner">
+                        <div class="gd_Block">
+                            <div class="block">
+                                <div class="gn_block_title fadeUpMotion"><span>게이트맨 지문 인증 기술로</span></div>
+                                <div class="gn_title">
+                                    <div class="tit fadeUpMotion">빠르고 정확한 지문인증</div>
+                                    <div class="sub fadeUpMotion">비밀번호 없이 지문으로 빠르게 문을 열 수 있으며 <br class="hide-pc">복제가 불가능한 게이트맨의 지문 인증 기술로 최고 수준의 출입 보안을 제공합니다.</div>
+                                </div>
+                                <div class="img fadeUpMotion"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Certified_icon.png"></div>
+                                <div class="img fadeUpMotion"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Certified01.gif"></div>
+                            </div>
+                            <div class="block">
+                                <div class="gn_block_title fadeUpMotion"><span>문 여는 과정 최소화</span></div>
+                                <div class="gn_title">
+                                    <div class="tit fadeUpMotion">퀵패스 지문인식</div>
+                                    <div class="sub fadeUpMotion">퀵패스 지문인식은 지문인식과 문을 여는 과정이 자연스럽게 이어지게 하여 고객 편의를 <br class="hide-pc">극대화한 지문 인증 방식입니다. 핸들을 잡음과 동시에 지문 인식부에 지문을 접촉하면 <br class="hide-pc">빠르고 편리하게 인증이 완료되며 문을 열 수 있습니다.</div>
+                                </div>
+                                <div class="img fadeUpMotion"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Certified02.png"></div>
+                            </div>
+                            <div class="block">
+                                <div class="gn_block_title fadeUpMotion"><span>게이트맨 기술력의 정점</span></div>
+                                <div class="gn_title">
+                                    <div class="tit fadeUpMotion">부드럽게 열리는 모터락</div>
+                                    <div class="sub fadeUpMotion">기존의 푸시풀 도어락보다 한 단계 더 업그레이드 된 모터락은 <br class="hide-pc">추가 동작 없이도 유리문을 당기듯 부드럽게 열립니다.</div>
+                                </div>
+                                <div class="img fadeUpMotion"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Certified03.gif"></div>
+                            </div>
+                            <div class="block">
+                                <div class="gn_block_title fadeUpMotion"><span>짐이 많을 때도 편안하게</span></div>
+                                <div class="gn_title">
+                                    <div class="tit fadeUpMotion">밀고 나가는 푸시풀</div>
+                                    <div class="sub fadeUpMotion">손이 없어도 살짝 밀면 열리도록 <br class="hide-pc">사용자의 편리함을 극대화했습니다.</div>
+                                </div>
+                                <div class="img fadeUpMotion"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Certified04.png"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ga_Safety -->
+                <div class="ga_Safety">
+                    <div class="gn_Inner">
+                        <div class="gn_title fadeUpMotion"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Safety_logo.png"></div>
+                        <div class="gn_title"><div class="tit fadeUpMotion">게이트맨으로 선택하는 <br>안전한 일상</div></div>
+                        <div class="gs_block gs_block_top">
+                            <div class="box fadeUpMotion">
+                                <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Safety01.png"></div>
+                                <div class="txt">
+                                    <p>
+                                        누군가 나를 따라 들어올까 불안했던 적 없으셨나요?<br>
+                                        이제 0초 잠김 기능의 안전함으로 말끔히 해결하세요.<br>
+                                        문이 닫히는 순간 렛치볼트가 즉시 문을 잠가 침입 위험을 완벽히 차단합니다.
+                                        <span>*데드볼트 잠김시간 : 1~5초 별도 설정 가능 (매뉴얼 참고) / 기본 설정 : 3초</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gs_block">
+                            <div class="box slideLeftMotion">
+                                <div class="txt">
+                                    <span>이중 잠금으로 10배 더 안전한</span>
+                                    <div>후크(Hook) 매커니즘</div>
+                                    <p>강력한 맞물림 구조로 설계된 게이트맨 후크 매커니즘은 <br>빗장 구조의 잠금방식이 가진 취약점을 획기적으로 개선시켜 <br>걸쇠로 한번, 후크로 두번 잠그는 이중잠금방식으로 강화하여 <br>더 안전합니다.</p>
+                                </div>
+                                <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Safety03.png"></div>
+                            </div>
+                        </div>
+                        <div class="gs_vs fadeUpMotion">
+                            <div>
+                                <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Safety04.png"></div>
+                                <dl>
+                                    <dt>일반 도어록 잠금쇠</dt>
+                                    <dd><p>체결력이 약한 빗장방식으로 빠루 등 도구를 사용한 <br>신종 범죄에 취약</p></dd>
+                                </dl>
+                            </div>
+                            <span>VS</span>
+                            <div>
+                                <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Safety05.png"></div>
+                                <dl>
+                                    <dt>게이트맨 후크 매커니즘</dt>
+                                    <dd><p>강하고 질긴 특성의 SUS 소재를 사용하여 더욱 뛰어난 강도와 이중잠금방식의 강력한 맞물림 구조로 10배 더 안전하게</p></dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="gs_media fadeUpMotion">
+                            <iframe src="https://www.youtube.com/embed/nRvlRDPktjs?si=tn3z6aKJfk2i7ayH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ga_Fire -->
+                <div class="ga_Fire">
+                    <div class="img imgPC"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Fire_PC.png" alt="화재 시 도어락 문제, 알고 계신가요? - 아래 참조"></div>
+                    <div class="img imgM"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Fire_M.png" alt="화재 시 도어락 문제, 알고 계신가요? - 아래 참조"></div>
+                    <div class="gaBlind">
+                        최근 해외 직구로 구매한 디지털 도어록의 화재 안전성 문제가 제기되고 있습니다. 한국소비자원이 실시한 실험 결과, 일부 제품이 심각한 결함을 보이며 소비자의 안전을 위협하고 있습니다. <br>
+                        <strong>Anti-Fire 게이트맨 화재대응 기술로 완벽하게 안심</strong> <br>
+                        <strong>화재에 강한 내화형 소재 사용</strong> <br>
+                        메인바디에 사용되는 특수소재는 섭씨 1,000도의 고온에서도 형태를 유지하여 유사시에도 정상 작동하도록 제작되었습니다. 또한 이 소재는 전기 절연성이 커서 정전기에도 강합니다. 화이버 글라스는 군용헬멧 등에 사용하고 있는 첨단소재이고, PCB 이중코팅으로 안정성을 높였습니다. <br>
+                        <strong>불꽃이 새지 않는 안티파이어 기술</strong> <br>
+                        불꽃과 열기에 지속적으로 노출되면 도어록과 방화문의 틈새로 불꽃이 새어나와 화재가 전이됩니다. 게이트맨에서 개발한 내화기술(내부 설치형 브라켓)은 도어록과 방화문의 틈새를 완벽하게 차단해 화재가 전이되는 것을 막아줍니다.
+                    </div>
+                </div>
+
+                <!-- ga_Reliability -->
+                <div class="ga_Reliability">
+                    <div class="gn_Inner">
+                        <div class="gn_title">
+                            <div class="tit fadeUpMotion">
+                                <span class="t1">국내 KS 기준을 능가하는</span>
+                                <span class="t2">자체 기준 신뢰성 테스트</span>
+                            </div>
+                            <div class="sub fadeUpMotion">
+                                국내 KS기준보다 엄격한 자체 기준을 세워 최고의 도어락을 만들기 위해 <br>끊임없이 연구하고 실험하고 개선합니다.
+                            </div>
+                        </div>
+                        <div class="gr_area">
+                            <div class="img fadeUpMotion"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Reliability.png"></div>
+                            <dl class="gr_item01 fadeUpMotion">
+                                <dt>IPX4 등급 생활방수</dt>
+                                <dd>GM-900S는 방수기능 테스트로 121개의 구멍을 가진 <br class="hide-pc">분무노즐을 통한 0.8기압, 분당 10리터의 수압을 견뎌냅니다.</dd>
+                            </dl>
+                            <dl class="gr_item02 fadeUpMotion">
+                                <dt>60,000회 버튼 반복 작동</dt>
+                                <dd>4자리의 비밀번호 입력을 시나리오로 키패드 각 버튼 마다 입력을 <br class="hide-pc">반복하여 내구성 및 99% 이상의 동작 성공률까지 테스트합니다.</dd>
+                            </dl>
+                            <dl class="gr_item03 fadeUpMotion">
+                                <dt>72시간 자외선 강제 노출</dt>
+                                <dd>도어록이 UV(자외선)에 장기간 노출되었을 때 온도 상승에 의한 <br class="hide-pc">물성의 변화가 발생하지 않는지 장시간 논스톱 테스트를 통해 검증합니다.</dd>
+                            </dl>
+                            <dl class="gr_item04 fadeUpMotion">
+                                <dt>96시간 염도 노출</dt>
+                                <dd>염수 농도 5%의 용액을 장시간 연속분사한 후 세척하여 관찰함으로 <br class="hide-pc">염분으로 인한 도어록의 결함 가능성을 사전에 방지합니다.</dd>
+                            </dl>
+                        </div>
+                        <div class="gr_media fadeUpMotion">
+                            <iframe src="https://www.youtube.com/embed/lO7g7giCsUI?si=k98YWknKUlJbpI_f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ga_Space -->
+                <div class="ga_Space">
+                    <div class="img imgPC"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Space_PC.png" alt="감각적인 디자인으로 공간과 조화를 이루다 GM-900S - 아래 참조"></div>
+                    <div class="img imgM"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Space_M.png" alt="감각적인 디자인으로 공간과 조화를 이루다 GM-900S - 아래 참조"></div>
+                    <div class="gaBlind">
+                        어떠한 문에도 완벽하게 어우러지는 슬림한 바디, 거기에 더해진 아름다운 곡선형 손잡이는 세련된 현관 인테리어 포인트로 완성시킵니다. <br>
+                        <strong>슬림하게 문에 ‘착’</strong> <br>
+                        어떠한 문에도 매끄럽게 어울리는 슬림한 바디 디자인으로 공간 활용도까지 높아 디자인과 기능성의 완벽한 균형을 이룹니다. <br>
+                        <strong>편안한 그립감과 곡선의 아름다움</strong> <br>
+                        인체공학적인 손잡이는 손에 착 감기고, 고급스러운 곡선 라인은 어떤 공간에서도 세련된 존재감을 드러냅니다.
+                    </div>
+                </div>
+
+                <!-- ga_Beautiful -->
+                <div class="ga_Beautiful">
+                    <div class="gn_Inner">
+                        <div class="gn_block_title fadeUpMotion"><span>서체까지도 아름다운 도어락</span></div>
+                        <div class="gn_title">
+                            <div class="tit fadeUpMotion">숫자 하나에도 디자인을 담다</div>
+                            <div class="sub fadeUpMotion">아름다운 타입페이스를 가진 Google Noto Sans 서체를 <br>키패드 숫자에 적용하여 직관성을 높혔습니다.</div>
+                        </div>
+                        <div class="gb_area">
+                            <div class="img fadeUpMotion"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Beautiful_prod.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ga_Visual -->
+                <div class="ga_Visual">
+                    <div class="gn_Inner">
+                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Visual01.png"></div>
+                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Visual02.png"></div>
+                    </div>
+                </div>
+
+                <!-- ga_Function -->
+                <div class="ga_Function">
+                    <div class="gn_Inner">
+                        <div class="gf_safety">
+                            <div class="gn_block_title"><span>더 이상 불안은 끝</span></div>
+                            <div class="gn_title"><div class="tit">안전 기능</div></div>
+                            <div class="gf_list swiper gfSlider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gf_safety01.png"></div>
+                                        <dl>
+                                            <dt>0초 즉시잠김</dt>
+                                            <dd><p>문이 닫히는 순간 렛치볼트가 즉시 문을 잠가 외부 침입 위험을 차단합니다.</p></dd>
+                                        </dl>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gf_safety02.png"></div>
+                                        <dl>
+                                            <dt>내화형 소재</dt>
+                                            <dd><p>화재에 강한 내화형 소재로 강력한 내구성을 갖고 있으며 섭씨 1,000도의 고온에서도 형태를 유지하여 유사시에도 정상 작동하도록 제작되었습니다.</p></dd>
+                                        </dl>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gf_safety03.png"></div>
+                                        <dl>
+                                            <dt>허수 비밀번호</dt>
+                                            <dd>
+                                                <p>비밀번호 앞 또는 뒤에 임의의 숫자들을 터치해 내 비밀번호를 숨길 수 있습니다.</p>
+                                                <span>TIP) 아무숫자 + 내 비밀번호 or 내 비밀번호 + 아무숫자</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gf_safety04.png"></div>
+                                        <dl>
+                                            <dt>내부 강제 잠금</dt>
+                                            <dd><p>안전 잠금 버튼을 5초 이상 누르면 외부에서는 문을 열 수 없게 됩니다.</p></dd>
+                                        </dl>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gf_safety05.png"></div>
+                                        <dl>
+                                            <dt>파손 방지 경보</dt>
+                                            <dd><p>외부에서 도어락 파손 및 침입 시도 시 강력한 경보음이 발생합니다.</p></dd>
+                                        </dl>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gf_safety06.png"></div>
+                                        <dl>
+                                            <dt>타임 락(LOCK)</dt>
+                                            <dd><p>비밀번호 오류 or 미등록 카드키를 5회 연속 입력 시 일정 시간 동안 모든 동작이 멈춥니다.</p>
+                                                <span>* 매뉴얼 참조</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gf_safety07.png"></div>
+                                        <dl>
+                                            <dt>지문 흔적 방지</dt>
+                                            <dd><p>비밀번호 입력 후 키패드를 손바닥 전체로 터치하거나 쓸어내리면 도어락이 해정됨과 함께 지문 흔적이 뭉개져 남지 않습니다.</p></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gf_convenience">
+                            <div class="gn_block_title"><span>생활을 더욱 편리하게</span></div>
+                            <div class="gn_title"><div class="tit">편의 기능</div></div>
+                            <div class="gf_list swiper gfSlider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gf_convenience01.png"></div>
+                                        <dl>
+                                            <dt>퀵패스 지문인식</dt>
+                                            <dd><p>지문 인식과 문을 여는 과정이 자연스럽게 이어지게 하여 정상적으로 인증이 완료되면 그대로 손잡이를 당겨 문을 열 수 있습니다.</p></dd>
+                                        </dl>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gf_convenience02.png"></div>
+                                        <dl>
+                                            <dt>건전지 교체 알림</dt>
+                                            <dd><p>건전지 교체 시기에 경고음과 표시등으로 미리 알려드립니다.</p></dd>
+                                        </dl>
+                                    </div>
+                                    <!--div class="swiper-slide">
+                                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gf_convenience03.png"></div>
+                                        <dl>
+                                            <dt>푸시형 배터리 커버</dt>
+                                            <dd><p>배터리 교체 시, 배터리 커버를 간단히 푸쉬해서 열고 닫을 수 있어 편리합니다.</p></dd>
+                                        </dl>
+                                    </div-->
+                                    <div class="swiper-slide">
+                                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gf_convenience04.png"></div>
+                                        <dl>
+                                            <dt>에티켓 모드</dt>
+                                            <dd>손바닥으로 5초 이상 키패드 터치 시 일회성 무음 기능이 켜집니다.</p></dd>
+                                        </dl>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gf_convenience05.png"></div>
+                                        <dl>
+                                            <dt>음성 안내</dt>
+                                            <dd>기본 상태는 물론 기능 설정 방법까지 음성으로 자세하게 안내해드립니다.</dd>
+                                        </dl>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="img"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/gf_convenience06.png"></div>
+                                        <dl>
+                                            <dt>비상 전원 단자</dt>
+                                            <dd>
+                                                <p>배터리 방전 시 알카라인 9V 건전지를 키패드 하단 비상 전원 단자에 접촉시켜 임시로 도어락을 작동시킬 수 있습니다.</p>
+                                                <span>* 비밀번호를 입력하는 동안 건전지를 비상 전원 단자에 접촉하고 있어야 함</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    var mySwipers = [];
+
+                    function initOrDestroySwipers() {
+                        var windowWidth = window.innerWidth;
+
+                        var sliders = document.querySelectorAll('.gfSlider');
+                        if (windowWidth > 1000) {
+                            if (!mySwipers.length) {
+                                sliders.forEach(function(slider){
+                                    mySwipers.push(new Swiper(slider, {
+                                        breakpoints: {
+                                            1000: {
+                                                slidesPerView: 2.2,
+                                                spaceBetween: 40,
+                                            },
+                                            1400: {
+                                                slidesPerView: 3.4,
+                                                spaceBetween: 90,
+                                            },
+                                        },
+                                    }));
+                                });
+                            }
+                        } else {
+                            if (mySwipers.length) {
+                                mySwipers.forEach(function(swiper){
+                                    swiper.destroy(true, true);
+                                });
+                                mySwipers = [];
+                            }
+                        }
+                    }
+
+                    initOrDestroySwipers();
+                    window.addEventListener('resize', initOrDestroySwipers);
+                </script>
+
+                <!-- ga_SmartIOT -->
+                <div class="ga_SmartIOT">
+                    <div class="gn_Inner">
+                        <div class="img imgPC"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_SmartIOT_PC.png" alt="SMART IoT Gateman Dot와 Gateman Access로 언제 어디서나 스마트하게 누리는 편리함"></div>
+                        <div class="img imgM"><img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_SmartIOT_M.png" alt="SMART IoT Gateman Dot와 Gateman Access로 언제 어디서나 스마트하게 누리는 편리함"></div>
+                    </div>
+                </div>
+
+                <!-- ga_Part -->
+                <div class="ga_Part">
+                    <div class="gn_Inner">
+                        <div class="gn_title"><div class="tit">부속품</div></div>
+                        <div class="gp_block">
+                            <div class="top">
+                                <div>
+                                    <img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Part01.png">
+                                    <span>프론트바디</span>
+                                </div>
+                                <div>
+                                    <img src="https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Part02.png">
+                                    <span>메인바디</span>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <ul>
+                                    <li>프론트 바디</li>
+                                    <li>브라켓</li>
+                                    <li>메인 바디</li>
+                                    <li>스크류</li>
+                                    <li>후크형 모티스</li>
+                                    <li>카드키 4개</li>
+                                    <li>스트라이크(좌/우수)</li>
+                                    <li>건전지 4개</li>
+                                </ul>
+                                <ul>
+                                    <li>경보스티커</li>
+                                    <li>듀얼통신팩</li>
+                                    <li>제품보증서</li>
+                                    <li>게이트맨 도트 1개</li>
+                                    <li>사용설명서</li>
+                                    <li>시공지본</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ga_Spec -->
+                <div class="ga_Spec">
+                    <div class="gn_Inner">
+                        <div class="gn_title"><div class="tit">제품규격 및 주요기능</div></div>
+                        <div class="gs_list">
+                            <ul>
+                                <li>
+                                    <span class="tit">모델명/제품종류</span>
+                                    <span class="txt">GM-900S</span>
+                                </li>
+                                <li>
+                                    <span class="tit">색상</span>
+                                    <span class="txt">Silver</span>
+                                </li>
+                                <li>
+                                    <span class="tit">사이즈</span>
+                                    <span class="txt">Front: 102(W) X 383.4(H) X 50(D)mm <br class="hide-pc">Main: 86.9(W) X 384.9(H) X 49.2(D)mm</span>
+                                </li>
+                                <li>
+                                    <span class="tit">재질</span>
+                                    <span class="txt">Front&amp;Main: PC, AIDC</span>
+                                </li>
+                                <li>
+                                    <span class="tit">인증방식</span>
+                                    <span class="txt">터치패드, 카드키, 지문</span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <span class="tit">건전지</span>
+                                    <span class="txt">1.5V AA(LR6) 알카라인 건전지 4개 <br>(1일 10회 사용기준 1년 사용 가능)</span>
+                                </li>
+                                <li>
+                                    <span class="tit">추가옵션</span>
+                                    <span class="txt">리모콘, 비디오폰 연동 통신팩, 무선연동기, 게이트맨액세스 (듀얼통신팩/커넥트), 보강판</span>
+                                </li>
+                                <li>
+                                    <span class="tit">비밀번호 등록 수</span>
+                                    <span class="txt">100개</span>
+                                </li>
+                                <li>
+                                    <span class="tit">카드키 등록 수</span>
+                                    <span class="txt">100개</span>
+                                </li>
+                                <li>
+                                    <span class="tit">지문 등록 수</span>
+                                    <span class="txt">100개</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- //gaWrap -->
+
+        </div>
+    </section>
+
+    <script type="text/javascript" src="https://gateman.kr/common/js/gateman/wow.min.js"></script>
+    <script type="text/javascript" src="https://gateman.kr/common/js/gateman/script-f.js"></script>
+    <script type="text/javascript" src="https://gateman.kr/common/js/gateman/test-boot.js"></script>
+</body>
+</html></div></div></div>
+					</div>
+	</div>
+</article>
+
+<section id="kso-footer" class="">
+  <div class="container">
+      <div class="row mBtm30">
+          <div class="col-md-3 mb-xs">
+              <img src="images/145/01f031d560bc353efc1c33d493dc1415.png" class="img-responsive center-block" />
+          </div>
+          <div class="col-md-4 col-md-offset-1 mb-xs">
+              <h5 class="deco-line font-en pointColor"><span>COMPANY INFO</span></h5>
+              <p class="footer-color">김해 밀양 공식 대리점<br>
+대표자 : [대표자명]<br>
+사업자등록번호 : [사업자번호]<br>
+주소 : [주소]</p>
+          </div>
+          <div class="col-md-4">
+              <h5 class="deco-line font-en pointColor"><span>CONTACT US</span></h5>
+              <div class="company-info footer-color">
+                  <ul class="list-unstyled">
+                      <li><i class="xi-headset fa-lg"></i> 문의 : 010-6633-7732</li>
+                      <li><i class="xi-box fa-lg"></i> 영업시간 : 평일 09:00-18:00</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <ul class="social list-unstyled list-inline text-center">
+              <li>
+                  <a href="https://www.facebook.com/Egateman/" class="pointHover" target="_blank" alt="">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="xi-facebook fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+              </li>
+              <li>
+                  <a href="https://www.youtube.com/channel/UCiYYNhMvhPUsqTfyht2eBnQ" class="pointHover" target="_blank" alt="">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="xi-youtube fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+              </li>
+              <li>
+                  <a href="https://www.instagram.com/gateman_official/" class="pointHover" target="_blank" alt="">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="xi-instagram fa-stack-1x fa-inverse"></i>
+                      </span>
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</section>
+<section id="kso-copyright" class="kso-copyright">
+  <div class="container">
+      <div class="sr-only">© <span class="conceptColor">k2s0o1d6e0s1i0g1n</span>. All Rights Reserved</div>
+      <div class="text-center">© 김해 밀양 공식 대리점. ALL RIGHTS RESERVED.</div>
+  </div>
+</section></div>
+<script type="text/javascript">
+	// <![CDATA[
+	(function($) {
+		$(document).ready(function(){
+			$("#kso-nav").sticky({topSpacing:0, className: 'sticked', wrapperClassName: 'kso-sticky hidden-xs'});
+			$("#kso-owl").owlCarousel({
+    			autoplayTimeout:4000
+			});
+		});
+			}) (jQuery);	
+	
+	// ]]>
+</script>	
+<!-- ETC -->
+<div class="wfsr"></div>
+<script src="https://gateman.kr/addons/autolink/autolink.js?20191022190255"></script><script src="https://gateman.kr/common/js/plugins/ui/jquery-ui.min.js?20191022190255"></script><script src="https://gateman.kr/common/js/plugins/ui/jquery.ui.datepicker-ko.js?20191022190255"></script><script src="https://gateman.kr/addons/resize_image/js/resize_image.min.js?20191022190255"></script><script src="https://gateman.kr/files/cache/ruleset/92762280c95e26e2932df6efd59da1d5.ko.js?20191022190255"></script>
+</body>
+</html>
