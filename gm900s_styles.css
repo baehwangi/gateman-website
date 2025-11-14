@@ -1,0 +1,419 @@
+/* GM-900S Complete Styles - 100% Clone from gateman.kr */
+
+/* Reset and Common */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #fff;
+    color: #231f20;
+    overflow-x: hidden;
+}
+
+/* Custom Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+header .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #231f20;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #00aad0;
+}
+
+main {
+    margin-top: 80px;
+}
+
+/* gaWrap Styles */
+.gaWrap {font-size: 20px;}
+.gaWrap * {box-sizing: border-box; letter-spacing: -0.08rem; font-family: 'Noto Sans KR', sans-serif; padding: 0; margin: 0; color: #231f20;}
+.gaWrap li, dd {list-style: none;}
+.gaWrap a {text-decoration: none;}
+.gaWrap img {max-width: 100%; vertical-align: top;}
+.gn_Inner {width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 15px; overflow: hidden;}
+.gn_block_title, .gn_block_title span {font-size: 20px; color: #00aad0; text-align: center; margin-bottom: 20px;}
+.gn_title {position: relative; font-size: 48px; font-weight: bold; line-height: 1.2; text-align: center;}
+.gn_title .sub + .tit {margin-top: 20px;}
+.gn_title .tit + .sub {margin-top: 48px;}
+.gn_title .sub {margin-top: 0; font-size: 20px; font-weight: 400; line-height: 1.4;}
+.gn_title .sub p {margin-top: 26px; font-size: 20px; font-weight: 500;}
+.gn_title span, .gn_color01 {color: #00aad0;}
+.gn_Comment {margin-top:88px; padding-top: 30px !important; border-top: 1px solid #d5d5d5; font-size: 18px; font-weight: 300; color: #666;}
+.gn_Comment li + li {margin-top: 8px;}
+.gn_Comment li strong {font-weight: bold;}
+.gaWrap .hide-m, .gaWrap .hide_tbl_m {display: none;}
+.gaWrap .hide-pc {display: block;}
+.gaWrap .imgM {display: none;}
+.gaBlind {overflow:hidden;position:absolute;width:1px ;height:1px;margin:-1px;border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);}
+
+@keyframes float {0% {transform: translatey(0px);}      50% {transform: translatey(-10px);} 100% {transform: translatey(0px);}}
+@keyframes float2 {0% {transform: translatey(-10px);}   50% {transform: translatey(0px);}   100% {transform: translatey(-10px);}}
+@keyframes float3 {0% {transform: translatey(0px);}     50% {transform: translatey(-5px);}  100% {transform: translatey(0px);}}
+@keyframes float4 {0% {transform: translatey(-5px);}    50% {transform: translatey(0px);}   100% {transform: translatey(-5px);}}
+
+/* ga_GM-900S */
+.ga_GM-900S {padding: 320px 0 200px; background: #000 url(https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Main_bg.png) no-repeat 50% 0%; background-size: cover;}
+.ga_GM-900S .gn_block_title span {color: #fff;}
+.ga_GM-900S .gn_title * {color: #bebab7; letter-spacing: 1.5rem; font-weight: 300;}
+.ga_GM-900S .gn_title strong {display: block; margin-top: 50px; font-weight: bold;}
+.ga_GM-900S .gm-900S {position: relative; top: -20px;}
+.ga_GM-900S .gm-900S .imgBlock {display: flex;}
+.ga_GM-900S .gm-900S .imgBlock > div {width: 50%;}
+.ga_GM-900S .gm-900S .imgBlock > .img01 {text-align: right; padding-top: 120px; padding-right: 0; margin-right: -50px;}
+.ga_GM-900S .gm-900S .imgBlock > .img02 {text-align: left; padding-left: 0; padding-top: 470px; margin-left: -50px;}
+.ga_GM-900S .gm-900S .img01 img {transform: translatey(0px); animation: float 6s ease-in-out infinite; transition: all 0.3s;}
+.ga_GM-900S .gm-900S .img02 img {transform: translatey(0px); animation: float2 6s ease-in-out infinite; transition: all 0.3s;}
+.ga_GM-900S .gm-900S .txt {margin-top: 100px; font-size: 73px; font-weight: bold; text-align: center; color: #fff;}
+
+/* ga_Point */
+.ga_Point {padding: 180px 0;}
+.ga_Point .gp_list > div {display: flex; justify-content: space-between;}
+.ga_Point .gp_list > div > div + div {margin-left: 30px;}
+.ga_Point .gp_list > div > .i2 .iBox + .iBox {margin-top: 31px;}
+.ga_Point .gp_list .gl02 {margin-top: 30px;}
+
+/* ga_assaAbloy */
+.ga_assaAbloy {padding: 140px 0 400px; background: #030d18 url(https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_assaAbloy_bg.png) no-repeat 50% 100%;}
+.ga_assaAbloy .gn_title {margin-top: 160px;}
+.ga_assaAbloy .gn_title * {color: #fff;}
+.ga_assaAbloy .gn_title .tit span {display:block; color: #00aad0;}
+.ga_assaAbloy .gn_title .sub {line-height: 1.6;}
+
+/* ga_Easily */
+.ga_Easily {padding: 180px 0 230px; background-color: #000;}
+.ga_Easily .gn_title .tit {color: #fff;}
+.ga_Easily .gn_title .sub span {display: inline-block; border: 1px solid #fff; border-radius: 34px; padding: 4px 50px; color: #fff; font-size: 40px;}
+.ga_Easily .img {padding: 50px 0 80px; text-align: center;}
+.ga_Easily .block {text-align: center; color: #fff; font-weight: bold; font-size: 28px;}
+.ga_Easily .block span {color: #00b8d6;}
+.ga_Easily .gn_Comment {margin-top: 30px; padding-top: 0 !important; border: none;}
+.ga_Easily .gn_Comment li {color: #b4b4b4;}
+
+/* ga_GatemanDot */
+.ga_GatemanDot {padding-top: 130px; background:
+    url(https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_GatemanDot_bg.png) no-repeat 50% 0,
+    linear-gradient(180deg, rgba(208, 234, 252, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+.ga_GatemanDot .gn_title span {display: block; margin-top: 70px; font-size: 100px;}
+.ga_GatemanDot .gn_title span + br {display: none;}
+.ga_GatemanDot .gvSlider {margin-top: 60px;}
+
+/* ga_Anyone */
+.ga_Anyone {position: relative; margin-top: -185px; padding: 0 0 120px; text-align: center; z-index: 1;}
+.ga_Anyone .block {margin-top: 100px;}
+.ga_Anyone .gn_Comment {margin-top: 60px; padding-top: 0 !important; border: none;}
+.ga_Anyone .gn_Comment .hide-pc {display: none;}
+
+/* ga_Anyone02 */
+.ga_Anyone02 {padding: 170px 0 120px; background-color: #f4f8f9;}
+.ga_Anyone02 .gn_Inner > .block,
+.ga_Anyone02 .gn_Inner > .block_list {max-width: 1000px; margin: 0 auto;}
+.ga_Anyone02 .gn_Inner > .block {margin-top: 90px;}
+.ga_Anyone02 dl {margin-top: 50px;}
+.ga_Anyone02 dt {font-size: 30px; font-weight: bold; color: #000;}
+.ga_Anyone02 dd {margin-top: 30px; font-size: 20px; color: #000;}
+.ga_Anyone02 .gn_Inner > .block dl {display: flex;}
+.ga_Anyone02 .gn_Inner > .block dt {min-width: 400px;}
+.ga_Anyone02 .gn_Inner > .block dd {margin-top: 0;}
+.ga_Anyone02 .block_list .box {display: flex; justify-content: space-between; gap: 0 8%; margin-top: 110px;}
+.ga_Anyone02 .block_list .box .block {width: 50%;}
+.ga_Anyone02 .block_list .box .block .img {width: 100%; max-width: 460px;}
+.ga_Anyone02 .gn_Comment {text-align: center;}
+.ga_Anyone02 .hide-pc {display: none;}
+
+/* ga_Dot */
+.ga_Dot {background-color: #000;}
+.ga_Dot .gd_media {position:relative; height:0; padding-bottom:56.25%;}
+.ga_Dot .gd_media iframe {position:absolute; top:0; left:0; width:100%; height:100%;}
+
+/* ga_USE */
+.ga_USE {padding: 180px 0; text-align: center;}
+.ga_USE .img {margin-top: 120px;}
+
+/* ga_IOT */
+.ga_IOT {position: relative; padding: 218px 0 94px; overflow: hidden; background: rgb(222,243,248); background: linear-gradient(180deg, rgba(222,243,248,1) 0%, rgba(243,243,243,1) 100%);}
+.ga_IOT_list {margin-top: 120px; text-align: center;}
+.ga_IOT_list .tit {font-size: 40px; font-weight: bold;}
+.ga_IOT .gil_list {margin-top: 70px; display: flex; flex-wrap: wrap; justify-content: center; gap: 80px 40px;}
+.ga_IOT .gil_list li {width: calc(100% / 3 - 40px);}
+.ga_IOT .gil_list .img {width: 300px; height: 300px; margin: 0 auto; border-radius: 30px; box-shadow: -1px 0px 30px 10px rgba(37,54,97,0.09); -webkit-box-shadow: -1px 0px 30px 10px rgba(37,54,97,0.09); -moz-box-shadow: -1px 0px 30px 10px rgba(37,54,97,0.09);}
+.ga_IOT .gil_list .ga_badge {display:block; margin-top: 20px;}
+.ga_IOT .gil_list .ga_badge span {display:inline-block; height: 50px; line-height: 50px; padding: 0 20px; border-radius: 25px; font-size: 18px; color: #fff;}
+.ga_IOT .gil_list .txt {margin-top: 10px; font-size: 18px; font-weight: bold;}
+.ga_IOT .gil_list li:nth-child(1) .ga_badge span {background-color: #8fcec0;}
+.ga_IOT .gil_list li:nth-child(2) .ga_badge span {background-color: #89c0ed}
+.ga_IOT .gil_list li:nth-child(3) .ga_badge span {background-color: #f3b987}
+.ga_IOT .gil_list li:nth-child(4) .ga_badge span {background-color: #b597f4}
+.ga_IOT .gil_list li:nth-child(5) .ga_badge span {background-color: #889dec}
+.ga_IOT .gn_background_item {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;}
+.ga_IOT .gn_background_item > div {position: absolute; top: 0; transform: translatey(0px); animation: float 6s ease-in-out infinite; transition: all 0.3s;}
+.ga_IOT .gn_background_item .gbi_01 {top: -150px; left: calc(50% - 52%);}
+.ga_IOT .gn_background_item .gbi_02 {top: 190px; left: calc(50% - 52%); animation: float2 6s ease-in-out infinite;}
+.ga_IOT .gn_background_item .gbi_03 {top: 590px; left: calc(50% - 52%);}
+.ga_IOT .gn_background_item .gbi_04 {top: 10px; left: calc(50% - 40%); animation: float2 5s ease-in-out infinite;}
+.ga_IOT .gn_background_item .gbi_05 {top: 430px; left: calc(50% - 40%); animation: float3 4s ease-in-out infinite;}
+.ga_IOT .gn_background_item .gbi_06 {top: -50px; left: calc(50% - 26%); animation: float4 4s ease-in-out infinite;}
+.ga_IOT .gn_background_item .gbi_11 {top: -150px; right: calc(50% - 26%); animation: float2 6s ease-in-out infinite;}
+.ga_IOT .gn_background_item .gbi_12 {top: -230px; right: calc(50% - 40%); animation: float2 6s ease-in-out infinite;}
+.ga_IOT .gn_background_item .gbi_13 {top: 180px; right: calc(50% - 40%); animation: float3 4s ease-in-out infinite;}
+.ga_IOT .gn_background_item .gbi_14 {top: 420px; right: calc(50% - 40%); animation: float4 4s ease-in-out infinite;}
+.ga_IOT .gn_background_item .gbi_15 {top: -50px; right: calc(50% - 52%); animation: float 6s ease-in-out infinite;}
+.ga_IOT .gn_background_item .gbi_16 {top: 280px; right: calc(50% - 52%); animation: float2 6s ease-in-out infinite;}
+.ga_IOT .gn_Comment {text-align: center;}
+
+/* ga_SmartPhone */
+.ga_SmartPhone {padding:112px 0 78px; background-color: #1a3550; text-align: center;}
+.ga_SmartPhone .block .tit {font-size: 40px; font-weight: 300; color: #fff;}
+.ga_SmartPhone .block .img {margin-top: 46px;}
+.ga_SmartPhone .block .txt {margin-top: 100px; font-size: 48px; font-weight: 300; color: #fff;}
+.ga_SmartPhone .block .txt strong {color: #00aad0; font-weight: bold;}
+
+/* ga_SmartPhone02 */
+.ga_SmartPhone02 {padding: 130px 0; background: url(https://gateman.kr/common/img/access/ga_SmartPhone02.png) no-repeat 50% 0; background-size: cover;}
+.ga_SmartPhone02 .gn_Inner {width: 800px; padding: 0;}
+.ga_SmartPhone02 .ga_sp_list + .ga_sp_list {margin-top: 22px;}
+.ga_SmartPhone02 .ga_sp_list {position: relative; text-align: left; padding: 40px; border-radius: 30px; display: flex; align-items: center;}
+.ga_SmartPhone02 .ga_sp_list::before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 30px; background: rgba(255, 255, 255, 0.2); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);}
+.ga_SmartPhone02 .ga_sp_list dl {position: relative; padding-left: 300px; min-height: 242px; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 1;}
+.ga_SmartPhone02 .ga_sp_list dt, .ga_SmartPhone02 .ga_sp_list dd {color: #fff; width: 100%; text-align: left;}
+.ga_SmartPhone02 .ga_sp_list dt {font-size: 30px; font-weight: bold;}
+.ga_SmartPhone02 .ga_sp_list dd {margin-top: 40px; font-size: 24px; font-weight: 500;}
+.ga_SmartPhone02 .ga_sp_list .ga_check_list li {color: #fff; padding-left: 30px; background: url(https://gateman.kr/common/img/access/common_check.png) no-repeat 0 7px;}
+.ga_SmartPhone02 .ga_sp_list dl::before {content: ''; position: absolute; top: 0; left: 0; width: 242px; height: 242px; border-radius: 50%; z-index: 0;}
+.ga_SmartPhone02 .ga_sp_list:nth-child(1) dl::before {background: url(https://gateman.kr/common/img/access/ga_SmartPhone02_01.png) no-repeat 50% 50%}
+.ga_SmartPhone02 .ga_sp_list:nth-child(2) dl::before {background: url(https://gateman.kr/common/img/access/ga_SmartPhone02_02.png) no-repeat 50% 50%}
+.ga_SmartPhone02 .ga_sp_list:nth-child(3) dl::before {background: url(https://gateman.kr/common/img/access/ga_SmartPhone02_03.png) no-repeat 50% 50%}
+
+/* ga_Card */
+.ga_Card {padding: 110px 0; background-color: #1a3550;}
+.ga_Card .gn_Inner {width: 100%; max-width: 1000px; margin: 0 auto; padding: 0; text-align: center; overflow: hidden;}
+.ga_Card dl {display: flex; flex-direction: column; align-items: center; justify-content: center; padding-left: 370px; min-height: 301px; background: url(https://gateman.kr/common/img/access/ga_Card.png) no-repeat 0 50%; background-size: 340px auto;}
+.ga_Card dl dt, .ga_Card dl dd {width: 100%; text-align: left;}
+.ga_Card dl dt {font-size: 46px; font-weight: bold; color: #00d0ff;}
+.ga_Card dl dd {margin-top: 30px; font-size: 30px; color: #fff;}
+.ga_Card dl dd.iot {font-size: 34px; font-weight: 300;}
+.ga_Card dl dd.iot span {display: block; padding: 0 6px; color: #fff; background-color: #00aad0;}
+.ga_Card dl dd.iot .hide-pc {display: none;}
+.ga_Card dl dd.iot br + span {margin-top: 10px;}
+
+/* ga_Dual */
+.ga_Dual {padding: 200px 0 140px;}
+.ga_Dual .gn_Inner {width: 100%; max-width: 1000px; margin: 0 auto; padding: 0; text-align: center; overflow: hidden;}
+.ga_Dual_list {margin-top: 134px}
+.ga_Dual_list + .ga_Dual_list {margin-top: 74px; display: flex; justify-content: space-between;}
+.ga_Dual_list .block {display: flex; align-items: center;}
+.ga_Dual_list .block + .block {margin-top: 38px;}
+.ga_Dual_list .block .img {margin-right: 50px; width: 430px; height: 348px; border-radius: 20px;}
+.ga_Dual_list .block .img.gd_01 {background: #f3fcff url(https://gateman.kr/common/img/access/ga_Dual_01.png) no-repeat 50% 50%;}
+.ga_Dual_list .block .img.gd_02 {background: #fbf3ff url(https://gateman.kr/common/img/access/ga_Dual_02.png) no-repeat 50% 50%;}
+.ga_Dual_list .block dl {text-align: left;}
+.ga_Dual_list .block dl dt {margin-bottom: 30px; font-size: 30px; font-weight: bold;}
+.ga_Dual_list .block dl dd {font-size: 20px; font-weight: 500;}
+.ga_Dual_list + .ga_Dual_list .block {width: 484px; height: 754px; margin-top: 0; border-radius: 20px;}
+.ga_Dual_list + .ga_Dual_list .block:nth-child(1) {background: #f3fcff url(https://gateman.kr/common/img/access/ga_Dual_03.png) no-repeat 50% 50%;}
+.ga_Dual_list + .ga_Dual_list .block:nth-child(2) {background: #fbf3ff url(https://gateman.kr/common/img/access/ga_Dual_04.png) no-repeat 50% 50%;}
+.ga_Dual_list + .ga_Dual_list .block dl {text-align: center; position: relative; width: 100%; height: 100%;}
+.ga_Dual_list + .ga_Dual_list .block dl dt, .ga_Dual_list + .ga_Dual_list .block dl dd {position: absolute; left: 0; width: 100%; padding: 0 20px; margin: 0;}
+.ga_Dual_list + .ga_Dual_list .block dl dt {top: 60px;}
+.ga_Dual_list + .ga_Dual_list .block dl dd {bottom: 0; border-radius: 0 0 20px 20px; width: 100%; height: 172px; padding: 40px 0;}
+.ga_Dual_list + .ga_Dual_list .block:nth-child(1) dl dd {background-color: #bbebf7;}
+.ga_Dual_list + .ga_Dual_list .block:nth-child(2) dl dd {background-color: #ddbbf7;}
+.ga_Dual .btn_set {margin-top: 36px; text-align: center;}
+.ga_Dual .btn_set a {display:inline-block; height: 60px; padding: 0 30px; background-color: #f2f2f2; border-radius: 30px;}
+.ga_Dual .btn_set a span {display: block; line-height: 60px; font-size: 16px; font-weight: bold; color: #1a3550;}
+
+/* ga_Certified */
+.ga_Certified {padding: 160px 0; background-color: #f4f8f9;}
+.ga_Certified .gd_Block .block + .block {margin-top: 180px;}
+.ga_Certified .gd_Block .block .img {margin-top: 140px; text-align: center;}
+.ga_Certified .gd_Block .block:first-child .img {margin-top: 80px;}
+
+/* ga_Safety */
+.ga_Safety {padding: 160px 0; background-color: #000;}
+.ga_Safety .gn_title * {color: #fff;}
+.ga_Safety .gs_block {margin-top: 140px;}
+.ga_Safety .gs_block * {color: #fff;}
+.ga_Safety .gs_block .box {display: flex; align-items: center; justify-content: start; flex-direction: row-reverse;}
+.ga_Safety .gs_block .box + .box {margin-top: 200px;}
+.ga_Safety .gs_block .box .img {margin: 0 100px 0 0;}
+.ga_Safety .gs_block .box .txt > span {display: block; margin-bottom: 40px;}
+.ga_Safety .gs_block .box .txt > div {font-size: 48px; font-weight: bold; color: #00b8d6;}
+.ga_Safety .gs_block .box .txt > p {margin-top: 60px;}
+.ga_Safety .gs_block .box .txt > p span {display:block; margin-top:30px; color: #aca8a9;}
+.ga_Safety .gs_block.gs_block_top {margin: 0; padding: 240px 0; background: url(https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Safety_bg.png) no-repeat 100% 50%;}
+.ga_Safety .gs_block.gs_block_top .box {flex-direction: column; align-items: flex-start;}
+.ga_Safety .gs_block.gs_block_top .box .img {margin: 0;}
+.ga_Safety .gs_vs {display: flex; align-items: center; justify-content: center; padding: 50px; border-radius: 20px; background-color: #222222; margin-top: 100px;}
+.ga_Safety .gs_vs > span {padding: 0 5%; font-size: 54px; font-weight: bold; color: #fff;}
+.ga_Safety .gs_vs > div {width: auto; text-align: center;}
+.ga_Safety .gs_vs > div:first-child {max-width: 418px;}
+.ga_Safety .gs_vs > div:last-child {max-width: 510px;}
+.ga_Safety .gs_vs dl {display: block; margin-top: 40px; text-align: center;}
+.ga_Safety .gs_vs dl * {color: #fff;}
+.ga_Safety .gs_vs dt {font-size: 28px; font-weight: bold;}
+.ga_Safety .gs_vs dd {margin-top: 30px;}
+.ga_Safety .gs_media {margin-top: 150px; position:relative; height:0; padding-bottom:56.25%;}
+.ga_Safety .gs_media iframe {position:absolute; top:0; left:0; width:100%; height:100%;}
+
+/* ga_Fire */
+.ga_Fire {text-align: center; background: #310A04;
+    background: linear-gradient(180deg,rgba(49, 10, 4, 1) 0%, rgba(22, 0, 0, 1) 50%, rgba(118, 33, 10, 1) 100%);
+}
+
+/* ga_Reliability */
+.ga_Reliability {padding: 170px 0 80px; background: #121212 url(https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Reliability_bg.png) no-repeat 50% 0;}
+.ga_Reliability .gn_title .tit,
+.ga_Reliability .gn_title .sub {color: #fff;}
+.ga_Reliability .gn_title .tit span {display: block; color: #fff;}
+.ga_Reliability .gn_title .tit .t1 {font-weight: normal;}
+.ga_Reliability .gr_area {position: relative; margin-top: 100px; text-align: center;}
+.ga_Reliability .gr_area dl {position: absolute; text-align: left;}
+.ga_Reliability .gr_area .gr_item01 {top: 5%; left: 0; width: 450px;}
+.ga_Reliability .gr_area .gr_item02 {top: 55%; left: 0; width: 480px;}
+.ga_Reliability .gr_area .gr_item03 {top: 30%; left: 60%; width: 540px;}
+.ga_Reliability .gr_area .gr_item04 {bottom: 0; left: 60%; width: 480px;}
+.ga_Reliability .gr_area dt {font-size: 40px; font-weight: bold; color: #b3d4e8;}
+.ga_Reliability .gr_area dd {margin-top: 30px; font-size: 18px; color: #fff;}
+.ga_Reliability .gr_media {margin-top: 140px; position:relative; height:0; padding-bottom:56.25%;}
+.ga_Reliability .gr_media iframe {position:absolute; top:0; left:0; width:100%; height:100%;}
+
+/* ga_Space */
+.ga_Space {text-align: center; background: #515150;
+    background: linear-gradient(180deg,rgba(81, 81, 80, 1) 0%, rgba(114, 114, 113, 1) 50%, rgba(76, 76, 75, 1) 100%);
+}
+
+/* ga_Beautiful */
+.ga_Beautiful {padding: 250px 0 0; background: #e1e4eb url(https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/ga_Beautiful_bg.png) no-repeat 50% 50%;}
+.ga_Beautiful .gn_block_title span {color: #000;}
+.ga_Beautiful .gb_area {margin-top: 60px; text-align: center;}
+
+/* ga_Visual */
+.ga_Visual {padding: 100px 0;}
+.ga_Visual .gn_Inner {text-align: center;}
+.ga_Visual .img + .img {margin-top: 100px;}
+
+/* ga_Function */
+.ga_Function {padding: 220px 0 150px; background-color: #f7f7f7;}
+.ga_Function .gn_Inner {max-width: 1920px; overflow: visible;}
+.ga_Function .gn_block_title span {color: #313131;}
+.ga_Function .gf_list {padding-left: 12%; margin-top: 100px; overflow: visible;}
+.ga_Function .gf_list .swiper-slide {max-width: 400px !important;}
+.ga_Function .gf_list dl {margin-top: 40px;}
+.ga_Function .gf_list dt {font-weight: bold;}
+.ga_Function .gf_list dd {margin-top: 20px;}
+.ga_Function .gf_list dd span {display:block; margin-top: 20px; color: #aca8a9;}
+.ga_Function .gf_convenience {margin-top: 180px;}
+
+/* ga_SmartIOT */
+.ga_SmartIOT {text-align: center; background: #D0EAFC;
+    background: linear-gradient(180deg,rgba(208, 234, 252, 1) 0%, rgba(249, 249, 249, 1) 100%);
+}
+
+/* ga_Part */
+.ga_Part {padding-top: 220px;}
+.ga_Part .gp_block {margin-top: 100px; padding: 8% 7%; border-radius: 20px; background-color: #f7f7f7;}
+.ga_Part .gp_block .top {display: flex; justify-content: center;}
+.ga_Part .gp_block .top > div {text-align: center;}
+.ga_Part .gp_block .top > div + div {margin-left: 10%;}
+.ga_Part .gp_block .top > div span {display: block; margin-top: 60px; font-weight: 500;}
+.ga_Part .gp_block .bottom {margin-top: 80px; border-top: 1px solid #c7c7c7; padding-top: 90px; display: flex; justify-content: space-between;}
+.ga_Part .gp_block .bottom ul {width: 50%;}
+.ga_Part .gp_block .bottom li {display: inline-block; width: 49%; padding: 0 15px; margin-bottom: 20px;}
+.ga_Part .gp_block .bottom li span {color: #aca8a9;}
+
+/* ga_Spec */
+.ga_Spec {padding-top: 200px;}
+.ga_Spec .gs_list {display: flex; justify-content: space-between; margin-top: 180px;}
+.ga_Spec .gs_list ul {width: calc(50% - 20px);}
+.ga_Spec .gs_list li {display: flex;}
+.ga_Spec .gs_list li + li {margin-top: 20px;}
+.ga_Spec .gs_list li span {width: 100%;}
+.ga_Spec .gs_list li .tit {width: 220px; font-weight: bold;}
+
+/* ga_Inquiry */
+.ga_Inquiry {padding: 150px 0;}
+.ga_Inquiry .gi_list {margin-top: 100px; display: flex; justify-content: space-between;}
+.ga_Inquiry .gi_list > dl {position:relative; display: flex; align-items: center; width: calc(100% / 3 - 15px); height: 148px; padding: 40px; border-radius: 20px;}
+.ga_Inquiry .gi_list .iL01 {background-color: #00b8d6;}
+.ga_Inquiry .gi_list .iL02 {background-color: #002e4f;}
+.ga_Inquiry .gi_list .iL03 {background-color: #fbcb0a;}
+.ga_Inquiry .gi_list .iL02 * {color: #fff;}
+.ga_Inquiry .gi_list dt {width: 120px; font-weight: bold; line-height: 1.2;}
+.ga_Inquiry .gi_list dd a, .ga_Inquiry .gi_list dd div {display: block; font-size: 48px; font-weight: 600;}
+.ga_Inquiry .gi_list .iL03 .center {padding-left: 40px; font-size: 28px; font-weight: bold; background: url(https://gateman.kr/common/img/smartdoorlock/gateman/gm_900s/common_Search.png) no-repeat 0 50%;}
+.ga_Inquiry .btn_kakao {position:absolute; top:0; left:0; width:100%; height:100%;}
+
+/* Mobile Responsive */
+@media all and (max-width: 1000px){
+    .gaWrap {font-size: 16px;}
+    .gaWrap * {letter-spacing: -0.05rem;}
+    .gn_Inner {max-width: inherit; padding: 0 10px;}
+    .gn_block_title, .gn_block_title span {font-size: 14px;}
+    .gn_title {font-size: 28px !important;}
+    .gn_title .sub {font-size: 14px !important;}
+    .gaWrap .hide-pc, .gaWrap .hide_tbl_m {display: none;}
+    .gaWrap .hide-m {display: block;}
+    .gaWrap .imgPC {display: none;}
+    .gaWrap .imgM {display: block;}
+
+    header {padding: 15px 0;}
+    header .logo img {height: 35px;}
+    header nav ul {gap: 20px; font-size: 14px;}
+    main {margin-top: 65px;}
+
+    .ga_GM-900S {padding: 80px 0 50px;}
+    .ga_Point {padding: 50px 0;}
+    .ga_assaAbloy {padding: 70px 0 200px;}
+    .ga_Easily {padding: 80px 0 70px;}
+    .ga_IOT {padding: 100px 0 60px;}
+    .ga_SmartPhone {padding:50px 0 40px;}
+    .ga_SmartPhone02 {padding: 80px 0;}
+    .ga_SmartPhone02 .gn_Inner {width: auto; padding: 0 20px;}
+    .ga_Card {padding: 70px 0;}
+    .ga_Dual {padding: 80px 0 40px;}
+    .ga_Certified {padding: 80px 0;}
+    .ga_Safety {padding: 80px 0 50px;}
+    .ga_Reliability {padding: 80px 0 100px;}
+    .ga_Beautiful {padding-top: 80px;}
+    .ga_Visual {padding: 60px 0;}
+    .ga_Function {padding: 100px 0 80px;}
+    .ga_Part {padding-top: 100px;}
+    .ga_Spec {padding-top: 90px;}
+    .ga_Inquiry {padding: 80px 0 120px;}
+}

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GATEMAN - 김해 밀양 공식 대리점</title>
+
+    <!-- Gateman.kr CSS Files -->
+    <link rel="stylesheet" href="https://gateman.kr/common/css/xe.min.css" />
+    <link rel="stylesheet" href="https://gateman.kr/common/js/plugins/ui/jquery-ui.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
+    <link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/animate.min.css" />
+    <link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/bootstrap.kso.min.css" />
+    <link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/kso-layout.css" />
+    <link rel="stylesheet" href="https://gateman.kr/layouts/KSO_Infinity/css/kso-custom.css" />
+    <link rel="stylesheet" href="https://gateman.kr/common/css/gateman/main.css" />
+
+    <!-- jQuery -->
+    <script src="https://gateman.kr/common/js/jquery.min.js"></script>
+    <script src="https://gateman.kr/common/js/x.min.js"></script>
+    <script src="https://gateman.kr/layouts/KSO_Infinity/js/bootstrap.min.js"></script>
+    <script src="https://gateman.kr/layouts/KSO_Infinity/js/owl.carousel.min.js"></script>
+
+    <style>
+        /* Hide original gateman.kr header and navigation */
+        #kso-header, #xs-header, #kso-nav, nav#xs-menu,
+        .kso-header, .kso-nav, .xs-header, .xs-menu {
+            display: none !important;
+        }
+
+        /* Custom Header Styles */
+        .custom-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 10000;
+            transition: all 0.3s ease;
+        }
+
+        .custom-header .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-area img {
+            height: 50px;
+            width: auto;
+        }
+
+        .dealer-badge {
+            background: #1a5490;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: #1a5490;
+        }
+
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #1a5490;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .main-nav a:hover::after,
+        .main-nav a.active::after {
+            transform: scaleX(1);
+        }
+
+        .header-contact {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #1a5490;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        /* Hero Video Section */
+        .hero-video-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            margin-top: 80px; /* Header height */
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            z-index: 3;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #1a5490;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .hero-btn:hover {
+            background: #154570;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+        }
+
+        @media (max-width: 1000px) {
+            .main-nav {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .header-contact {
+                display: none;
+            }
+
+            .dealer-badge {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Main content padding */
+        body {
+            padding-top: 0;
+            margin: 0;
+        }
+
+        /* Keep original gateman.kr styles for content sections */
+        .main-content {
+            /* Will inherit gateman.kr styles */
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Header -->
+    <header class="custom-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-area">
+                    <a href="./main.html">
+                        <img src="./LOGO/logo.png" alt="GATEMAN Logo">
+                    </a>
+                    <span class="dealer-badge">김해 밀양 공식 대리점</span>
+                </div>
+
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="./smartdoorlock.html">스마트도어락</a></li>
+                        <li><a href="./iot-service.html">IoT서비스</a></li>
+                        <li><a href="./technology.html">테크놀로지</a></li>
+                        <li><a href="./customer-support.html">고객지원</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-contact">
+                    <i class="fas fa-phone"></i>
+                    <span>010-6633-7732</span>
+                </div>
+
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Video Section -->
+    <section class="hero-video-section">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <!-- 여기에 영상 경로를 넣어주세요 -->
+            <source src="./videos/hero-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>스마트한 생활의 시작</h1>
+                <p>GATEMAN과 함께하는 안전하고 편리한 일상</p>
+                <a href="./smartdoorlock.html" class="hero-btn">제품 둘러보기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content from gateman.kr -->
+    <div class="main-content">
+        <!-- 여기서부터 gateman.kr의 메인 페이지 콘텐츠를 가져옵니다 -->
+
+        <!-- Products Section -->
+        <section class="container" style="padding: 80px 20px;">
+            <div class="text-center mb-5">
+                <h2 style="font-size: 2.5rem; font-weight: bold; color: #333;">주요 제품</h2>
+                <p style="font-size: 1.2rem; color: #666;">최첨단 기술로 만든 프리미엄 도어락</p>
+            </div>
+
+            <div class="row">
+                <!-- 제품 카드들 -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="product-card" style="border: 1px solid #e0e0e0; border-radius: 10px; overflow: hidden; transition: all 0.3s;">
+                        <div style="height: 250px; background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                            <img src="https://gateman.kr/files/attach/images/827/product_gm900s.png" alt="GM-900S" style="max-width: 80%; max-height: 80%;">
+                        </div>
+                        <div style="padding: 20px; text-align: center;">
+                            <h4 style="font-weight: bold;">GM-900S</h4>
+                            <p style="color: #666;">프리미엄 푸시풀 도어락</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="product-card" style="border: 1px solid #e0e0e0; border-radius: 10px; overflow: hidden; transition: all 0.3s;">
+                        <div style="height: 250px; background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                            <img src="https://gateman.kr/files/attach/images/827/product_gm500s.png" alt="GM-500S" style="max-width: 80%; max-height: 80%;">
+                        </div>
+                        <div style="padding: 20px; text-align: center;">
+                            <h4 style="font-weight: bold;">GM-500S</h4>
+                            <p style="color: #666;">스마트 푸시풀 도어락</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="product-card" style="border: 1px solid #e0e0e0; border-radius: 10px; overflow: hidden; transition: all 0.3s;">
+                        <div style="height: 250px; background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                            <img src="https://gateman.kr/files/attach/images/827/product_gp900d.png" alt="GP-900D" style="max-width: 80%; max-height: 80%;">
+                        </div>
+                        <div style="padding: 20px; text-align: center;">
+                            <h4 style="font-weight: bold;">GP-900D</h4>
+                            <p style="color: #666;">디지털 도어락</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="product-card" style="border: 1px solid #e0e0e0; border-radius: 10px; overflow: hidden; transition: all 0.3s;">
+                        <div style="height: 250px; background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                            <img src="https://gateman.kr/files/attach/images/827/product_ggrab.png" alt="G-GRAB" style="max-width: 80%; max-height: 80%;">
+                        </div>
+                        <div style="padding: 20px; text-align: center;">
+                            <h4 style="font-weight: bold;">G-GRAB Series</h4>
+                            <p style="color: #666;">차세대 IoT 도어락</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="./smartdoorlock.html" class="btn btn-lg" style="background: #1a5490; color: white; padding: 15px 40px; border-radius: 30px; font-weight: 600;">
+                    모든 제품 보기
+                </a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section style="background: #f8f9fa; padding: 80px 20px;">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 style="font-size: 2.5rem; font-weight: bold; color: #333;">왜 GATEMAN인가?</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center">
+                            <div style="font-size: 3rem; color: #1a5490; margin-bottom: 20px;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4 style="font-weight: bold; margin-bottom: 15px;">최고의 보안성</h4>
+                            <p style="color: #666;">최첨단 암호화 기술과 생체인식으로 완벽한 보안을 제공합니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center">
+                            <div style="font-size: 3rem; color: #1a5490; margin-bottom: 20px;">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4 style="font-weight: bold; margin-bottom: 15px;">IoT 연동</h4>
+                            <p style="color: #666;">스마트폰으로 언제 어디서나 도어락을 제어할 수 있습니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center">
+                            <div style="font-size: 3rem; color: #1a5490; margin-bottom: 20px;">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h4 style="font-weight: bold; margin-bottom: 15px;">품질 보증</h4>
+                            <p style="color: #666;">엄격한 품질 테스트와 A/S 보증으로 신뢰할 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section style="background: #1a5490; color: white; padding: 60px 20px;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h3 style="font-size: 2rem; font-weight: bold; margin-bottom: 10px;">지금 바로 상담받으세요</h3>
+                        <p style="font-size: 1.2rem; opacity: 0.9;">김해 밀양 지역 공식 대리점에서 최고의 서비스를 제공합니다.</p>
+                    </div>
+                    <div class="col-md-4 text-right">
+                        <a href="tel:010-6633-7732" class="btn btn-lg" style="background: white; color: #1a5490; padding: 15px 40px; border-radius: 30px; font-weight: 600;">
+                            <i class="fas fa-phone"></i> 010-6633-7732
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <nav class="mobile-menu">
+        <div class="mobile-menu-header">
+            <img src="./LOGO/logo.png" alt="GATEMAN Logo" style="height: 40px;">
+            <button class="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-menu-items">
+            <li><a href="./smartdoorlock.html">스마트도어락</a></li>
+            <li><a href="./iot-service.html">IoT서비스</a></li>
+            <li><a href="./technology.html">테크놀로지</a></li>
+            <li><a href="./customer-support.html">고객지원</a></li>
+        </ul>
+        <div class="mobile-menu-contact">
+            <a href="tel:010-6633-7732">
+                <i class="fas fa-phone"></i>
+                010-6633-7732
+            </a>
+        </div>
+    </nav>
+
+    <style>
+        /* Mobile Menu Styles */
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 10001;
+        }
+
+        .mobile-menu-overlay.active {
+            display: block;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100%;
+            background: white;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 10002;
+            transition: right 0.3s ease;
+        }
+
+        @media (max-width: 1000px) {
+            .mobile-menu {
+                display: block;
+            }
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .mobile-menu-items {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .mobile-menu-items li {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .mobile-menu-items a {
+            display: block;
+            padding: 18px 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .mobile-menu-items a:hover {
+            background: #f5f5f5;
+        }
+
+        .mobile-menu-contact {
+            padding: 20px;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        .mobile-menu-contact a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 15px;
+            background: #1a5490;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        /* Product card hover effect */
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+        }
+    </style>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.add('active');
+            document.querySelector('.mobile-menu-overlay').classList.add('active');
+        });
+
+        document.querySelector('.mobile-menu-close').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            document.querySelector('.mobile-menu-overlay').classList.remove('active');
+        });
+
+        document.querySelector('.mobile-menu-overlay').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+            document.querySelector('.mobile-menu-overlay').classList.remove('active');
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.custom-header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html>

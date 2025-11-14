@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1">
+<title>스마트리빙</title>
+
+<!-- Original Gateman CSS -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+<link href="https://gateman.kr/common/css/gateman/sub/animate.css" rel="stylesheet" type="text/css">
+<link href="https://gateman.kr/common/css/gateman/sub/common.css" rel="stylesheet" type="text/css">
+<link href="https://gateman.kr/common/css/gateman/sub/style_pc_2.css" rel="stylesheet" type="text/css">
+<link href="https://gateman.kr/common/css/gateman/sub/style_tab_2.css" rel="stylesheet" type="text/css">
+<link href="https://gateman.kr/common/css/gateman/sub/style_m_2.css" rel="stylesheet" type="text/css">
+
+<style>
+/* Hero banner styles from purchase.html */
+.sub-promotion {
+    background-image: url(https://gateman.kr/files/attach/images/827/93468613ae031baf99f60fb918b2e4a1.png);
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+.displaytable {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.displaytablecell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.displaytablecell.vertical-bottom {
+    vertical-align: bottom;
+}
+
+.sub-head-title {
+    text-align: center;
+    padding: 50px 20px;
+    color: #fff;
+}
+
+.sub-head-title h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.sub-head-title p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.sub-nav.nav-drop.brand-nav {
+    height: auto;
+}
+
+/* Mobile styles will use original gateman.kr CSS */
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+    width: 100%;
+}
+
+.header .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.dealer-badge {
+    background: #1a5490;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 17.6px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #1a5490;
+}
+
+.header-contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17.6px;
+    font-weight: 600;
+    color: #1a5490;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Mobile Bottom Buttons */
+.mobile-bottom-buttons {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    padding: 10px;
+    gap: 10px;
+}
+
+.mobile-bottom-buttons .btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.mobile-bottom-buttons .btn-products {
+    background: #1a5490;
+    color: white;
+}
+
+.mobile-bottom-buttons .btn-contact {
+    background: white;
+    color: #1a5490;
+    border: 2px solid #1a5490;
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 60px 20px 30px;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+    color: #1eb9d5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #444;
+    color: #999;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .main-nav,
+    .header-contact {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .mobile-bottom-buttons {
+        display: flex;
+    }
+
+    .dealer-badge {
+        display: none;
+    }
+
+    body {
+        margin-bottom: 70px;
+    }
+}
+</style>
+
+<!-- Custom Header Styles -->
+<style>
+    /* Hide ALL Original Headers */
+    #xs-header, #kso-header, #kso-nav, nav#xs-menu,
+    .kso-header, .kso-nav, .xs-header, .xs-menu,
+    header[id*="kso-"], nav[id*="kso-"],
+    .navbar.nav-md, .navbar-header, .navbar-collapse,
+    .float-menu, .nav-mini {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    /* Custom Header Styles */
+    .custom-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: white !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+        z-index: 10000 !important;
+        width: 100% !important;
+    }
+
+    .custom-header .container {
+        max-width: 1400px !important;
+        margin: 0 auto !important;
+        padding: 0 20px !important;
+    }
+
+    .header-content {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 15px 0 !important;
+    }
+
+    .custom-header .logo {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+
+    .custom-header .logo img {
+        height: 50px !important;
+        width: auto !important;
+    }
+
+    .custom-header .dealer-badge {
+        background: #1a5490 !important;
+        color: white !important;
+        padding: 10px 20px !important;
+        border-radius: 25px !important;
+        font-size: 17.6px !important;
+        font-weight: 600 !important;
+    }
+
+    .custom-header .main-nav ul {
+        display: flex !important;
+        list-style: none !important;
+        gap: 40px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .custom-header .main-nav a {
+        text-decoration: none !important;
+        color: #333 !important;
+        font-weight: 500 !important;
+        font-size: 16px !important;
+        transition: color 0.3s !important;
+    }
+
+    .custom-header .main-nav a:hover,
+    .custom-header .main-nav a.active {
+        color: #1a5490 !important;
+    }
+
+    .custom-header .header-contact {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        color: #1a5490 !important;
+        font-weight: 600 !important;
+        font-size: 17.6px !important;
+    }
+
+    .custom-header .mobile-menu-btn {
+        display: none !important;
+        background: none !important;
+        border: none !important;
+        font-size: 1.5rem !important;
+        color: #333 !important;
+        cursor: pointer !important;
+    }
+
+    @media (max-width: 1000px) {
+        .custom-header .main-nav {
+            display: none !important;
+        }
+        .custom-header .mobile-menu-btn {
+            display: block !important;
+        }
+        .custom-header .header-contact {
+            display: none !important;
+        }
+        .custom-header .dealer-badge {
+            display: none !important;
+        }
+        .custom-header .logo {
+            justify-content: center !important;
+            flex: 1 !important;
+        }
+        .header-content {
+            position: relative !important;
+        }
+        .custom-header .mobile-menu-btn {
+            position: absolute !important;
+            right: 0 !important;
+        }
+    }
+
+    /* Video Hero Section */
+    .hero-video-section {
+        position: relative !important;
+        width: 100% !important;
+        height: 100vh !important;
+        max-height: 800px !important;
+        overflow: hidden !important;
+        margin-top: 80px !important;
+    }
+
+    .hero-video-wrapper {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .hero-video {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .hero-overlay {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: rgba(0, 0, 0, 0.3) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .hero-content {
+        text-align: center !important;
+        color: white !important;
+        z-index: 2 !important;
+        padding: 0 20px !important;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 20px !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem !important;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    @media (max-width: 768px) {
+        .hero-video-section {
+            margin-top: 60px !important;
+            height: 60vh !important;
+        }
+        .hero-content h1 {
+            font-size: 2rem !important;
+        }
+        .hero-content p {
+            font-size: 1.2rem !important;
+        }
+    }
+
+    /* Ensure content after header has proper spacing */
+    body {
+        padding-top: 0 !important;
+    }
+
+    #kso-container {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+</style>
+</head>
+<body>
+
+<!-- Custom Header -->
+<header class="custom-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <a href="main.html" style="display: flex; align-items: center; gap: 15px; text-decoration: none;">
+                    <img src="../LOGO/logo.png" alt="GATEMAN Logo">
+                    <span class="dealer-badge">김해 밀양 공식 대리점</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="smartdoorlock.html">스마트도어락</a></li>
+                    <li><a href="purchase.html">IoT 서비스</a></li>
+                    <li><a href="technology.html">테크놀로지</a></li>
+                    <li><a href="cs_support.html">고객지원</a></li>
+                </ul>
+            </nav>
+            <div class="header-contact">
+                <i class="fas fa-phone"></i>
+                <span>010-6633-7732</span>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+                <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="./index.html" style="display: flex; align-items: center; gap: 15px; text-decoration: none;">
+                        <img src="./LOGO/logo.png" alt="GATEMAN Logo" style="height: 50px !important; width: auto !important;">
+                        <span class="dealer-badge" style="font-size: 17.6px !important; padding: 10px 20px;">김해 밀양 공식 대리점</span>
+                    </a>
+                </div>
+                <nav class="main-nav" style="font-size: 16px !important;">
+                    <ul>
+                        <li><a href="./smartdoorlock.html" style="font-size: 16px !important;">스마트도어락</a></li>
+                        <li><a href="./technology.html" style="font-size: 16px !important;">테크놀로지</a></li>
+                        <li><a href="./cs_support.html" style="font-size: 16px !important;">자주하는 질문</a></li>
+                        <li><a href="./purchase.html" style="font-size: 16px !important;">IoT 서비스</a></li>
+                        <li><a href="./gateman.html" style="font-size: 16px !important;">게이트맨</a></li>
+                    </ul>
+                </nav>
+                <div class="header-contact" style="font-size: 17.6px !important;">
+                    <i class="fas fa-phone"></i>
+                    <span style="font-size: 17.6px !important;">010-6633-7732</span>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+<!-- Main Content -->
+<section id="container" style="margin-top: 80px;">
+
+<section class="sub-promotion">
+	<div class="displaytable">
+		<div class="displaytablecell vertical-bottom">
+			<div class="container">
+				<div class="sub-head-title">
+					<h1 class="font-en">IoT 서비스</h1>
+					<p>이젠 도어락도 IoT 시대!<br/>언제 어디서든 내 손 안에서 관리하는 스마트<br/>도어락을 경험해보세요.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="sub-nav brand-nav">
+<div class="section">
+<ul class="nav6">
+    <li class="fadeUpMotion wow fadeInUp animated" data-wow-delay="0.6s">
+        <a href="./purchase.html">게이트맨 액세스</a>
+    </li>
+    <li class="fadeUpMotion wow fadeInUp animated" data-wow-delay="0.6s">
+        <a href="./gatemandot.html">게이트맨 도트</a>
+    </li>
+    <li class="fadeUpMotion wow fadeInUp animated" data-wow-delay="0.7s">
+        <a class="active-nav">스마트리빙</a>
+    </li>
+</ul>
+</div>
+</div>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+    <!-- Notice Image from Original Site -->
+    <div style="text-align: center; margin-bottom: 40px;">
+        <img src="https://gateman.kr/files/attach/images/181/181/eca07f5322e20adeb878bf5e2c627189.jpg"
+             alt="스마트리빙 단종 공지"
+             style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    </div>
+
+    <!-- Beyond Safety Title -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h2 style="font-size: 2.2rem; color: #00B8D4; margin-bottom: 15px; font-weight: 700;">Beyond Safety,</h2>
+        <h2 style="font-size: 2.2rem; color: #333; margin-bottom: 30px; font-weight: 700;">Connecting Happiness</h2>
+    </div>
+
+    <!-- Video Section -->
+    <div style="max-width: 960px; margin: 0 auto 60px; position: relative; padding-top: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://www.youtube.com/embed/YRGn2kNYoac"
+                title="게이트맨의 독자적인 IoT 플렛폼 스마트리빙3.0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 10px;">
+        </iframe>
+    </div>
+
+    <!-- Features Section -->
+    <div style="text-align: center; margin-bottom: 80px;">
+        <h2 style="font-size: 2.2rem; color: #003366; margin-bottom: 50px; font-weight: 700;">내 손 안의 스마트 솔루션, 게이트맨 스마트리빙</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+            <div style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">📱</div>
+                <p style="font-weight: 600; color: #333;">위치기반<br>스마트키 서비스</p>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">🔓</div>
+                <p style="font-weight: 600; color: #333;">원격 열림<br>/닫힘 기능</p>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">💬</div>
+                <p style="font-weight: 600; color: #333;">실시간 푸시<br>알림 서비스</p>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">✅</div>
+                <p style="font-weight: 600; color: #333;">간편한<br>업그레이드</p>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">🔒</div>
+                <p style="font-weight: 600; color: #333;">도어록<br>비밀번호 변경</p>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">🔑</div>
+                <p style="font-weight: 600; color: #333;">1회용, 방문자<br>비밀번호 발급</p>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">📋</div>
+                <p style="font-weight: 600; color: #333;">출입/경보<br>이력 조회</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bridge Section -->
+    <div style="background: #00B8D4; color: white; padding: 60px 40px; border-radius: 20px; text-align: center; margin-bottom: 60px;">
+        <h2 style="font-size: 2rem; margin-bottom: 20px; font-weight: 700;">스마트리빙팩과 브릿지 연동으로 완성되는<br>게이트맨 스마트리빙 서비스</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8;">
+            게이트맨 스마트리빙팩과 스마트리빙 브릿지를 연동 시<br>
+            원격에서 실시간으로 스마트리빙이 제공하는 모든 기능을 사용하실 수 있습니다.
+        </p>
+    </div>
+
+    <!-- Compatibility Table -->
+    <div style="max-width: 900px; margin: 0 auto;">
+        <table style="width: 100%; border-collapse: collapse; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
+            <thead>
+                <tr style="background: #003366; color: white;">
+                    <th style="padding: 20px; text-align: center; font-weight: 600;">Smart Living APP 호환 OS</th>
+                    <th style="padding: 20px; text-align: center; font-weight: 600;">최소사양</th>
+                    <th style="padding: 20px; text-align: center; font-weight: 600;">권장사양</th>
+                    <th style="padding: 20px; text-align: center; font-weight: 600;">OS 버전 확인</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #f9f9f9;">
+                    <td style="padding: 20px; text-align: center; font-weight: 600; border-bottom: 1px solid #ddd;">안드로이드 (갤럭시)</td>
+                    <td style="padding: 20px; text-align: center; border-bottom: 1px solid #ddd;">6.0</td>
+                    <td style="padding: 20px; text-align: center; border-bottom: 1px solid #ddd;">10.0</td>
+                    <td style="padding: 20px; text-align: left; font-size: 0.9rem; border-bottom: 1px solid #ddd;">* 휴대폰기기 설정메뉴 -> 휴대전화 정보 -> 소프트웨어 정보 -> 안드로이드 버전 확인</td>
+                </tr>
+                <tr style="background: white;">
+                    <td style="padding: 20px; text-align: center; font-weight: 600;">IOS (아이폰)</td>
+                    <td style="padding: 20px; text-align: center;">9.0</td>
+                    <td style="padding: 20px; text-align: center;">13.4.0</td>
+                    <td style="padding: 20px; text-align: left; font-size: 0.9rem;">* 휴대폰기기 설정메뉴 -> 일반 -> 정보 -> 버전 확인</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 30px; padding: 20px; background: #fff9e6; border-left: 4px solid #ffc107; border-radius: 5px;">
+            <ul style="list-style: none; padding: 0; margin: 0; color: #666; line-height: 1.8;">
+                <li style="margin-bottom: 10px;">※ 원활한 스마트리빙 앱 사용을 위해 스마트폰의 최신 OS 버전으로 업그레이드 하여 주시길 권장합니다.</li>
+                <li style="margin-bottom: 10px;">※ 최소 사양 보다 낮은 OS버젼일 경우 스마트리빙 사용이 보장 되지 않습니다.</li>
+                <li>※ 새로운 휴대폰 기종과 OS버전 출시 시 원활한 스마트리빙 앱 사용을 위해 게이트맨 스마트리빙은 지속적으로 업데이트 예정입니다.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Mobile Bottom Buttons -->
+<div class="mobile-bottom-buttons">
+    <a href="./smartdoorlock.html" class="btn btn-products">
+        <i class="fas fa-door-open"></i>
+        <span>제품보기</span>
+    </a>
+    <a href="tel:010-6633-7732" class="btn btn-contact">
+        <i class="fas fa-phone"></i>
+        <span>문의하기</span>
+    </a>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>COMPANY INFO</h3>
+            <p style="color: #bbb; line-height: 1.8;">
+                Experience a safer and more open world<br>
+                아사아블로이코리아 주식회사<br>
+                대표자 : 신현욱<br>
+                사업자등록번호 : 128-86-00073<br>
+                서울특별시 금천구 가산디지털1로 186<br>
+                (가산동 459-11), 제이플라츠 빌딩 10층
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>CONTACT US</h3>
+            <ul>
+                <li><i class="fas fa-headset"></i> AS문의 : 1544-3232</li>
+                <li><i class="fas fa-box"></i> 제품문의 : 1577-1919</li>
+                <li><a href="#">표준 거래 약관 & 법적고지</a></li>
+                <li><a href="#">보안센터</a></li>
+                <li><a href="#">개인정보취급방침</a></li>
+                <li><a href="#">이메일 무단수집 거부</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© ASSA ABLOY COPYRIGHT(C) IREVO. ALL RIGHTS RESERVED.</p>
+    </div>
+</footer>
+
+<script src="https://gateman.kr/common/js/jquery.min.js"></script>
+<script src="https://gateman.kr/common/js/gateman/wow.min.js"></script>
+<script src="https://gateman.kr/common/js/gateman/script-f.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('.sub-bnr dt').click(function(){
+        $(this).toggleClass('open-nav');
+        $(this).parent().parent().next().toggleClass('nav-drop');
+    });
+});
+
+</script>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3 style="margin: 0; font-size: 18px;">메뉴</h3>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-menu-items">
+            <li><a href="./index.html">홈</a></li>
+            <li><a href="./smartdoorlock.html">스마트도어락</a></li>
+            <li><a href="./technology.html">테크놀로지</a></li>
+            <li><a href="./cs_support.html">자주하는 질문</a></li>
+            <li><a href="./purchase.html">IoT 서비스</a></li>
+            <li><a href="./gateman.html">게이트맨</a></li>
+        </ul>
+        <div class="mobile-menu-contact">
+            <a href="tel:010-6633-7732">
+                <i class="fas fa-phone"></i>
+                <span>전화 문의</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+            function openMobileMenu() {
+                mobileMenu.classList.add('active');
+                mobileMenuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMobileMenu() {
+                mobileMenu.classList.remove('active');
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', openMobileMenu);
+            }
+
+            if (mobileMenuClose) {
+                mobileMenuClose.addEventListener('click', closeMobileMenu);
+            }
+
+            if (mobileMenuOverlay) {
+                mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+            }
+
+            // Close menu on link click
+            const menuLinks = document.querySelectorAll('.mobile-menu-items a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+        });
+    </script>
+</body>
+</html>

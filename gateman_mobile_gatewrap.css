@@ -1,0 +1,325 @@
+        @media all and (max-width: 1000px){
+        .gaWrap * {letter-spacing: -0.05rem;}
+        
+        .gn_Inner {max-width: inherit; padding: 0 10px;}
+        
+        .gn_block_title,
+        .gn_block_title span {font-size: 12px; color: #00aad0;}
+        
+        .gn_title {position: relative; font-size: 25px; font-weight: bold; line-height: 1.2;}
+        
+        .gn_title .sub {margin-top: 24px; font-size: 14px; font-weight: 400;}
+        .gn_title .sub p {margin-top: 14px; font-size: 14px; font-weight: 500;}
+        
+        .gn_Comment {margin-top:40px; padding-top: 20px; border-top: 1px solid #d5d5d5; font-size: 14px; font-weight: 300; color: #666;}
+        .gn_Comment li + li {margin-top: 4px;}
+        
+        .hide-pc,
+        .hide_tbl_m {display: none;}
+        .hide-m {display: block;}
+        /******************** content ********************/
+        /* gatemanAccess */
+        .gatemanAccess {position: relative; padding: 50px 0 0; min-height: 480px; overflow: hidden; background: url(https://gateman.kr/common/img/access/gatemanAccess.png) no-repeat 50% 0; background-size: cover;}
+        .gatemanAccess .gn_title {margin-top: 30px;}
+        .gatemanAccess .gn_block_title img {width: 90px;}
+        .gatemanAccess .gn_phone {position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); height: 270px;}
+        .gatemanAccess .gn_phone img {max-width: 160px;}
+        
+        .ga_background_item > div {position: absolute; top: 0; transform: translatey(0px); animation: float 6s ease-in-out infinite; width: 110px; height: 80px;}
+        .ga_background_item > div img {width: 60px;}
+        .ga_background_item .gai_01 {
+        top: 68%;
+        left: calc(50% - 51%);
+        animation: float2 7s ease-in-out infinite;
+        }
+        .ga_background_item .gai_02 {
+        top: 46%;
+        left: calc(50% - 35%);
+        }
+        .ga_background_item .gai_03 {
+        top: 80%;
+        left: calc(50% - 41%);
+        animation: float2 5s ease-in-out infinite;
+        }
+        .ga_background_item .gai_11 {
+        top: 35%;
+        left: calc(50% - -28%);
+        animation: float 5s ease-in-out infinite;
+        }
+        .ga_background_item .gai_12 {
+        top: 82%;
+        left: calc(50% - -19%);
+        animation: float2 7s ease-in-out infinite;
+        }
+        .ga_background_item .gai_13 {
+        top: 65%;
+        left: calc(50% - -35%);
+        }
+        
+        /* ga_Smart */
+        .ga_Smart {padding: 50px 0;}
+        .ga_Smart_list li {width: calc(50% - 20px);}
+        .ga_Smart_list li a {font-size: 12px; font-weight: bold; color: #1a3550;}
+        
+        .ga_Smart_list li span img {width: 80px; height: 80px;}
+        
+        .ga_Smart_use {margin-top: 70px;}
+        .ga_Smart_use .tit {font-size: 24px; font-weight: bold;}
+        
+        .gsu_list {position: relative; margin: 40px auto 0; justify-content: center;}
+        .gsu_list li {position: relative; max-width: 270px; height: 340px;}
+        
+        .gsu_list li .btm {position: absolute; bottom: 3px; left: 0; width: 100%; height: 100px; padding:6px 15px; display: flex; align-items: center; flex-direction: column;}
+        .gsu_list li .btm::before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 0 0 20px 20px;
+        background: rgba(0, 0, 0, 0.4);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        }
+        
+        .gsu_list li .btm .txt {font-size: 16px;}
+        .gsu_list li .btm .function {font-size: 18px; font-weight: bold;}
+        
+        /* ga_IOT */
+        .ga_IOT {position: relative; padding: 100px 0 60px; overflow: hidden;
+        background: rgb(222,243,248);
+        background: linear-gradient(180deg, rgba(222,243,248,1) 0%, rgba(243,243,243,1) 100%);
+        transition: all 0.3s;
+        }
+        .ga_IOT_list {margin-top: 60px;}
+        .ga_IOT_list .tit {font-size: 24px; font-weight: bold;}
+        
+        .gil_list {margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 40px 20px;}
+        .gil_list li {width: 100%; max-width: 300px;}
+        .gil_list .img {width: 100%; height: auto; border-radius: 30px;
+        box-shadow: -1px 0px 30px 10px rgba(37,54,97,0.09);
+        -webkit-box-shadow: -1px 0px 30px 10px rgba(37,54,97,0.09);
+        -moz-box-shadow: -1px 0px 30px 10px rgba(37,54,97,0.09);
+        }
+        .gil_list .img img {width:100%; height: 100%; vertical-align: middle;}
+        
+        .gil_list .ga_badge span {display:inline-block; height: 30px; line-height: 30px; padding: 0 10px; border-radius: 15px; font-size: 12px; color: #fff;}
+        
+        .gil_list .txt {margin-top: 10px; font-size: 14px; font-weight: bold;}
+        
+        .gn_background_item > div {position: absolute; top: 0; transform: translatey(0px); animation: float 6s ease-in-out infinite;}
+        .gn_background_item .gbi_01 {
+        width: 70px;
+        height: 140px;
+        top: -50px;
+        left: calc(50% - 11%);
+        }
+        .gn_background_item .gbi_02 {
+        width: 70px;
+        height: 140px;
+        top: -50px;
+        left: calc(50% - -39%);
+        animation: float2 6s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_03 {
+        width: 70px;
+        height: 140px;
+        top: -60px;
+        left: calc(50% - 52%);
+        }
+        .gn_background_item .gbi_04 {
+        width: 70px;
+        height: 140px;
+        top: 100px;
+        left: calc(50% - 52%);
+        animation: float2 5s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_05 {
+        display: none;
+        width: 70px;
+        height: 70px;
+        top: 22%;
+        left: calc(50% - 40%);
+        animation: float3 4s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_06 {
+        width: 70px;
+        height: 70px;
+        top: 30px;
+        left: calc(50% - 30%);
+        animation: float4 4s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_11 {
+        width: 70px;
+        height: 140px;
+        top: -30px;
+        right: calc(50% - 28%);
+        animation: float2 6s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_12 {
+        display: none;
+        width: 70px;
+        height: 70px;
+        top: 3%;
+        right: calc(50% - 40%);
+        animation: float2 6s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_13 {
+        width: 70px;
+        height: 70px;
+        top: 100px;
+        right: calc(50% - 53%);
+        animation: float3 4s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_14 {
+        display: none;
+        width: 70px;
+        height: 70px;
+        top: 18%;
+        right: calc(50% - 40%);
+        animation: float4 4s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_15 {
+        display: none;
+        width: 70px;
+        height: 140px;
+        top: 5%;
+        right: calc(50% - 52%);
+        animation: float 6s ease-in-out infinite;
+        }
+        .gn_background_item .gbi_16 {
+        display: none;
+        width: 70px;
+        height: 140px;
+        top: 12%;
+        right: calc(50% - 52%);
+        animation: float2 6s ease-in-out infinite;
+        }
+        
+        /* ga_Slide */
+        .ga_Slide {padding: 70px 0 100px;}
+        
+        .access_tab {width:100%; max-width: 1000px; margin: 40px auto 0; height:110px; border-radius: 55px; padding: 20px 40px; display: flex; align-items: center; background-color: #f4f4f4;}
+        
+        .acTab li {width: 24%; display: block;}
+        
+        .acTab li button {position: relative; width: 100%; height: 100%; border: none; background: none; padding: 45px 0 0; margin: 0; cursor: pointer;}
+        .acTab li button span {display:inline-block; margin-top: 4px; padding: 0 10px; font-size: 12px; font-weight: bold; line-height: 22px;}
+        
+        .acTab li.tab01 button {background: url(https://gateman.kr/common/img/access/ga_slide_tab_01.png) no-repeat 50% 0; background-size: 45px auto;}
+        .acTab li.tab02 button {background: url(https://gateman.kr/common/img/access/ga_slide_tab_02.png) no-repeat 50% 0; background-size: 45px auto;}
+        .acTab li.tab03 button {background: url(https://gateman.kr/common/img/access/ga_slide_tab_03.png) no-repeat 50% 0; background-size: 45px auto;}
+        .acTab li.tab04 button {background: url(https://gateman.kr/common/img/access/ga_slide_tab_04.png) no-repeat 50% 0; background-size: 45px auto;}
+        
+        .acTab li.active button span {height:24px; border-radius: 12px; background-color: #00aad0; color: #fff;}
+        
+        .ac_content_area {position:relative; margin-top: 50px;}
+        
+        .ac_content .tit {font-size: 20px; font-weight: bold; line-height: 1.2; margin-bottom: 40px;}
+        
+        .ac_content_area .swiper-wrapper {position:relative; padding-top: 40px;}
+        
+        .accessSwiper .swiper-slide {margin-bottom: 25px; transition: all 0.3s; cursor: move;}
+        
+        .accessSwiper .access_slide_con {height: 560px;}
+        
+        .accessSwiper .access_slide_con .top_tit {position: absolute; top: -15px; left: 50%; transform: translateX(-50%); width: 130px; height: 30px; line-height: 30px; padding: 0 10px; border-radius: 15px; font-size: 14px; font-weight: bold; background-color: #f3b987;}
+        
+        .accessSwiper .access_slide_con .access_con {position: absolute; top: 50px; left: 15px; width: calc(100% - 30px);}
+        .accessSwiper .access_slide_con .access_con dt {font-size: 12px; font-weight: bold;}
+        .accessSwiper .access_slide_con .access_con dd {font-size: 14px;}
+        .accessSwiper .access_slide_con .access_con dd.img {margin-top: 10px;}
+        .accessSwiper .access_slide_con .access_con dd.img img {max-width: 200px;}
+        
+        .accessSwiper .access_slide_con .access_comment {position: absolute; bottom: 150px; left: 15px; width: calc(100% - 30px); padding: 20px 10px; background-color: #fff; border-radius: 10px;}
+        .accessSwiper .access_slide_con .access_comment::before {content: ''; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); width: 28px; height: 28px; background-color: #f3b987; border-radius: 50%;}
+        
+        .accessSwiper .access_slide_con .access_comment::after {content: ''; position: absolute; top: -7px; left: 50%; transform: translateX(-50%); width: 24px; height: 14px; background: url(https://gateman.kr/common/img/access/ac_arrow.png) no-repeat 50% 50%; background-size: 14px auto}
+        
+        .accessSwiper .access_slide_con .access_comment dt {font-size: 12px; font-weight: bold;}
+        .accessSwiper .access_slide_con .access_comment dd {font-size: 14px; font-weight: bold;}
+        .accessSwiper .access_slide_con .access_comment dd span {position: relative; display: inline-block; padding: 0 25px;}
+        
+        .accessSwiper .access_slide_con .access_comment dd em::before {content: ''; position: absolute; bottom: 0; left: -10px; width: 100%; height: 16px; padding: 0 10px; background-color: #c7ecf5; z-index: 0;}
+        
+        .accessSwiper .access_slide_con .btm_txt {position: absolute; bottom: 0; left: 0; width: 100%; height: 110px; background-color: #baebf6; border-radius: 0 0 30px 30px;}
+        .accessSwiper .access_slide_con .btm_txt .tit {position: absolute; top: -15px; left: 50%; transform: translateX(-50%); width: 100px; height: 30px; line-height: 30px; padding: 0 10px; border-radius: 15px; font-size: 12px; font-weight: bold; background-color: #00aad0; color: #fff;}
+        .accessSwiper .access_slide_con .btm_txt .txt {margin-top: 30px;}
+        .accessSwiper .access_slide_con .btm_txt .txt li {min-height: 25px; width: 100%; display: inline-flex; align-items: center; justify-content: center;}
+        .accessSwiper .access_slide_con .btm_txt .txt li + li {margin-top: 5px;}
+        .accessSwiper .access_slide_con .btm_txt .txt li span {display: inline-block; min-height: 25px; font-size: 14px; font-weight: bold; padding-left: 26px;}
+        
+        .ac_icon_01 {background: url(https://gateman.kr/common/img/access/ac_icon_01.png) no-repeat 0 0; background-size: 25px auto;}
+        .ac_icon_02 {background: url(https://gateman.kr/common/img/access/ac_icon_02.png) no-repeat 0 0; background-size: 25px auto;}
+        .ac_icon_03 {background: url(https://gateman.kr/common/img/access/ac_icon_03.png) no-repeat 0 0; background-size: 25px auto;}
+        .ac_icon_04 {background: url(https://gateman.kr/common/img/access/ac_icon_04.png) no-repeat 0 0; background-size: 25px auto;}
+        .ac_icon_05 {background: url(https://gateman.kr/common/img/access/ac_icon_05.png) no-repeat 0 0; background-size: 25px auto;}
+        .ac_icon_06 {background: url(https://gateman.kr/common/img/access/ac_icon_06.png) no-repeat 0 0; background-size: 25px auto;}
+        .ac_icon_07 {background: url(https://gateman.kr/common/img/access/ac_icon_07.png) no-repeat 0 0; background-size: 25px auto;}
+        .ac_icon_08 {background: url(https://gateman.kr/common/img/access/ac_icon_08.png) no-repeat 0 0; background-size: 25px auto;}
+        
+        /* ga_VS */
+        .ga_VS {padding: 40px 0; background-color: #eef2f8;}
+        .ga_VS .tit {position: relative; display: flex; justify-content: space-between; align-items: center; height: 40px; border-radius: 10px; z-index: 1;
+        background: rgb(0,170,208);
+        background: linear-gradient(123deg, rgba(0,170,208,1) 0%, rgba(0,170,208,1) 49.3%, rgba(74,74,74,1) 49.3%, rgba(74,74,74,1) 100%);
+        }
+        .ga_VS .tit::before {content: ''; position: absolute; top: 0; left: 50%; width: 100%; height: 100%; transform: translateX(-50%); background: url(https://gateman.kr/common/img/access/ga_VS.png) no-repeat 50% 50%; background-size: contain;}
+        .ga_VS .tit div {position: relative; display: flex; align-items: center; justify-content: center; width: 50%; height: 100%; font-size: 14px; font-weight: 300; color: #fff;}
+        
+        .ga_VS .tit div:nth-child(1) {padding-right: 30px;}
+        .ga_VS .tit div:nth-child(2) {padding-left: 30px;}
+        
+        .ga_VS .tit div::before {content: ''; position: absolute; top: -70px; display: block; width: 80px; height: 100px;}
+        .ga_VS .tit div:nth-child(1)::before{left:0; background: url(https://gateman.kr/common/img/access/ga_VS_use.png) no-repeat 0 50%; background-size: 80px auto;}
+        .ga_VS .tit div:nth-child(2)::before{right:0; background: url(https://gateman.kr/common/img/access/ga_VS_none.png) no-repeat 0 50%; background-size: 80px auto;}
+        
+        .ga_VS .gn_tbl {position: relative; padding-top: 20px; padding-bottom: 20px; background-color: #fff; border-radius: 0 0 20px 20px;}
+        
+        .ga_VS .gn_tbl th {font-size: 16px; font-weight: bold; padding: 20px 0 14px; text-align: center;}
+        .ga_VS .gn_tbl th span {position: relative; display:inline-block; width: auto; height: 40px; padding: 0 40px; line-height: 38px; border-radius: 20px; color: #fff; }
+        
+        .ga_VS .gn_tbl th span em {display: inline-block; font-style: normal; padding-right: 20px;}
+        
+        .ga_VS .gn_tbl th span.emoji_01::after,
+        .ga_VS .gn_tbl th span.emoji_03::after {content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); margin-bottom: -30px; border-top: 10px solid #1a3550; border-right: 10px solid transparent; border-bottom: 20px solid transparent; border-left: 10px solid transparent;}
+        
+        .ga_VS .gn_tbl th span.emoji_01 em {background: url(https://gateman.kr/common/img/access/emoji_01.png) no-repeat 100% 50%; background-size: 20px auto;}
+        .ga_VS .gn_tbl th span.emoji_02 em {background: url(https://gateman.kr/common/img/access/emoji_02.png) no-repeat 100% 50%; background-size: 20px auto;}
+        .ga_VS .gn_tbl th span.emoji_03 em {background: url(https://gateman.kr/common/img/access/emoji_03.png) no-repeat 100% 50%; background-size: 20px auto;}
+        .ga_VS .gn_tbl th span.emoji_04 em {background: url(https://gateman.kr/common/img/access/emoji_04.png) no-repeat 100% 50%; background-size: 20px auto;}
+        
+        .ga_VS .gn_tbl td {padding: 14px 0; border-top: 1px solid #dcdcdc; font-size: 14px; font-weight: 500;}
+        
+        /* ga_SmartPhone */
+        .ga_SmartPhone {padding:50px 0 40px; background-color: #1a3550;}
+        
+        .ga_SmartPhone .block .tit {font-size: 20px; font-weight: 300; color: #fff;}
+        .ga_SmartPhone .block .img {margin-top: 26px;}
+        .ga_SmartPhone .block .img img {width: 100%; max-width: 320px;}
+        .ga_SmartPhone .block .txt {margin-top: 30px; font-size: 24px; font-weight: 300; color: #fff;}
+        
+        /* ga_SmartPhone02 */
+        .ga_SmartPhone02 {padding: 80px 0; background: url(https://gateman.kr/common/img/access/ga_SmartPhone02.png) no-repeat 50% 0; background-size: cover;}
+        .ga_SmartPhone02 .gn_Inner {max-width: 800px; margin: 0 auto;}
+        
+        .ga_sp_list + .ga_sp_list {margin-top: 40px;}
+        .ga_sp_list {position: relative; text-align: left; padding:20px 40px; border-radius: 20px; display: flex; align-items: center; justify-content: center;}
+        .ga_sp_list::before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .ga_sp_list dl {position: relative; padding: 150px 0 0; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 1;}
+        
+        .ga_sp_list dt {font-size: 22px; font-weight: bold; text-align: center;}
+        .ga_sp_list dd {margin-top: 20px; font-size: 20px; font-weight: 500;}
+        .ga_sp_list .ga_check_list li {color: #fff; padding-left: 20px; background: url(https://gateman.kr/common/img/access/common_check.png) no-repeat 0 7px; background-size: 16px auto;}
+        
+        .ga_sp_list dl::before {content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 125px; height: 125px; border-radius: 50%; z-index: 0;}
+        .ga_sp_list:nth-child(1) dl::before {background: url(https://gateman.kr/common/img/access/ga_SmartPhone02_01.png) no-repeat 50% 0; background-size: 125px auto;}
+        .ga_sp_list:nth-child(2) dl::before {background: url(https://gateman.kr/common/img/access/ga_SmartPhone02_02.png) no-repeat 50% 0; background-size: 125px auto;}
+        .ga_sp_list:nth-child(3) dl::before {background: url(https://gateman.kr/common/img/access/ga_SmartPhone02_03.png) no-repeat 50% 0; background-size: 125px auto;}
+        
+        /* ga_Card */
+        .ga_Card {padding: 70px 0; background-color: #1a3550;}
+        
+        .ga_Card dl {display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 200px 0 0; background: url(https://gateman.kr/common/img/access/ga_Card.png) no-repeat 50% 0; background-size: 200px auto;;}
+        .ga_Card dl dt,
