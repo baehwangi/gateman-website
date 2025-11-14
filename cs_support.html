@@ -535,6 +535,23 @@ xe.msg_select_menu = "대상 메뉴 선택";
 }
 
 </style>
+
+<style>
+    /* Hide ALL Original Headers */
+    #xs-header, #kso-header, #kso-nav, nav#xs-menu,
+    .kso-header, .kso-nav, .xs-header, .xs-menu,
+    header[id*="kso-"], nav[id*="kso-"],
+    .navbar.nav-md, .navbar-header, .navbar-collapse,
+    .float-menu, .nav-mini {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+</style>
+
 </head>
 <body>
 
