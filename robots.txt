@@ -1,18 +1,18 @@
-# 게이트맨 김해 밀양 대리점 - robots.txt
-
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://baehwangi.github.io/gateman-website/sitemap.xml
+Sitemap: https://gateman-gimhae.com/sitemap.xml
 
-# 네이버 봇
+# Naver Bot
 User-agent: Yeti
 Allow: /
 
-# 구글 봇
+# Google Bot
 User-agent: Googlebot
 Allow: /
 
-# 크롤링 속도
-Crawl-delay: 1
+# Disallow unnecessary pages
+Disallow: /new_footer.html
+Disallow: /original_gm900s_source.html
+Disallow: /gateman_products_original.html
