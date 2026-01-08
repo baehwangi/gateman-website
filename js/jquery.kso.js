@@ -122,7 +122,6 @@ jQuery(function($){
 		      		var fromTop = menu_head + (row_i * 125);
 							var fromLeft = col_i * 125;
 							var delayTime = (row_i * 200) + Math.floor((Math.random() * 200) + 1);
-							console.log(delayTime);
 				      $(this).css("left", fromLeft);
 							$(this).delay(delayTime).queue(function(){
 				      	$(this).css("top", fromTop);

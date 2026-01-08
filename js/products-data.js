@@ -1013,4 +1013,3 @@ const productsData = [
 ];
 
 // Total: 70+ products
-console.log(`Total products loaded: ${productsData.length}`);
